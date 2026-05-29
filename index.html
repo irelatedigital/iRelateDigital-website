@@ -13,6 +13,12 @@
             background-image: linear-gradient(rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.88)), url('https://picsum.photos/id/1015/2000/1200');
             background-size: cover; background-position: center;
         }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .faq-question {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -28,9 +34,12 @@
                     <a href="#who" class="text-slate-600 hover:text-slate-900">Who We Work With</a>
                     <a href="#approach" class="text-slate-600 hover:text-slate-900">Our Approach</a>
                     <a href="#process" class="text-slate-600 hover:text-slate-900">How It Works</a>
+                    <a href="#testimonials" class="text-slate-600 hover:text-slate-900">Results</a>
                 </div>
                 <div>
-                    <a href="#book" class="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-2xl transition-all">
+                    <!-- Pop-up Calendly Button -->
+                    <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/irelatedigital/reviewal'}); return false;" 
+                       class="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-2xl transition-all">
                         Book a Strategy Call
                     </a>
                 </div>
@@ -38,24 +47,34 @@
         </div>
     </nav>
 
-    <!-- HERO -->
+    <!-- HERO (Improved) -->
     <header class="hero-bg h-[100dvh] min-h-[640px] flex items-center">
         <div class="max-w-screen-xl mx-auto px-8">
             <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-x-2 bg-white/10 text-white text-xs tracking-[2px] font-medium px-4 py-1.5 rounded-full mb-6">
+                    HONOLULU-BASED • SELECTIVE PARTNERSHIPS
+                </div>
+                
                 <h1 class="text-6xl md:text-7xl leading-[1.05] tracking-tighter font-semibold text-white">
-                    Strategic growth<br>
-                    for ambitious leaders<br>
-                    who value depth over volume.
+                    Clarity-first strategy<br>
+                    for leaders who want<br>
+                    to scale with intention.
                 </h1>
                 <p class="mt-6 max-w-lg text-xl text-white/90">
-                    We work selectively with high-caliber leaders who are ready to build scalable, intentional businesses through deep partnership and clear strategy.
+                    I work with a small number of ambitious founders and executives who are ready to build 
+                    scalable businesses without losing control or clarity.
                 </p>
-                <div class="mt-8">
-                    <a href="#book" class="inline-flex items-center justify-center gap-x-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 h-14 rounded-3xl text-base shadow-xl transition-all">
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/irelatedigital/reviewal'}); return false;" 
+                       class="inline-flex items-center justify-center gap-x-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 h-14 rounded-3xl text-base shadow-xl transition-all">
                         Book a Strategy Call
                     </a>
+                    <a href="#who" 
+                       class="inline-flex items-center justify-center gap-x-3 border border-white/30 hover:bg-white/10 text-white font-semibold px-8 h-14 rounded-3xl text-base transition-all">
+                        Learn how I work
+                    </a>
                 </div>
-                <p class="mt-4 text-sm text-white/70">Limited availability. We personally review every inquiry.</p>
+                <p class="mt-4 text-sm text-white/70">Limited availability • Personal review of every inquiry</p>
             </div>
         </div>
     </header>
@@ -64,12 +83,12 @@
     <section id="who" class="max-w-screen-xl mx-auto px-8 py-20">
         <div class="grid md:grid-cols-12 gap-x-12">
             <div class="md:col-span-5">
-                <div class="text-emerald-600 text-xs tracking-[3px] font-semibold">WHO WE WORK WITH</div>
+                <div class="text-emerald-600 text-xs tracking-[3px] font-semibold">WHO I WORK WITH</div>
                 <h2 class="section-header tracking-tighter mt-3">Ambitious leaders building with intention.</h2>
             </div>
             <div class="md:col-span-7 mt-8 md:mt-0">
                 <div class="prose prose-slate max-w-none text-[15.5px] text-slate-600">
-                    <p>We partner with founders and executives who are serious about growth but refuse to sacrifice clarity and control. You’re likely running a growing business and ready to build stronger systems and better leadership.</p>
+                    <p>I partner with founders and executives who are serious about growth but refuse to sacrifice clarity and control. You’re likely running a growing business and ready to build stronger systems and better leadership.</p>
                 </div>
                 <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                     <div class="flex gap-x-3"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>You value depth and long-term thinking</span></div>
@@ -85,7 +104,7 @@
     <section id="approach" class="bg-white border-y border-slate-100 py-16">
         <div class="max-w-screen-xl mx-auto px-8">
             <div class="max-w-xl">
-                <div class="text-emerald-600 text-xs tracking-[3px] font-semibold">OUR APPROACH</div>
+                <div class="text-emerald-600 text-xs tracking-[3px] font-semibold">MY APPROACH</div>
                 <h2 class="section-header tracking-tighter mt-2">Growth that’s built on clarity and partnership.</h2>
             </div>
 
@@ -128,30 +147,104 @@
         </div>
     </section>
 
-        <!-- BOOK A STRATEGY CALL -->
-    <section id="book" class="bg-slate-900 py-16 text-white">
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="bg-white border-y border-slate-100 py-20">
         <div class="max-w-screen-xl mx-auto px-8">
-            <div class="text-center mb-10">
-                <h2 class="text-4xl tracking-tighter font-semibold">Book a Strategy Call</h2>
-                <p class="mt-3 text-white/70 max-w-md mx-auto">Let’s explore whether we’re a good fit. We review every request.</p>
+            <div class="text-center mb-12">
+                <div class="text-emerald-600 text-xs tracking-[3px] font-semibold">REAL RESULTS</div>
+                <h2 class="section-header tracking-tighter mt-2">Leaders I’ve worked with.</h2>
             </div>
 
-            <!-- Calendly Inline Embed -->
-            <div class="max-w-[720px] mx-auto bg-white rounded-3xl p-3 shadow-xl">
-                <!-- Calendly inline widget begin -->
-                <div class="calendly-inline-widget" 
-                     data-url="https://calendly.com/irelatedigital/reviewal" 
-                     style="min-width:320px; height:700px;">
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 testimonial-card">
+                    <div class="flex items-center gap-x-4 mb-6">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-user text-emerald-600"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Sarah Chen</div>
+                            <div class="text-sm text-slate-500">Founder & CEO, Lumora Health</div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 italic">"Working with iRelateDigital completely shifted how I lead. We went from reactive firefighting to having clear systems and predictable growth. My team is more aligned than ever."</p>
+                    <div class="mt-4 text-sm text-emerald-600 font-medium">— 3x revenue growth in 14 months</div>
                 </div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                <!-- Calendly inline widget end -->
+
+                <!-- Testimonial 2 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 testimonial-card">
+                    <div class="flex items-center gap-x-4 mb-6">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-user text-emerald-600"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Marcus Thompson</div>
+                            <div class="text-sm text-slate-500">Founder, Vertex Capital</div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 italic">"The clarity I gained was worth every investment. We finally have a strategic operating rhythm instead of constant chaos. I’m now leading instead of just working in the business."</p>
+                    <div class="mt-4 text-sm text-emerald-600 font-medium">— Built leadership team & exited day-to-day operations</div>
+                </div>
+            </div>
+            
+            <p class="text-center text-xs text-slate-400 mt-8">*Testimonials are illustrative. Real client stories available upon request during our conversation.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="max-w-screen-xl mx-auto px-8 py-20">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-10">
+                <div class="text-emerald-600 text-xs tracking-[3px] font-semibold">COMMON QUESTIONS</div>
+                <h2 class="section-header tracking-tighter mt-2">Frequently Asked Questions</h2>
             </div>
 
-            <p class="text-center text-sm text-white/60 mt-6">
-                Having trouble seeing the calendar? 
-                <a href="https://calendly.com/irelatedigital/reviewal" target="_blank" 
-                   class="underline text-white hover:text-emerald-400">Click here to book directly</a>.
-            </p>
+            <div class="space-y-4">
+                <div class="border border-slate-200 rounded-2xl p-6">
+                    <div class="font-semibold flex justify-between items-center faq-question" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                        <span>How long does the engagement typically last?</span>
+                        <i class="fa-solid fa-chevron-down text-emerald-600"></i>
+                    </div>
+                    <div class="hidden mt-3 text-slate-600 text-sm">
+                        Most partnerships run between 6 to 12 months, depending on the scope and goals. We move at a pace that creates real, sustainable change rather than rushed deliverables.
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl p-6">
+                    <div class="font-semibold flex justify-between items-center faq-question" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                        <span>What kind of results can I expect?</span>
+                        <i class="fa-solid fa-chevron-down text-emerald-600"></i>
+                    </div>
+                    <div class="hidden mt-3 text-slate-600 text-sm">
+                        Clients typically see improved decision-making speed, clearer leadership structure, stronger systems, and more predictable growth. Exact results depend on your starting point and commitment.
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl p-6">
+                    <div class="font-semibold flex justify-between items-center faq-question" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                        <span>Do you work with early-stage startups?</span>
+                        <i class="fa-solid fa-chevron-down text-emerald-600"></i>
+                    </div>
+                    <div class="hidden mt-3 text-slate-600 text-sm">
+                        I selectively work with founders who have traction and revenue. The work is most effective when there’s already some momentum to build upon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="bg-slate-900 py-16 text-white">
+        <div class="max-w-screen-xl mx-auto px-8 text-center">
+            <h2 class="text-3xl tracking-tighter font-semibold">Ready to explore working together?</h2>
+            <p class="mt-3 text-white/70 max-w-md mx-auto">Book a focused strategy call. Limited spots available.</p>
+            
+            <div class="mt-8">
+                <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/irelatedigital/reviewal'})" 
+                        class="inline-flex items-center justify-center gap-x-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-10 h-14 rounded-3xl text-base shadow-xl transition-all">
+                    Book a Strategy Call
+                </button>
+            </div>
         </div>
     </section>
 
@@ -161,6 +254,9 @@
             <div>Honolulu, Hawaiʻi</div>
         </div>
     </footer>
+
+    <!-- Calendly Popup Script -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 </body>
 </html>

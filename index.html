@@ -80,7 +80,7 @@
     </header>
 
     <!-- WHO WE WORK WITH -->
-    <section id="who" class="max-w-screen-xl mx-auto px-8 py-20">
+    <section id="who" class="max-w-screen-xl mx-auto px-8 py-24">
         <div class="grid md:grid-cols-12 gap-x-12">
             <div class="md:col-span-5">
                 <div class="text-emerald-600 text-xs tracking-[3px] font-semibold">WHO I WORK WITH</div>
@@ -101,25 +101,25 @@
     </section>
 
     <!-- OUR APPROACH -->
-    <section id="approach" class="bg-white border-y border-slate-100 py-16">
+    <section id="approach" class="bg-white border-y border-slate-100 py-20">
         <div class="max-w-screen-xl mx-auto px-8">
             <div class="max-w-xl">
                 <div class="text-emerald-600 text-xs tracking-[3px] font-semibold">MY APPROACH</div>
                 <h2 class="section-header tracking-tighter mt-2">Growth that’s built on clarity and partnership.</h2>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6 mt-10">
+            <div class="grid md:grid-cols-3 gap-8 mt-10">
                 <div>
                     <div class="font-semibold text-lg">Deep Diagnosis</div>
-                    <p class="mt-2 text-slate-600 text-sm">We start by understanding your business, your goals, and what’s really holding you back.</p>
+                    <p class="mt-3 text-slate-600">We start by understanding your business, your goals, and what’s really holding you back.</p>
                 </div>
                 <div>
                     <div class="font-semibold text-lg">Strategic Partnership</div>
-                    <p class="mt-2 text-slate-600 text-sm">We work alongside you — not just deliver a plan and disappear.</p>
+                    <p class="mt-3 text-slate-600">We work alongside you — not just deliver a plan and disappear. This is hands-on, high-touch work.</p>
                 </div>
                 <div>
                     <div class="font-semibold text-lg">Sustainable Systems</div>
-                    <p class="mt-2 text-slate-600 text-sm">We build systems and leadership capacity so growth doesn’t depend on you working harder.</p>
+                    <p class="mt-3 text-slate-600">We build systems and leadership capacity so growth doesn’t depend on you working harder.</p>
                 </div>
             </div>
         </div>
@@ -132,17 +132,17 @@
             <div class="border border-slate-200 rounded-3xl p-7">
                 <div class="text-emerald-600 font-mono text-sm mb-4">01</div>
                 <div class="font-semibold text-xl">Book a Strategy Call</div>
-                <p class="mt-3 text-slate-600 text-sm">We start with a focused conversation to explore whether we’re a fit.</p>
+                <p class="mt-3 text-slate-600">We start with a focused conversation to explore whether we’re a fit.</p>
             </div>
             <div class="border border-slate-200 rounded-3xl p-7">
                 <div class="text-emerald-600 font-mono text-sm mb-4">02</div>
                 <div class="font-semibold text-xl">Discovery & Alignment</div>
-                <p class="mt-3 text-slate-600 text-sm">If we move forward, we go deeper into your business and define the right path.</p>
+                <p class="mt-3 text-slate-600">If we move forward, we go deeper into your business and define the right path.</p>
             </div>
             <div class="border border-slate-200 rounded-3xl p-7">
                 <div class="text-emerald-600 font-mono text-sm mb-4">03</div>
                 <div class="font-semibold text-xl">Engagement</div>
-                <p class="mt-3 text-slate-600 text-sm">We work together with clear milestones, accountability, and ongoing support.</p>
+                <p class="mt-3 text-slate-600">We work together with clear milestones, accountability, and ongoing support.</p>
             </div>
         </div>
     </section>
@@ -196,11 +196,11 @@
             <div class="space-y-4">
                 <div class="border border-slate-200 rounded-2xl p-6">
                     <div class="font-semibold">How long does the engagement typically last?</div>
-                    <div class="mt-3 text-slate-600 text-sm">Most partnerships run between 6 to 12 months, depending on scope and goals.</div>
+                    <div class="mt-3 text-slate-600">Most partnerships run between 6 to 12 months, depending on scope and goals.</div>
                 </div>
                 <div class="border border-slate-200 rounded-2xl p-6">
                     <div class="font-semibold">What kind of results can I expect?</div>
-                    <div class="mt-3 text-slate-600 text-sm">Clients typically see improved decision-making, clearer leadership structure, and more predictable growth.</div>
+                    <div class="mt-3 text-slate-600">Clients typically see improved decision-making, clearer leadership structure, and more predictable growth.</div>
                 </div>
             </div>
         </div>
@@ -228,9 +228,8 @@
         </div>
     </footer>
 
-    <!-- Calendly Script + Robust Function -->
+    <!-- Calendly Script + Safe Function -->
     <script>
-        // Load Calendly script
         function loadCalendly() {
             const script = document.createElement('script');
             script.src = 'https://assets.calendly.com/assets/external/widget.js';
@@ -238,24 +237,20 @@
             document.body.appendChild(script);
         }
 
-        // Open Calendly safely
         function openCalendly() {
             if (typeof Calendly !== 'undefined') {
                 Calendly.initPopupWidget({ url: CALENDLY_URL });
             } else {
-                // If script not loaded yet, wait and try again
                 setTimeout(() => {
                     if (typeof Calendly !== 'undefined') {
                         Calendly.initPopupWidget({ url: CALENDLY_URL });
                     } else {
-                        // Final fallback - open in new tab
                         window.open(CALENDLY_URL, '_blank');
                     }
                 }, 800);
             }
         }
 
-        // Load Calendly when page loads
         window.onload = function() {
             loadCalendly();
         };

@@ -10,8 +10,9 @@
         body { font-family: 'Inter', system_ui, sans-serif; }
         .section-header { font-size: 2.1rem; line-height: 2.4rem; font-weight: 700; color: #0F172A; }
         .hero-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.88)), url('https://picsum.photos/id/1015/2000/1200');
-            background-size: cover; background-position: center;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
         }
     </style>
 </head>
@@ -46,41 +47,47 @@
         </div>
     </nav>
 
-    <!-- HERO -->
-    <header class="hero-bg min-h-[100dvh] flex items-center py-12">
+    <!-- HERO (Updated to match your screenshot) -->
+    <header class="hero-bg min-h-[100dvh] flex items-center py-16">
         <div class="max-w-screen-xl mx-auto px-8">
             <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-x-2 bg-white/10 text-white text-xs tracking-[2px] font-medium px-4 py-1.5 rounded-full mb-6">
+                
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-x-2 bg-white/10 text-white text-xs tracking-[2px] font-medium px-5 py-2 rounded-full mb-6">
                     HONOLULU-BASED • SELECTIVE PARTNERSHIPS
                 </div>
-                
-                <h1 class="text-5xl md:text-7xl leading-tight tracking-tighter font-semibold text-white">
+
+                <!-- Headline -->
+                <h1 class="text-5xl md:text-7xl leading-[1.1] tracking-tighter font-semibold text-white">
                     Clarity-first strategy<br>
                     for leaders who want<br>
                     to scale with intention.
                 </h1>
-                
-                <p class="mt-6 max-w-lg text-xl text-white/90">
+
+                <!-- Subtext -->
+                <p class="mt-6 max-w-lg text-lg md:text-xl text-white/90">
                     I work with a small number of ambitious founders and executives who are ready to build 
                     scalable businesses without losing control or clarity.
                 </p>
 
+                <!-- Buttons -->
                 <div class="mt-8 flex flex-col sm:flex-row gap-4">
                     <button onclick="openCalendly()" 
-                            class="inline-flex items-center justify-center gap-x-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 h-14 rounded-3xl text-base shadow-xl transition-all">
+                            class="inline-flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 h-14 rounded-3xl text-base shadow-xl transition-all">
                         Book a Strategy Call
                     </button>
-                    <a href="#who" class="inline-flex items-center justify-center gap-x-3 border border-white/30 hover:bg-white/10 text-white font-semibold px-8 h-14 rounded-3xl text-base transition-all">
+                    
+                    <a href="#who" 
+                       class="inline-flex items-center justify-center border border-white/40 hover:bg-white/10 text-white font-semibold px-8 h-14 rounded-3xl text-base transition-all">
                         Learn how I work
                     </a>
                 </div>
-                <p class="mt-4 text-sm text-white/70">Limited availability • Personal review of every inquiry</p>
             </div>
         </div>
     </header>
 
     <!-- WHO WE WORK WITH -->
-    <section id="who" class="max-w-screen-xl mx-auto px-8 py-24">
+    <section id="who" class="max-w-screen-xl mx-auto px-8 py-20">
         <div class="grid md:grid-cols-12 gap-x-12">
             <div class="md:col-span-5">
                 <div class="text-emerald-600 text-xs tracking-[3px] font-semibold">WHO I WORK WITH</div>
@@ -115,7 +122,7 @@
                 </div>
                 <div>
                     <div class="font-semibold text-lg">Strategic Partnership</div>
-                    <p class="mt-3 text-slate-600">We work alongside you — not just deliver a plan and disappear. This is hands-on, high-touch work.</p>
+                    <p class="mt-3 text-slate-600">We work alongside you — not just deliver a plan and disappear.</p>
                 </div>
                 <div>
                     <div class="font-semibold text-lg">Sustainable Systems</div>

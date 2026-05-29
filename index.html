@@ -7,223 +7,359 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: 'Inter', system_ui, sans-serif; }
-        .section-header { font-size: 2.1rem; line-height: 2.4rem; font-weight: 700; color: #0F172A; }
-        .hero-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.88)), url('https://picsum.photos/id/1015/2000/1200');
-            background-size: cover; background-position: center;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .section-header {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .premium-shadow {
+            box-shadow: 0 10px 15px -3px rgb(15 23 42 / 0.05), 0 4px 6px -4px rgb(15 23 42 / 0.05);
+        }
+
+        .pillar-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(15 23 42 / 0.1), 0 8px 10px -6px rgb(15 23 42 / 0.1);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+            color: white;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .outcome-item {
+            transition: all 0.2s ease;
         }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
 
-    <!-- NAVBAR -->
-    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
-        <div class="max-w-screen-xl mx-auto px-8">
-            <div class="flex items-center justify-between py-5">
-                <a href="https://irelatedigital.com">
-                    <img src="logo.PNG" alt="iRelateDigital" class="h-11 w-auto">
-                </a>
-
-                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
-                    <a href="#who" class="text-slate-600 hover:text-slate-900">Who We Work With</a>
-                    <a href="#approach" class="text-slate-600 hover:text-slate-900">Our Approach</a>
-                    <a href="#process" class="text-slate-600 hover:text-slate-900">How It Works</a>
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="px-8 py-5 flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="logo.PNG" alt="iRelateDigital Logo" class="h-9 w-auto">
                 </div>
-
+                
+                <!-- Nav Links -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm">
+                    <a href="#who" class="text-slate-600 hover:text-slate-900 transition-colors">Who We Work With</a>
+                    <a href="#approach" class="text-slate-600 hover:text-slate-900 transition-colors">How We Work</a>
+                    <a href="#outcomes" class="text-slate-600 hover:text-slate-900 transition-colors">Outcomes</a>
+                </div>
+                
                 <div>
                     <a href="https://calendly.com/irelatedigital/reviewal" 
-                       class="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-2xl transition-all">
-                        Book a Strategy Call
+                       target="_blank"
+                       class="inline-flex items-center px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold rounded-2xl transition-all active:scale-[0.985]">
+                        Book Strategy Call
                     </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <header class="hero-bg h-[100dvh] min-h-[640px] flex items-center">
-        <div class="max-w-screen-xl mx-auto px-8">
-            <div class="max-w-3xl">
-                <h1 class="text-6xl md:text-7xl leading-[1.05] tracking-tighter font-semibold text-white">
-                    Strategic growth<br>
-                    for ambitious leaders<br>
-                    who value depth over volume.
-                </h1>
-                <p class="mt-6 max-w-lg text-xl text-white/90">
-                    We work selectively with high-caliber leaders who are ready to build scalable, intentional businesses through deep partnership and clear strategy.
-                </p>
-                <div class="mt-8">
-                    <a href="https://calendly.com/irelatedigital/reviewal" 
-                       class="inline-flex items-center justify-center gap-x-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 h-14 rounded-3xl text-base shadow-xl transition-all">
-                        Book a Strategy Call
-                    </a>
-                </div>
-                <p class="mt-4 text-sm text-white/70">Limited availability.</p>
+    <!-- Hero -->
+    <header class="max-w-screen-xl mx-auto px-8 pt-16 pb-20">
+        <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-x-2 bg-white border border-slate-200 rounded-full px-4 py-1.5 mb-6">
+                <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                <span class="text-sm font-medium text-slate-600">Limited engagements available</span>
             </div>
+            
+            <h1 class="text-6xl md:text-7xl leading-[1.05] tracking-tighter font-semibold text-slate-900">
+                Strategic growth<br>for leaders who<br>value <span class="text-slate-700">depth</span> over volume.
+            </h1>
+            
+            <p class="mt-6 max-w-lg text-xl text-slate-600">
+                We partner with ambitious founders and executives to build scalable businesses 
+                through clear strategy, strong systems, and leadership that doesn’t depend on heroic effort.
+            </p>
+            
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                <a href="https://calendly.com/irelatedigital/reviewal" 
+                   target="_blank"
+                   class="inline-flex justify-center items-center px-8 py-4 bg-slate-900 hover:bg-slate-800 active:bg-black text-white font-semibold rounded-3xl text-lg transition-all">
+                    Book a Strategy Call
+                </a>
+                <a href="#who" 
+                   class="inline-flex justify-center items-center px-8 py-4 border border-slate-300 hover:bg-white text-slate-700 font-semibold rounded-3xl text-lg transition-all">
+                    Learn more
+                </a>
+            </div>
+            
+            <p class="mt-4 text-sm text-slate-500">I personally review every request. • Selective by design.</p>
         </div>
     </header>
 
-    <!-- WHO WE WORK WITH -->
+    <!-- The Real Problem -->
+    <section class="max-w-screen-xl mx-auto px-8 py-16 border-t border-slate-100 bg-white">
+        <div class="max-w-3xl">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">THE HIDDEN COST</div>
+            <h2 class="section-header tracking-tighter">Growth without structure eventually breaks the leader.</h2>
+            
+            <div class="mt-8 grid md:grid-cols-2 gap-8 text-[15px] leading-relaxed text-slate-600">
+                <div>
+                    <p>Many ambitious leaders reach a point where the business is growing, but the weight of that growth is still carried almost entirely by them.</p>
+                </div>
+                <div>
+                    <p>Decisions slow down. Systems stay fragile. Leadership capacity doesn’t scale. And what used to feel like momentum starts to feel like pressure.</p>
+                    <p class="mt-4">This isn’t a motivation problem. It’s a <span class="font-medium text-slate-800">structure and clarity</span> problem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who This Is For -->
     <section id="who" class="max-w-screen-xl mx-auto px-8 py-20">
-        <div class="grid md:grid-cols-12 gap-x-12">
-            <div class="md:col-span-5">
-                <div class="text-emerald-600 text-xs tracking-[3px] font-semibold">WHO WE WORK WITH</div>
-                <h2 class="section-header tracking-tighter mt-3">Ambitious leaders building with intention.</h2>
-            </div>
-            <div class="md:col-span-7 mt-8 md:mt-0">
-                <div class="prose prose-slate max-w-none text-[15.5px] text-slate-600">
-                    <p>We partner with founders and executives who are serious about growth but refuse to sacrifice clarity and control. You’re likely running a growing business and ready to build stronger systems and better leadership.</p>
+        <div class="max-w-2xl mb-10">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">WHO WE WORK WITH</div>
+            <h2 class="section-header tracking-tighter">Ambitious leaders building with intention.</h2>
+        </div>
+
+        <div class="grid md:grid-cols-5 gap-6">
+            <div class="md:col-span-3 bg-white border border-slate-200 rounded-3xl p-8 premium-shadow">
+                <p class="text-lg text-slate-700">We partner with founders and executives who are serious about growth but refuse to sacrifice clarity and control.</p>
+                
+                <div class="mt-8 space-y-4">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-check text-emerald-600 mt-1.5"></i>
+                        <span class="text-slate-700">You value depth and long-term thinking over quick fixes</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-check text-emerald-600 mt-1.5"></i>
+                        <span class="text-slate-700">You’re willing to do the real work required to build something lasting</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-check text-emerald-600 mt-1.5"></i>
+                        <span class="text-slate-700">You want a true strategic partner — not another consultant who disappears after the plan</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-check text-emerald-600 mt-1.5"></i>
+                        <span class="text-slate-700">You’re ready to scale with intention, not just speed</span>
+                    </div>
                 </div>
-                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                    <div class="flex gap-x-3"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>You value depth and long-term thinking</span></div>
-                    <div class="flex gap-x-3"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>You’re willing to do the real work</span></div>
-                    <div class="flex gap-x-3"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>You want a true strategic partner</span></div>
-                    <div class="flex gap-x-3"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span>You’re ready to scale with intention</span></div>
+            </div>
+            
+            <div class="md:col-span-2 bg-slate-900 text-white rounded-3xl p-8 flex flex-col">
+                <div class="flex-1">
+                    <p class="text-slate-300 text-sm">You’re likely running a growing business and ready to build:</p>
+                    <ul class="mt-6 space-y-3 text-white">
+                        <li class="flex items-center gap-3"><span class="text-emerald-400">→</span> Stronger systems</li>
+                        <li class="flex items-center gap-3"><span class="text-emerald-400">→</span> Better leadership capacity</li>
+                        <li class="flex items-center gap-3"><span class="text-emerald-400">→</span> Sustainable growth that doesn’t require you to work harder</li>
+                    </ul>
+                </div>
+                <div class="pt-6 border-t border-white/20 text-sm text-slate-400">
+                    We are highly selective. We only work with a small number of leaders at a time.
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- OUR APPROACH -->
-    <section id="approach" class="bg-white border-y border-slate-100 py-16">
-        <div class="max-w-screen-xl mx-auto px-8">
-            <div class="max-w-xl">
-                <div class="text-emerald-600 text-xs tracking-[3px] font-semibold">OUR APPROACH</div>
-                <h2 class="section-header tracking-tighter mt-2">Growth that’s built on clarity and partnership.</h2>
-            </div>
+    <!-- How We Work -->
+    <section id="approach" class="max-w-screen-xl mx-auto px-8 py-16 bg-white border-y border-slate-100">
+        <div class="max-w-2xl mb-10">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">OUR APPROACH</div>
+            <h2 class="section-header tracking-tighter">Growth that’s built on clarity and partnership.</h2>
+        </div>
 
-            <div class="grid md:grid-cols-3 gap-6 mt-10">
-                <div>
-                    <div class="font-semibold text-lg">Deep Diagnosis</div>
-                    <p class="mt-2 text-slate-600 text-sm">We start by understanding your business, your goals, and what’s really holding you back.</p>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="pillar-card bg-white border border-slate-200 rounded-3xl p-8">
+                <div class="w-11 h-11 bg-slate-100 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-search text-slate-700 text-2xl"></i>
                 </div>
-                <div>
-                    <div class="font-semibold text-lg">Strategic Partnership</div>
-                    <p class="mt-2 text-slate-600 text-sm">We work alongside you — not just deliver a plan and disappear. This is hands-on, high-touch work.</p>
+                <h3 class="font-semibold text-2xl tracking-tight">Deep Diagnosis</h3>
+                <p class="mt-4 text-slate-600 leading-relaxed">We start by truly understanding your business, your goals, and what’s really holding progress back — beyond surface-level symptoms.</p>
+            </div>
+            
+            <div class="pillar-card bg-white border border-slate-200 rounded-3xl p-8">
+                <div class="w-11 h-11 bg-slate-100 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-handshake text-slate-700 text-2xl"></i>
                 </div>
+                <h3 class="font-semibold text-2xl tracking-tight">Strategic Partnership</h3>
+                <p class="mt-4 text-slate-600 leading-relaxed">We work alongside you as a true partner — not just deliver a plan and disappear. This is hands-on, high-touch work with ongoing support.</p>
+            </div>
+            
+            <div class="pillar-card bg-white border border-slate-200 rounded-3xl p-8">
+                <div class="w-11 h-11 bg-slate-100 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-sync text-slate-700 text-2xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight">Sustainable Systems</h3>
+                <p class="mt-4 text-slate-600 leading-relaxed">We build systems and leadership capacity so growth no longer depends on you carrying everything. The business becomes stronger than any single person.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes -->
+    <section id="outcomes" class="max-w-screen-xl mx-auto px-8 py-20">
+        <div class="max-w-2xl mb-10">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">WHAT CHANGES</div>
+            <h2 class="section-header tracking-tighter">What becomes possible when we work together.</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-x-8 gap-y-8">
+            <div class="outcome-item flex gap-5">
+                <div class="mt-1"><i class="fa-solid fa-check-circle text-emerald-600 text-xl"></i></div>
                 <div>
-                    <div class="font-semibold text-lg">Sustainable Systems</div>
-                    <p class="mt-2 text-slate-600 text-sm">We build systems and leadership capacity so growth doesn’t depend on you working harder.</p>
+                    <h4 class="font-semibold text-lg">Clear priorities and faster decisions</h4>
+                    <p class="text-slate-600 mt-1">Stop feeling pulled in ten directions. Get ruthless clarity on what actually moves the needle.</p>
+                </div>
+            </div>
+            
+            <div class="outcome-item flex gap-5">
+                <div class="mt-1"><i class="fa-solid fa-check-circle text-emerald-600 text-xl"></i></div>
+                <div>
+                    <h4 class="font-semibold text-lg">Systems that scale without burning you out</h4>
+                    <p class="text-slate-600 mt-1">Build repeatable processes and leadership structures so growth doesn’t require more of your personal energy.</p>
+                </div>
+            </div>
+            
+            <div class="outcome-item flex gap-5">
+                <div class="mt-1"><i class="fa-solid fa-check-circle text-emerald-600 text-xl"></i></div>
+                <div>
+                    <h4 class="font-semibold text-lg">Stronger leadership capacity in the business</h4>
+                    <p class="text-slate-600 mt-1">Develop the people and decision-making frameworks so the business can run — and grow — without you in every room.</p>
+                </div>
+            </div>
+            
+            <div class="outcome-item flex gap-5">
+                <div class="mt-1"><i class="fa-solid fa-check-circle text-emerald-600 text-xl"></i></div>
+                <div>
+                    <h4 class="font-semibold text-lg">Sustainable momentum</h4>
+                    <p class="text-slate-600 mt-1">Create growth that feels intentional and durable instead of reactive and exhausting.</p>
+                </div>
+            </div>
+        </div>
+        
+        <p class="mt-10 text-sm text-slate-500 max-w-md">Most clients work with us for 6–12 months. Some continue on retainer for ongoing partnership.</p>
+    </section>
+
+    <!-- How It Works -->
+    <section class="max-w-screen-xl mx-auto px-8 py-16 bg-white border-y border-slate-100">
+        <div class="max-w-2xl mb-10">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">HOW IT WORKS</div>
+            <h2 class="section-header tracking-tighter">Simple. Focused. Selective.</h2>
+        </div>
+
+        <div class="max-w-3xl space-y-8">
+            <div class="flex gap-6">
+                <div><div class="step-number">01</div></div>
+                <div class="flex-1 pt-1">
+                    <h3 class="font-semibold text-xl">Book a Strategy Call</h3>
+                    <p class="text-slate-600 mt-2">We start with a focused conversation to explore whether we’re a fit.</p>
+                </div>
+            </div>
+            
+            <div class="flex gap-6">
+                <div><div class="step-number">02</div></div>
+                <div class="flex-1 pt-1">
+                    <h3 class="font-semibold text-xl">Discovery &amp; Alignment</h3>
+                    <p class="text-slate-600 mt-2">If we move forward, we go deeper into your business and define the clearest path together.</p>
+                </div>
+            </div>
+            
+            <div class="flex gap-6">
+                <div><div class="step-number">03</div></div>
+                <div class="flex-1 pt-1">
+                    <h3 class="font-semibold text-xl">Engagement</h3>
+                    <p class="text-slate-600 mt-2">We work together with clear milestones, accountability, and hands-on support to build lasting systems and leadership capacity.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section id="process" class="max-w-screen-xl mx-auto px-8 py-20">
-        <h2 class="section-header tracking-tighter">How it works.</h2>
-        <div class="grid md:grid-cols-3 gap-6 mt-10">
-            <div class="border border-slate-200 rounded-3xl p-7">
-                <div class="text-emerald-600 font-mono text-sm mb-4">01</div>
-                <div class="font-semibold text-xl">Book a Strategy Call</div>
-                <p class="mt-3 text-slate-600 text-sm">We start with a focused conversation to explore whether we’re a fit.</p>
+    <!-- FAQ -->
+    <section class="max-w-screen-xl mx-auto px-8 py-20">
+        <div class="max-w-2xl mb-10">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">COMMON QUESTIONS</div>
+            <h2 class="section-header tracking-tighter">Frequently asked questions.</h2>
+        </div>
+
+        <div class="max-w-3xl space-y-6">
+            <div class="border-b border-slate-200 pb-6">
+                <h4 class="font-semibold">Who do you typically work with?</h4>
+                <p class="text-slate-600 mt-2">Ambitious founders and executives running growing businesses who are serious about building scalable systems and leadership capacity with clarity and intention.</p>
             </div>
-            <div class="border border-slate-200 rounded-3xl p-7">
-                <div class="text-emerald-600 font-mono text-sm mb-4">02</div>
-                <div class="font-semibold text-xl">Discovery & Alignment</div>
-                <p class="mt-3 text-slate-600 text-sm">If we move forward, we go deeper into your business and define the right path.</p>
+            
+            <div class="border-b border-slate-200 pb-6">
+                <h4 class="font-semibold">How selective are you?</h4>
+                <p class="text-slate-600 mt-2">Very. We only work with a small number of leaders at a time. I personally review every inquiry.</p>
             </div>
-            <div class="border border-slate-200 rounded-3xl p-7">
-                <div class="text-emerald-600 font-mono text-sm mb-4">03</div>
-                <div class="font-semibold text-xl">Engagement</div>
-                <p class="mt-3 text-slate-600 text-sm">We work together with clear milestones, accountability, and ongoing support.</p>
+            
+            <div class="border-b border-slate-200 pb-6">
+                <h4 class="font-semibold">What does a typical engagement look like?</h4>
+                <p class="text-slate-600 mt-2">Engagements are custom and high-touch. We begin with a Strategy Call, move into deep discovery, then work together on building the systems, strategy, and leadership needed for sustainable growth.</p>
+            </div>
+            
+            <div class="border-b border-slate-200 pb-6">
+                <h4 class="font-semibold">How long do engagements last?</h4>
+                <p class="text-slate-600 mt-2">Most clients work with us for 6 to 12 months. Some continue on a retainer basis after the initial engagement.</p>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold">What makes your approach different?</h4>
+                <p class="text-slate-600 mt-2">We don’t deliver generic playbooks. We work as true partners — combining sharp strategy with hands-on support to build systems that actually work in your business.</p>
             </div>
         </div>
     </section>
 
-    <!-- FAQ SECTION -->
-    <section class="max-w-screen-xl mx-auto px-8 py-20 border-t border-slate-100">
-        <div class="max-w-2xl mx-auto">
-            <div class="text-center mb-10">
-                <div class="text-emerald-600 text-xs tracking-[3px] font-semibold">COMMON QUESTIONS</div>
-                <h2 class="section-header tracking-tighter mt-2">Frequently Asked Questions</h2>
-            </div>
-
-            <div class="space-y-8 text-sm">
-                <div>
-                    <div class="font-semibold">Who do you work with?</div>
-                    <p class="mt-1 text-slate-600">We work with ambitious founders and executives running growing businesses who are serious about building scalable systems and leadership capacity with clarity and intention.</p>
-                </div>
-
-                <div>
-                    <div class="font-semibold">How selective are you?</div>
-                    <p class="mt-1 text-slate-600">Very. We only work with a small number of leaders at a time. This allows us to deliver deep focus and real partnership.</p>
-                </div>
-
-                <div>
-                    <div class="font-semibold">What makes your approach different?</div>
-                    <p class="mt-1 text-slate-600">We don’t deliver generic strategies. We work as true partners to build systems that actually work in your business.</p>
-                </div>
-
-                <div>
-                    <div class="font-semibold">How long do engagements last?</div>
-                    <p class="mt-1 text-slate-600">Most clients work with us for 6 to 12 months. Some continue on a retainer after the initial engagement.</p>
-                </div>
-
-                <div>
-                    <div class="font-semibold">What results can I expect?</div>
-                    <p class="mt-1 text-slate-600">Clients typically experience clearer decision-making, stronger leadership, more predictable growth, and systems that reduce reliance on them personally.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section id="book" class="bg-slate-900 py-16 text-white">
-        <div class="max-w-screen-xl mx-auto px-8 text-center">
-            <h2 class="text-4xl tracking-tighter font-semibold">Book a Strategy Call</h2>
-            <p class="mt-3 text-white/70 max-w-md mx-auto">We only work with a limited number of leaders at a time. If you’re serious about building with clarity and intention, book a Strategy Call below.</p>
-
+    <!-- Final CTA -->
+    <section class="max-w-screen-xl mx-auto px-8 pb-20">
+        <div class="bg-slate-900 rounded-3xl px-10 py-14 text-center text-white">
+            <h2 class="text-4xl tracking-tighter font-semibold">Ready to build with more clarity and control?</h2>
+            <p class="mt-4 max-w-md mx-auto text-slate-300">We only work with a limited number of leaders at a time. If you’re serious about building with intention, let’s talk.</p>
+            
             <div class="mt-8">
                 <a href="https://calendly.com/irelatedigital/reviewal" 
-                   class="inline-flex items-center justify-center gap-x-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-10 h-14 rounded-3xl text-lg shadow-xl transition-all">
-                    Book a Strategy Call
+                   target="_blank"
+                   class="inline-flex items-center justify-center bg-white text-slate-900 hover:bg-slate-100 font-semibold px-10 py-4 rounded-3xl text-lg transition-all active:scale-[0.985]">
+                    Book Your Strategy Call
                 </a>
             </div>
-            <p class="mt-4 text-sm text-white/60">I personally review every request.</p>
+            <p class="mt-4 text-sm text-slate-400">I personally review every request.</p>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-slate-900 text-white/70 text-sm py-10">
-        <div class="max-w-screen-xl mx-auto px-8">
-            <div class="flex flex-col md:flex-row justify-between gap-y-8">
-                <div>
-                    <a href="https://irelatedigital.com">
-                        <img src="logo.PNG" alt="iRelateDigital" class="h-9 w-auto mb-4">
-                    </a>
-                    <p class="text-xs max-w-[260px]">We work selectively with ambitious leaders to build scalable, intentional businesses.</p>
-                </div>
-
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-x-10 text-xs">
-                    <div>
-                        <div class="font-semibold text-white mb-3 tracking-wider">EXPLORE</div>
-                        <div class="space-y-1.5">
-                            <div>Who We Work With</div>
-                            <div>Our Approach</div>
-                            <div>How It Works</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="font-semibold text-white mb-3 tracking-wider">CONNECT</div>
-                        <div class="space-y-1.5">
-                            <a href="https://calendly.com/irelatedigital/reviewal" class="block hover:text-white">Book a Strategy Call</a>
-                            <div>Honolulu, Hawaiʻi</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-10 pt-6 border-t border-white/10 text-xs flex flex-col md:flex-row justify-between gap-y-2">
-                <div>© iRelateDigital. All rights reserved.</div>
-                <div class="flex gap-x-5">
-                    <div>Privacy</div>
-                    <div>Terms</div>
-                </div>
-            </div>
+    <!-- Footer -->
+    <footer class="border-t border-slate-100 py-8">
+        <div class="max-w-screen-xl mx-auto px-8 flex flex-col items-center justify-center gap-y-2 text-center text-sm text-slate-500">
+            <img src="logo.PNG" alt="iRelateDigital" class="h-5 w-auto">
+            <div>Strategic growth consulting for leaders who value depth.</div>
         </div>
     </footer>
 
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

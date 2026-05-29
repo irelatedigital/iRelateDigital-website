@@ -19,7 +19,6 @@
 
     <!-- ==================== CHANGE YOUR CALENDLY LINK HERE ==================== -->
     <script>
-        // 👉 Change only this line with your Calendly link
         const CALENDLY_URL = "https://calendly.com/irelatedigital/reviewal";
     </script>
     <!-- ====================================================================== -->
@@ -38,16 +37,16 @@
                     <a href="#testimonials" class="text-slate-600 hover:text-slate-900">Results</a>
                 </div>
                 <div>
-                    <a href="#" onclick="Calendly.initPopupWidget({url: CALENDLY_URL}); return false;" 
-                       class="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-2xl transition-all">
+                    <button onclick="openCalendly()" 
+                            class="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-2xl transition-all">
                         Book a Strategy Call
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <header class="hero-bg min-h-[100dvh] flex items-center py-12">
         <div class="max-w-screen-xl mx-auto px-8">
             <div class="max-w-3xl">
@@ -67,10 +66,10 @@
                 </p>
 
                 <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                    <a href="#" onclick="Calendly.initPopupWidget({url: CALENDLY_URL}); return false;" 
-                       class="inline-flex items-center justify-center gap-x-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 h-14 rounded-3xl text-base shadow-xl transition-all">
+                    <button onclick="openCalendly()" 
+                            class="inline-flex items-center justify-center gap-x-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 h-14 rounded-3xl text-base shadow-xl transition-all">
                         Book a Strategy Call
-                    </a>
+                    </button>
                     <a href="#who" class="inline-flex items-center justify-center gap-x-3 border border-white/30 hover:bg-white/10 text-white font-semibold px-8 h-14 rounded-3xl text-base transition-all">
                         Learn how I work
                     </a>
@@ -214,7 +213,7 @@
             <p class="mt-3 text-white/70">Book a focused strategy call. Limited spots available.</p>
             
             <div class="mt-8">
-                <button onclick="Calendly.initPopupWidget({url: CALENDLY_URL})" 
+                <button onclick="openCalendly()" 
                         class="inline-flex items-center justify-center gap-x-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-10 h-14 rounded-3xl text-base shadow-xl transition-all">
                     Book a Strategy Call
                 </button>
@@ -229,8 +228,38 @@
         </div>
     </footer>
 
-    <!-- Calendly Script -->
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <!-- Calendly Script + Robust Function -->
+    <script>
+        // Load Calendly script
+        function loadCalendly() {
+            const script = document.createElement('script');
+            script.src = 'https://assets.calendly.com/assets/external/widget.js';
+            script.async = true;
+            document.body.appendChild(script);
+        }
+
+        // Open Calendly safely
+        function openCalendly() {
+            if (typeof Calendly !== 'undefined') {
+                Calendly.initPopupWidget({ url: CALENDLY_URL });
+            } else {
+                // If script not loaded yet, wait and try again
+                setTimeout(() => {
+                    if (typeof Calendly !== 'undefined') {
+                        Calendly.initPopupWidget({ url: CALENDLY_URL });
+                    } else {
+                        // Final fallback - open in new tab
+                        window.open(CALENDLY_URL, '_blank');
+                    }
+                }, 800);
+            }
+        }
+
+        // Load Calendly when page loads
+        window.onload = function() {
+            loadCalendly();
+        };
+    </script>
 
 </body>
 </html>

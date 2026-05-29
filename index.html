@@ -343,26 +343,34 @@
         </div>
     </section>
 
-    <!-- Improved Footer -->
+    <!-- Improved Footer with Facebook Link -->
     <footer class="border-t border-slate-100 py-10 bg-white">
         <div class="max-w-screen-xl mx-auto px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-y-4 text-sm text-slate-500">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-y-6 text-sm text-slate-500">
                 
-                <!-- Logo + Tagline -->
+                <!-- Left: Logo + Tagline -->
                 <div class="flex items-center gap-x-3">
                     <img src="logo.PNG" alt="iRelateDigital" class="h-5 w-auto">
                     <span class="text-slate-600">Strategic growth consulting</span>
                 </div>
 
-                <!-- Subtle positioning -->
-                <div class="text-center md:text-right">
-                    <span class="text-slate-400">Selective • High-touch • Limited capacity</span>
+                <!-- Center: Social Links -->
+                <div class="flex items-center gap-x-5">
+                    <a href="https://www.facebook.com/IRelateDigital" 
+                       target="_blank"
+                       class="text-slate-400 hover:text-slate-600 transition-colors"
+                       aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f text-lg"></i>
+                    </a>
                 </div>
 
-                <!-- Copyright -->
-                <div class="text-slate-400">
-                    © 2026 iRelateDigital
+                <!-- Right: Copyright + Positioning -->
+                <div class="flex flex-col md:flex-row items-center gap-x-4 text-center md:text-right text-xs md:text-sm">
+                    <span class="text-slate-400">Selective • High-touch • Limited capacity</span>
+                    <span class="hidden md:inline text-slate-300">|</span>
+                    <span class="text-slate-400">© 2026 iRelateDigital</span>
                 </div>
+
             </div>
         </div>
     </footer>

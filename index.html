@@ -41,6 +41,14 @@
         .outcome-item, .testimonial-card {
             transition: all 0.3s ease;
         }
+        
+        /* Fix for Safari anchor link crashes */
+        html {
+            scroll-behavior: smooth;
+        }
+        section[id] {
+            scroll-margin-top: 80px;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -179,7 +187,7 @@
         </div>
     </section>
 
-    <!-- Testimonials Section (Strengthened) -->
+    <!-- Testimonials Section -->
     <section id="testimonials" class="max-w-screen-xl mx-auto px-8 py-20 bg-white border-y border-slate-100">
         <div class="max-w-2xl mb-10">
             <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">REAL RESULTS</div>
@@ -188,7 +196,6 @@
 
         <div class="grid md:grid-cols-3 gap-6">
             
-            <!-- Testimonial 1 -->
             <div class="testimonial-card bg-white border border-slate-200 rounded-3xl p-8">
                 <div class="flex gap-1 text-emerald-600 mb-4">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -204,7 +211,6 @@
                 </div>
             </div>
 
-            <!-- Testimonial 2 -->
             <div class="testimonial-card bg-white border border-slate-200 rounded-3xl p-8">
                 <div class="flex gap-1 text-emerald-600 mb-4">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -220,7 +226,6 @@
                 </div>
             </div>
 
-            <!-- Testimonial 3 -->
             <div class="testimonial-card bg-white border border-slate-200 rounded-3xl p-8">
                 <div class="flex gap-1 text-emerald-600 mb-4">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -243,7 +248,7 @@
         </p>
     </section>
 
-    <!-- NEW: Human Element Section -->
+    <!-- Human Element Section -->
     <section class="max-w-screen-xl mx-auto px-8 py-16 bg-white">
         <div class="max-w-3xl">
             <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">OUR PERSPECTIVE</div>

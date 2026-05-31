@@ -19,36 +19,6 @@
         .premium-shadow {
             box-shadow: 0 10px 15px -3px rgb(15 23 42 / 0.05), 0 4px 6px -4px rgb(15 23 42 / 0.05);
         }
-        .pillar-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .pillar-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgb(15 23 42 / 0.1), 0 8px 10px -6px rgb(15 23 42 / 0.1);
-        }
-        .step-number {
-            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
-            color: white;
-            width: 42px;
-            height: 42px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 9999px;
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-        .outcome-item, .testimonial-card {
-            transition: all 0.3s ease;
-        }
-        
-        /* Fix for Safari anchor link crashes */
-        html {
-            scroll-behavior: smooth;
-        }
-        section[id] {
-            scroll-margin-top: 80px;
-        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -187,7 +157,7 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials -->
     <section id="testimonials" class="max-w-screen-xl mx-auto px-8 py-20 bg-white border-y border-slate-100">
         <div class="max-w-2xl mb-10">
             <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">REAL RESULTS</div>
@@ -195,7 +165,6 @@
         </div>
 
         <div class="grid md:grid-cols-3 gap-6">
-            
             <div class="testimonial-card bg-white border border-slate-200 rounded-3xl p-8">
                 <div class="flex gap-1 text-emerald-600 mb-4">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -240,7 +209,6 @@
                     <div class="text-sm text-slate-500">CEO, Nova Studio</div>
                 </div>
             </div>
-
         </div>
 
         <p class="mt-8 text-sm text-slate-500 text-center">
@@ -248,7 +216,7 @@
         </p>
     </section>
 
-    <!-- Human Element Section -->
+    <!-- OUR PERSPECTIVE -->
     <section class="max-w-screen-xl mx-auto px-8 py-16 bg-white">
         <div class="max-w-3xl">
             <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">OUR PERSPECTIVE</div>
@@ -258,6 +226,37 @@
                 <p>Most founders don’t fail because they lack ambition or ideas. They struggle because the systems, decision-making, and leadership capacity inside the business haven’t kept up with its growth.</p>
                 <p>We’ve worked with leaders who were carrying too much of the weight themselves. Over time, this creates pressure, slows down progress, and makes scaling feel heavier instead of lighter.</p>
                 <p>That’s why our focus is on building clarity, strong systems, and real leadership capacity — so the business can grow without requiring more of the founder.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: A Note from Chase O. -->
+    <section class="max-w-screen-xl mx-auto px-8 py-20 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Photo -->
+                <div>
+                    <img src="https://i.imgur.com/placeholder.jpg" alt="Chase O. - Founder of iRelateDigital" 
+                         class="w-full max-w-md mx-auto rounded-3xl shadow-xl object-cover">
+                    <p class="text-center text-xs text-slate-500 mt-3">Chase O., Founder</p>
+                </div>
+
+                <!-- Text -->
+                <div>
+                    <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">A NOTE FROM CHASE O.</div>
+                    <h2 class="text-3xl font-semibold tracking-tighter text-slate-900 mb-6">Why I do this work.</h2>
+                    
+                    <div class="space-y-4 text-slate-600 leading-relaxed">
+                        <p>I started iRelateDigital because I’ve seen what happens when ambitious leaders grow their businesses without the right structure to support that growth.</p>
+                        
+                        <p>Most founders don’t struggle because they lack vision or drive. They struggle because the systems, decision-making, and leadership capacity inside the business haven’t kept pace with its growth.</p>
+                        
+                        <p>I believe growth should create more freedom and clarity — not more weight on your shoulders. That’s why I keep my practice intentionally small. I only work with a limited number of leaders at a time so I can show up fully and partner deeply.</p>
+                        
+                        <p>If you’re an ambitious leader who values depth and building something that lasts, I’d be glad to explore whether we’re a good fit.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

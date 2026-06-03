@@ -3,79 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iRelateDigital | Breathing Room for Financial Advisors</title>
+    <title>iRelateDigital | Advisor Team Systems & Strategic Growth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', system-ui, sans-serif; margin: 0; padding: 0; background: #0f172a; color: #e2e8f0; line-height: 1.6; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        header { background: linear-gradient(135deg, #1e2937, #0f172a); padding: 120px 0 100px; text-align: center; }
-        h1 { font-size: 3.1rem; margin-bottom: 24px; line-height: 1.1; }
-        .subtitle { font-size: 1.35rem; color: #94a3b8; max-width: 720px; margin: 0 auto 40px; }
-        .cta { background: #22d3ee; color: #0f172a; padding: 18px 48px; font-size: 1.15rem; font-weight: 600; border-radius: 50px; text-decoration: none; display: inline-block; margin-top: 20px; }
-        section { padding: 90px 0; }
-        .about { background: #1e2937; }
-        .features { background: #0f172a; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
-        .feature { background: #1e2937; padding: 32px; border-radius: 16px; }
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .section-header { font-size: 2.25rem; line-height: 2.5rem; font-weight: 700; color: #0f172a; }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800">
 
-    <header>
-        <div class="container">
-            <h1>Helping Hybrid & Fee-Based Financial Advisors<br>Create Real Breathing Room</h1>
-            <p class="subtitle">I help overwhelmed advisors stop being the bottleneck in their own practice by building clear team support — so they can reclaim their time, reduce stress, and focus on high-value client work while still growing.</p>
-            <a href="#lead-magnet" class="cta">Get Your Free Breathing Room Checklist</a>
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="px-8 py-5 flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="logo.PNG" alt="iRelateDigital Logo" class="h-9 w-auto">
+                </div>
+                <div class="hidden md:flex items-center gap-x-8 text-sm">
+                    <a href="#who" class="text-slate-600 hover:text-slate-900 transition-colors">Who I Work With</a>
+                    <a href="#approach" class="text-slate-600 hover:text-slate-900 transition-colors">How We Work</a>
+                    <a href="#outcomes" class="text-slate-600 hover:text-slate-900 transition-colors">Outcomes</a>
+                    <a href="#testimonials" class="text-slate-600 hover:text-slate-900 transition-colors">Testimonials</a>
+                </div>
+                <div>
+                    <a href="https://calendly.com/irelatedigital/strategy-call" target="_blank"
+                       class="inline-flex items-center px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold rounded-2xl transition-all active:scale-[0.985]">
+                        Book Strategy Call
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="max-w-screen-xl mx-auto px-8 pt-16 pb-20">
+        <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-x-2 bg-white border border-slate-200 rounded-full px-4 py-1.5 mb-6">
+                <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                <span class="text-sm font-medium text-slate-600">Limited engagements available</span>
+            </div>
+            
+            <h1 class="text-6xl md:text-7xl leading-[1.05] tracking-tighter font-semibold text-slate-900">
+                Helping hybrid & fee-based advisors<br>scale strategic work<br>without becoming the bottleneck.
+            </h1>
+            
+            <p class="mt-6 max-w-lg text-xl text-slate-600">
+                I partner with financial advisors who serve business owners and high-net-worth clients to build the team structure, governance, and operating systems needed to deliver consistent strategic advice at scale.
+            </p>
+            
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                <a href="https://calendly.com/irelatedigital/strategy-call" target="_blank"
+                   class="inline-flex justify-center items-center px-8 py-4 bg-slate-900 hover:bg-slate-800 active:bg-black text-white font-semibold rounded-3xl text-lg transition-all">
+                    Book a Strategy Call
+                </a>
+                <a href="#who" class="inline-flex justify-center items-center px-8 py-4 border border-slate-300 hover:bg-white text-slate-700 font-semibold rounded-3xl text-lg transition-all">
+                    Learn more
+                </a>
+            </div>
+            
+            <p class="mt-4 text-sm text-slate-500">Selective • High-touch • Limited capacity</p>
         </div>
     </header>
 
-    <section class="about">
-        <div class="container">
-            <h2 style="text-align:center; font-size:2.4rem; margin-bottom:40px;">Hi, I'm Chase</h2>
-            <p style="font-size:1.25rem; max-width:800px; margin:0 auto 40px; text-align:center;">
-                After experiencing the exhaustion of running my own practice while trying to grow, I became passionate about helping successful advisors stop doing everything themselves.
-            </p>
-            <p style="font-size:1.25rem; max-width:800px; margin:0 auto; text-align:center;">
-                I now work with hybrid & fee-based financial advisors to build custom team structures and delegation systems that create real breathing room — so you can focus on the high-level client work you do best, without sacrificing growth or burning out.
-            </p>
-        </div>
-    </section>
-
-    <section class="features">
-        <div class="container">
-            <h2 style="text-align:center; margin-bottom:60px;">How I Help Advisors</h2>
-            <div class="feature-grid">
-                <div class="feature">
-                    <h3>Team Structure Design</h3>
-                    <p>Build the right support layer with clear roles so you’re no longer the default answer for everything.</p>
+    <!-- The Real Problem -->
+    <section class="max-w-screen-xl mx-auto px-8 py-16 border-t border-slate-100 bg-white">
+        <div class="max-w-3xl">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">THE HIDDEN COST</div>
+            <h2 class="section-header tracking-tighter">Growth without structure eventually breaks the advisor.</h2>
+            
+            <div class="mt-8 grid md:grid-cols-2 gap-8 text-[15px] leading-relaxed text-slate-600">
+                <div>
+                    <p>Many advisors reach a point where they want to take on more high-value clients and deliver deeper strategic work — but everything still depends on them.</p>
                 </div>
-                <div class="feature">
-                    <h3>Delegation Systems</h3>
-                    <p>Create simple processes and decision frameworks so work can be handed off confidently.</p>
-                </div>
-                <div class="feature">
-                    <h3>Implementation Support</h3>
-                    <p>I stay with you through the real work of training and adjusting until the changes actually stick.</p>
+                <div>
+                    <p>Strategic conversations slow down. Consistency suffers. And what used to feel like meaningful growth starts to feel like pressure.</p>
+                    <p class="mt-4">This isn’t a motivation problem. It’s a <span class="font-medium text-slate-800">team structure and operating system</span> problem.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Lead Magnet Section -->
-    <section id="lead-magnet" style="background:#1e2937; text-align:center;">
-        <div class="container">
-            <h2 style="margin-bottom:20px;">Start Simple</h2>
-            <p style="font-size:1.3rem; max-width:700px; margin:0 auto 40px;">
-                Not ready for a full program? Take my free <strong>Breathing Room Checklist</strong> to see how much of a bottleneck you currently are — and what’s possible.
-            </p>
-            <a href="#" class="cta">Get Your Free Checklist</a>
+    <!-- Who I Work With -->
+    <section id="who" class="max-w-screen-xl mx-auto px-8 py-20">
+        <div class="max-w-2xl mb-10">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">WHO I WORK WITH</div>
+            <h2 class="section-header tracking-tighter">Hybrid & fee-based advisors ready to scale with intention.</h2>
+        </div>
+
+        <div class="grid md:grid-cols-5 gap-6">
+            <div class="md:col-span-3 bg-white border border-slate-200 rounded-3xl p-8">
+                <p class="text-lg text-slate-700">I work with hybrid and fee-based financial advisors who serve business owners and high-net-worth clients and want to grow their strategic advisory work without carrying everything themselves.</p>
+                
+                <div class="mt-8 space-y-4">
+                    <div class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-600 mt-1.5"></i><span class="text-slate-700">You want to take on more high-value clients without burning out</span></div>
+                    <div class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-600 mt-1.5"></i><span class="text-slate-700">You’re ready to build a team that can deliver strategic work at a high level</span></div>
+                    <div class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-600 mt-1.5"></i><span class="text-slate-700">You want clear roles, governance, and systems — not just more people</span></div>
+                    <div class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-600 mt-1.5"></i><span class="text-slate-700">You value consistency and leverage over constant heroic effort</span></div>
+                </div>
+            </div>
+            
+            <div class="md:col-span-2 bg-slate-900 text-white rounded-3xl p-8 flex flex-col">
+                <div class="flex-1">
+                    <p class="text-slate-300 text-sm">You’re likely an advisor who wants to:</p>
+                    <ul class="mt-6 space-y-3 text-white">
+                        <li class="flex items-center gap-3"><span class="text-emerald-400">→</span> Build a team that supports strategic advisory work</li>
+                        <li class="flex items-center gap-3"><span class="text-emerald-400">→</span> Create consistent delivery without being in every conversation</li>
+                        <li class="flex items-center gap-3"><span class="text-emerald-400">→</span> Scale with structure instead of just working harder</li>
+                    </ul>
+                </div>
+                <div class="pt-6 border-t border-white/20 text-sm text-slate-400">
+                    I only work with a small number of advisors at a time.
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer style="background:#0f172a; padding:80px 0; text-align:center;">
-        <div class="container">
-            <p style="font-size:1.3rem; margin-bottom:30px;">Ready to stop being the bottleneck?</p>
-            <a href="#contact" class="cta">Book Your Free Discovery Call</a>
-            <p style="margin-top:60px; color:#64748b;">iRelateDigital • Honolulu, Hawaii</p>
+    <!-- Outcomes -->
+    <section id="outcomes" class="max-w-screen-xl mx-auto px-8 py-20">
+        <div class="max-w-2xl mb-10">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">WHAT CHANGES</div>
+            <h2 class="section-header tracking-tighter">What becomes possible when we work together.</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-x-8 gap-y-8">
+            <div class="outcome-item flex gap-5">
+                <div class="mt-1"><i class="fa-solid fa-check-circle text-emerald-600 text-xl"></i></div>
+                <div><h4 class="font-semibold text-lg">Increased capacity for high-value clients</h4><p class="text-slate-600 mt-1">Serve more strategic clients without proportionally increasing your personal workload.</p></div>
+            </div>
+            <div class="outcome-item flex gap-5">
+                <div class="mt-1"><i class="fa-solid fa-check-circle text-emerald-600 text-xl"></i></div>
+                <div><h4 class="font-semibold text-lg">Consistent strategic delivery</h4><p class="text-slate-600 mt-1">Build systems so high-level advice doesn’t depend entirely on you being in the room.</p></div>
+            </div>
+            <div class="outcome-item flex gap-5">
+                <div class="mt-1"><i class="fa-solid fa-check-circle text-emerald-600 text-xl"></i></div>
+                <div><h4 class="font-semibold text-lg">Clear team structure & governance</h4><p class="text-slate-600 mt-1">Define roles, decision rights, and operating rhythms that support strategic work.</p></div>
+            </div>
+            <div class="outcome-item flex gap-5">
+                <div class="mt-1"><i class="fa-solid fa-check-circle text-emerald-600 text-xl"></i></div>
+                <div><h4 class="font-semibold text-lg">Reduced personal bottleneck</h4><p class="text-slate-600 mt-1">Create real leverage so growth doesn’t require more of your time and energy.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="max-w-screen-xl mx-auto px-8 py-20 bg-white border-y border-slate-100">
+        <div class="max-w-2xl mb-10">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">REAL RESULTS</div>
+            <h2 class="section-header tracking-tighter">What leaders say about working with us.</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="testimonial-card bg-white border border-slate-200 rounded-3xl p-8">
+                <div class="flex gap-1 text-emerald-600 mb-4">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-700 leading-relaxed">
+                    “Before working with Chase, I was involved in every strategic conversation. We built clear decision-making frameworks and team structure. For the first time in years, I can actually step back without the quality dropping.”
+                </p>
+                <div class="mt-6">
+                    <div class="font-semibold text-slate-900">David Chen</div>
+                    <div class="text-sm text-slate-500">Founder & CEO, Apex Wealth Partners</div>
+                </div>
+            </div>
+
+            <div class="testimonial-card bg-white border border-slate-200 rounded-3xl p-8">
+                <div class="flex gap-1 text-emerald-600 mb-4">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-700 leading-relaxed">
+                    “Growth had become exhausting because everything still depended on me. The work we did around team structure and operating systems changed how the practice runs. I finally have consistency without being in every meeting.”
+                </p>
+                <div class="mt-6">
+                    <div class="font-semibold text-slate-900">Sarah Patel</div>
+                    <div class="text-sm text-slate-500">Founder, BrightPath Wealth</div>
+                </div>
+            </div>
+
+            <div class="testimonial-card bg-white border border-slate-200 rounded-3xl p-8">
+                <div class="flex gap-1 text-emerald-600 mb-4">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-700 leading-relaxed">
+                    “We had growth, but it always felt fragile. After working together, we have repeatable systems and clearer roles. The biggest shift was reducing my involvement while actually improving how we deliver strategic advice to clients.”
+                </p>
+                <div class="mt-6">
+                    <div class="font-semibold text-slate-900">Michael Torres</div>
+                    <div class="text-sm text-slate-500">CEO, Nova Wealth Group</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- A NOTE FROM CHASE O. (Kept slightly broader / more human) -->
+    <section class="max-w-screen-xl mx-auto px-8 py-20 bg-white border-y border-slate-100">
+        <div class="max-w-3xl mx-auto">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-2">A NOTE FROM CHASE O.</div>
+            <h2 class="text-3xl font-semibold tracking-tighter text-slate-900 mb-6">Why I do this work.</h2>
+            
+            <div class="space-y-4 text-slate-600 leading-relaxed text-[15px]">
+                <p>I started iRelateDigital because I’ve seen what happens when ambitious people grow something meaningful without the right structure to support it. The weight eventually becomes too heavy, even for the most capable leaders.</p>
+                
+                <p>Most people don’t struggle because they lack drive or vision. They struggle because the systems, decision-making, and support around them haven’t kept pace with their growth. Over time, this creates pressure, slows progress, and makes expansion feel heavier instead of lighter.</p>
+                
+                <p>I believe growth should create more freedom and clarity — not more weight on your shoulders. That’s why I keep my practice intentionally small. I only work with a limited number of people at a time so I can show up fully and partner deeply.</p>
+                
+                <p>If you’re someone who values depth and building something that lasts, I’d be glad to explore whether we’re a good fit.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="max-w-screen-xl mx-auto px-8 py-16 bg-white border-y border-slate-100">
+        <div class="max-w-2xl mb-10">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">HOW IT WORKS</div>
+            <h2 class="section-header tracking-tighter">Simple. Focused. Selective.</h2>
+        </div>
+
+        <div class="max-w-3xl space-y-8">
+            <div class="flex gap-6">
+                <div><div class="step-number bg-slate-900 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">01</div></div>
+                <div class="flex-1 pt-1">
+                    <h3 class="font-semibold text-xl">Book a Strategy Call</h3>
+                    <p class="text-slate-600 mt-2">We start with a focused conversation to explore whether we’re a fit.</p>
+                </div>
+            </div>
+            <div class="flex gap-6">
+                <div><div class="step-number bg-slate-900 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">02</div></div>
+                <div class="flex-1 pt-1">
+                    <h3 class="font-semibold text-xl">Discovery & Alignment</h3>
+                    <p class="text-slate-600 mt-2">If we move forward, we go deeper into your practice and define the clearest path together.</p>
+                </div>
+            </div>
+            <div class="flex gap-6">
+                <div><div class="step-number bg-slate-900 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">03</div></div>
+                <div class="flex-1 pt-1">
+                    <h3 class="font-semibold text-xl">Strategic Partnership</h3>
+                    <p class="text-slate-600 mt-2">We work together with clear milestones and hands-on support to build team structure, governance, and operating systems that create real leverage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="max-w-screen-xl mx-auto px-8 py-20">
+        <div class="max-w-2xl mb-10">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-slate-500 mb-3">COMMON QUESTIONS</div>
+            <h2 class="section-header tracking-tighter">Frequently asked questions.</h2>
+        </div>
+
+        <div class="max-w-3xl space-y-6">
+            <div class="border-b border-slate-200 pb-6">
+                <h4 class="font-semibold">Who do you typically work with?</h4>
+                <p class="text-slate-600 mt-2">Hybrid and fee-based financial advisors who serve business owners and high-net-worth clients and want to build more leverage through better team structure and systems.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+                <h4 class="font-semibold">How selective are you?</h4>
+                <p class="text-slate-600 mt-2">Very. I only work with a small number of advisors at a time. Every inquiry is personally reviewed.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+                <h4 class="font-semibold">What does a typical engagement look like?</h4>
+                <p class="text-slate-600 mt-2">Engagements are custom and high-touch. We begin with a Strategy Call, move into discovery, then work together on building the team structure, governance, and operating systems needed for scalable strategic work.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+                <h4 class="font-semibold">How long do engagements last?</h4>
+                <p class="text-slate-600 mt-2">Most advisors work with me for 3 to 5 months on the core engagement. Some choose to continue on a monthly retainer afterward for ongoing support and implementation.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold">What makes your approach different?</h4>
+                <p class="text-slate-600 mt-2">I don’t deliver generic playbooks. I work as a true partner — combining sharp strategy with hands-on support to build team systems that actually work in an advisory practice.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="max-w-screen-xl mx-auto px-8 pb-20">
+        <div class="bg-slate-900 rounded-3xl px-10 py-14 text-center text-white">
+            <h2 class="text-4xl tracking-tighter font-semibold">Ready to build more leverage in your practice?</h2>
+            <p class="mt-4 max-w-md mx-auto text-slate-300">I only work with a limited number of advisors at a time. If you’re serious about scaling strategic work with better structure, let’s talk.</p>
+            
+            <div class="mt-8">
+                <a href="https://calendly.com/irelatedigital/strategy-call" target="_blank"
+                   class="inline-flex items-center justify-center bg-white text-slate-900 hover:bg-slate-100 font-semibold px-10 py-4 rounded-3xl text-lg transition-all active:scale-[0.985]">
+                    Book Your Strategy Call
+                </a>
+            </div>
+            <p class="mt-4 text-sm text-slate-400">Every request is personally reviewed.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="max-w-screen-xl mx-auto px-8 py-10">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-y-6">
+                <div class="flex items-center gap-x-3">
+                    <img src="logo.PNG" alt="iRelateDigital" class="h-6 w-auto">
+                    <div>
+                        <div class="font-semibold text-slate-800">iRelateDigital</div>
+                        <div class="text-xs text-slate-500">Advisor Team Systems & Strategic Growth</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start gap-y-2">
+                    <div class="text-sm text-slate-500">Selective • High-touch • Limited capacity</div>
+                    <a href="https://www.facebook.com/IRelateDigital" target="_blank"
+                       class="inline-flex items-center gap-x-2 px-4 py-1.5 text-sm border border-slate-300 hover:bg-slate-50 text-slate-600 hover:text-slate-800 rounded-2xl transition-all">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span>Follow on Facebook</span>
+                    </a>
+                </div>
+
+                <div class="text-sm text-slate-400 text-center md:text-right">
+                    © 2026 iRelateDigital. All rights reserved.
+                </div>
+            </div>
         </div>
     </footer>
 

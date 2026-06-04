@@ -1,121 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iRelateDigital | Breathing Room for Financial Advisors</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        body { font-family: 'Inter', system_ui, sans-serif; }
-        .hero-bg { background: linear-gradient(135deg, #0f172a, #1e2937); }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iRelateDigital | Practice Freedom for Financial Advisors</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#ffffff;
+color:#1b1b1b;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+header{
+padding:25px 0;
+border-bottom:1px solid #eee;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:1.8rem;
+font-weight:800;
+color:#0a2342;
+}
+
+.btn{
+background:#0a2342;
+color:white;
+padding:14px 28px;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+display:inline-block;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+.hero{
+padding:100px 0;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.hero h1{
+font-size:4rem;
+line-height:1.1;
+margin-bottom:20px;
+color:#0a2342;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-bottom:35px;
+color:#555;
+}
+
+.hero-card{
+background:#f7f9fc;
+padding:40px;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+.hero-card h3{
+margin-bottom:20px;
+font-size:1.4rem;
+color:#0a2342;
+}
+
+.hero-card ul{
+list-style:none;
+}
+
+.hero-card li{
+padding:10px 0;
+border-bottom:1px solid #ddd;
+}
+
+.section{
+padding:90px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:2.8rem;
+color:#0a2342;
+margin-bottom:15px;
+}
+
+.section-title p{
+max-width:700px;
+margin:auto;
+color:#666;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.06);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#0a2342;
+}
+
+.dark-section{
+background:#0a2342;
+color:white;
+}
+
+.dark-section h2{
+color:white;
+}
+
+.process{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.step{
+background:rgba(255,255,255,.08);
+padding:35px;
+border-radius:20px;
+}
+
+.step-number{
+font-size:3rem;
+font-weight:800;
+opacity:.4;
+margin-bottom:15px;
+}
+
+.testimonial{
+max-width:900px;
+margin:auto;
+text-align:center;
+font-size:1.4rem;
+font-weight:500;
+}
+
+.cta{
+text-align:center;
+padding:100px 0;
+}
+
+.cta h2{
+font-size:3rem;
+margin-bottom:20px;
+color:#0a2342;
+}
+
+footer{
+background:#111;
+color:white;
+padding:40px 0;
+text-align:center;
+}
+
+@media(max-width:900px){
+
+.hero-grid,
+.cards,
+.process{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:2.8rem;
+}
+
+}
+
+</style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body>
 
-    <!-- Navbar -->
-    <nav class="bg-white border-b sticky top-0 z-50">
-        <div class="max-w-screen-xl mx-auto px-8 py-5 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="logo.PNG" alt="iRelateDigital" class="h-9">
-                <span class="font-semibold text-xl">iRelateDigital</span>
-            </div>
-            <a href="https://calendly.com/irelatedigital/strategy-call" target="_blank"
-               class="px-6 py-3 bg-slate-900 text-white font-semibold rounded-2xl hover:bg-slate-800 transition">
-                Book Strategy Call
-            </a>
-        </div>
-    </nav>
+<header>
+<div class="container nav">
+<div class="logo">iRelateDigital</div>
+<a href="#book" class="btn">Book a Call</a>
+</div>
+</header>
 
-    <!-- Hero -->
-    <header class="hero-bg text-white py-24">
-        <div class="max-w-screen-xl mx-auto px-8 text-center">
-            <h1 class="text-5xl md:text-6xl font-semibold tracking-tighter leading-tight">
-                Helping Hybrid & Fee-Based Advisors<br>
-                <span class="text-emerald-400">Reclaim Their Time and Freedom</span>
-            </h1>
-            <p class="mt-6 text-xl text-slate-300 max-w-2xl mx-auto">
-                I help overwhelmed advisors stop being the bottleneck in their own practice by building clear team support and delegation systems — so they can reduce stress and focus on high-value client work while still growing.
-            </p>
-            <div class="mt-10">
-                <a href="https://calendly.com/irelatedigital/strategy-call" target="_blank"
-                   class="inline-block bg-emerald-400 hover:bg-emerald-300 text-slate-900 font-semibold px-10 py-4 rounded-3xl text-lg transition">
-                    Book Your Free Discovery Call
-                </a>
-            </div>
-        </div>
-    </header>
+<section class="hero">
+<div class="container hero-grid">
 
-    <!-- About -->
-    <section class="py-20 bg-white">
-        <div class="max-w-screen-xl mx-auto px-8">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-4xl font-semibold tracking-tight">Hi, I'm Chase</h2>
-                <p class="mt-8 text-lg text-slate-600">
-                    After experiencing the exhaustion of running my own practice while trying to grow, I became passionate about helping successful advisors stop doing everything themselves.
-                </p>
-                <p class="mt-6 text-lg text-slate-600">
-                    I now work with hybrid & fee-based financial advisors to build clear team structures and delegation systems that create real breathing room — so they can focus on the high-level client work they do best, without sacrificing growth or burning out.
-                </p>
-            </div>
-        </div>
-    </section>
+<div>
+<h1>Stop Being the Bottleneck in Your Practice.</h1>
 
-    <!-- How I Help -->
-    <section class="py-20 bg-slate-100">
-        <div class="max-w-screen-xl mx-auto px-8">
-            <h2 class="text-4xl font-semibold text-center mb-12">How I Help Advisors</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl">
-                    <h3 class="font-semibold text-xl mb-3">Team Structure Design</h3>
-                    <p class="text-slate-600">Build the right support layer with clear roles so you’re no longer the default answer for everything.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl">
-                    <h3 class="font-semibold text-xl mb-3">Delegation Systems</h3>
-                    <p class="text-slate-600">Create simple processes and decision frameworks so work can be handed off confidently.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl">
-                    <h3 class="font-semibold text-xl mb-3">Implementation Support</h3>
-                    <p class="text-slate-600">I stay with you through the real work of training and adjusting until the changes actually stick.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<p>
+We help hybrid and fee-based financial advisors reclaim 10–20+ hours per week through operational systems, workflow optimization, and scalable business processes.
+</p>
 
-    <!-- Testimonials -->
-    <section class="py-20 bg-white">
-        <div class="max-w-screen-xl mx-auto px-8">
-            <h2 class="text-4xl font-semibold text-center mb-4">What Advisors Say</h2>
-            <p class="text-center text-slate-500 mb-12">* Testimonials are for illustration purposes only and represent typical outcomes. Client privacy is always protected.</p>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-slate-50 p-8 rounded-3xl">
-                    <p class="italic">"Chase helped me finally step back without things falling apart. I got back nearly 12 hours a week."</p>
-                    <div class="mt-6 font-medium">— Michael R., Wealth Advisor</div>
-                </div>
-                <div class="bg-slate-50 p-8 rounded-3xl">
-                    <p class="italic">"The team structure we built changed everything. I no longer feel like I'm carrying the entire practice."</p>
-                    <div class="mt-6 font-medium">— Sarah P., Financial Advisor</div>
-                </div>
-                <div class="bg-slate-50 p-8 rounded-3xl">
-                    <p class="italic">"For the first time in years, I have breathing room. The systems actually work."</p>
-                    <div class="mt-6 font-medium">— David T., Principal Advisor</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<a href="#book" class="btn">Schedule Your Practice Freedom Assessment</a>
+</div>
 
-    <!-- Final CTA -->
-    <section class="py-20 bg-slate-900 text-white text-center">
-        <div class="max-w-2xl mx-auto px-8">
-            <h2 class="text-4xl font-semibold">Ready to stop being the bottleneck?</h2>
-            <p class="mt-6 text-lg text-slate-300">I only work with a limited number of advisors at a time. If you're serious about creating real breathing room, let's talk.</p>
-            <a href="https://calendly.com/irelatedigital/strategy-call" target="_blank"
-               class="mt-10 inline-block bg-emerald-400 hover:bg-emerald-300 text-slate-900 font-semibold px-10 py-4 rounded-3xl text-lg">
-                Book Your Free Discovery Call
-            </a>
-        </div>
-    </section>
+<div class="hero-card">
+<h3>What Advisors Gain</h3>
+
+<ul>
+<li>✓ More Time with Family</li>
+<li>✓ Less Operational Stress</li>
+<li>✓ Better Team Accountability</li>
+<li>✓ Streamlined Client Experience</li>
+<li>✓ Increased Capacity for Growth</li>
+<li>✓ A Practice That Doesn't Depend on You</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<h2>The Problem</h2>
+
+<p>
+You've built a successful advisory practice, but growth has created complexity. You're spending too much time managing operations, solving team issues, and handling tasks that should already be systemized.
+</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Operational Overload</h3>
+<p>
+Constant interruptions, repetitive tasks, and inefficient workflows consume valuable hours every week.
+</p>
+</div>
+
+<div class="card">
+<h3>Limited Capacity</h3>
+<p>
+Your growth potential is constrained because the business relies heavily on your involvement.
+</p>
+</div>
+
+<div class="card">
+<h3>Team Bottlenecks</h3>
+<p>
+Delegation breaks down when processes aren't clearly documented and accountability isn't defined.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="section dark-section">
+
+<div class="container">
+
+<div class="section-title">
+<h2>How We Help</h2>
+<p>
+We build the systems and operational infrastructure that create freedom, consistency, and scalable growth.
+</p>
+</div>
+
+<div class="process">
+
+<div class="step">
+<div class="step-number">01</div>
+<h3>Assess</h3>
+<p>
+Identify where time is being lost, uncover bottlenecks, and prioritize the highest-impact opportunities.
+</p>
+</div>
+
+<div class="step">
+<div class="step-number">02</div>
+<h3>Implement</h3>
+<p>
+Optimize workflows, document processes, improve delegation, and automate repetitive tasks.
+</p>
+</div>
+
+<div class="step">
+<div class="step-number">03</div>
+<h3>Scale</h3>
+<p>
+Create a business that can grow without requiring more of your time and attention.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Our Services</h2>
+<p>
+Designed specifically for independent advisors seeking operational leverage.
+</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Practice Freedom Assessment</h3>
+<p>
+A deep operational review to uncover inefficiencies, bottlenecks, and opportunities to reclaim time.
+</p>
+</div>
+
+<div class="card">
+<h3>Systems Implementation</h3>
+<p>
+Workflow optimization, SOP development, CRM enhancement, automation, and accountability systems.
+</p>
+</div>
+
+<div class="card">
+<h3>Strategic Operations Partnership</h3>
+<p>
+Ongoing guidance and optimization designed to support long-term growth and scalability.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="testimonial">
+"The goal isn't to work harder. It's to build a practice that delivers exceptional client experiences without demanding every hour of your day."
+</div>
+
+</div>
+
+</section>
+
+<section class="cta" id="book">
+
+<div class="container">
+
+<h2>Ready to Reclaim Your Time?</h2>
+
+<p style="max-width:700px;margin:0 auto 40px;color:#555;">
+Schedule a Practice Freedom Assessment and discover what's preventing your business from operating at its full potential.
+</p>
+
+<a href="https://calendly.com/YOUR-LINK" class="btn">
+Book Your Call
+</a>
+
+</div>
+
+</section>
+
+<footer>
+<div class="container">
+<p>© 2026 iRelateDigital. All Rights Reserved.</p>
+</div>
+</footer>
 
 </body>
 </html>

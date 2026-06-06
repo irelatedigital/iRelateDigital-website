@@ -3,276 +3,239 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>iRelateDigital | Helping Financial Advisors Reclaim Their Time</title>
+<title>iRelate Digital | Helping Local Service Businesses Dominate Their Market</title>
+<meta name="description" content="iRelate Digital helps service-based businesses dominate their local market through Local SEO, high-converting websites, automation, and digital marketing strategies.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-background:#ffffff;
-color:#1f2937;
-line-height:1.7;
+    font-family:'Inter',sans-serif;
+    color:#1a1a1a;
+    line-height:1.6;
 }
 
 .container{
-width:90%;
-max-width:1200px;
-margin:auto;
+    width:90%;
+    max-width:1200px;
+    margin:auto;
 }
 
 header{
-padding:24px 0;
-border-bottom:1px solid #e5e7eb;
-background:#fff;
-position:sticky;
-top:0;
-z-index:100;
+    background:#fff;
+    padding:20px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
 }
 
-.nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .logo{
-font-size:1.8rem;
-font-weight:800;
-color:#0f172a;
+    font-size:1.8rem;
+    font-weight:800;
+    color:#0d9488;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
 }
 
 .btn{
-display:inline-block;
-padding:15px 32px;
-background:#0f172a;
-color:#fff;
-text-decoration:none;
-border-radius:50px;
-font-weight:600;
-transition:.3s;
+    display:inline-block;
+    background:#0d9488;
+    color:#fff;
+    padding:14px 28px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
 }
 
 .btn:hover{
-transform:translateY(-2px);
+    background:#0f766e;
 }
 
 .hero{
-padding:110px 0;
-background:linear-gradient(to bottom,#ffffff,#f8fafc);
+    padding:100px 0;
+    background:linear-gradient(to right,#f8fafc,#ecfeff);
 }
 
 .hero-content{
-max-width:800px;
-margin:auto;
-text-align:center;
+    max-width:700px;
 }
 
 .hero h1{
-font-size:4rem;
-line-height:1.1;
-margin-bottom:24px;
-color:#0f172a;
+    font-size:3.5rem;
+    line-height:1.1;
+    margin-bottom:25px;
 }
 
 .hero p{
-font-size:1.25rem;
-color:#4b5563;
-margin-bottom:40px;
+    font-size:1.2rem;
+    margin-bottom:35px;
+    color:#555;
 }
 
 .section{
-padding:100px 0;
+    padding:90px 0;
 }
 
 .section-title{
-text-align:center;
-margin-bottom:60px;
+    text-align:center;
+    margin-bottom:60px;
 }
 
 .section-title h2{
-font-size:2.8rem;
-margin-bottom:15px;
-color:#0f172a;
+    font-size:2.5rem;
+    margin-bottom:15px;
 }
 
 .section-title p{
-max-width:800px;
-margin:auto;
-color:#6b7280;
+    color:#666;
+    max-width:700px;
+    margin:auto;
 }
 
 .grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
 }
 
 .card{
-padding:35px;
-background:#fff;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.06);
+    background:#fff;
+    padding:35px;
+    border-radius:16px;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
 }
 
 .card h3{
-margin-bottom:15px;
-color:#0f172a;
-}
-
-.card p{
-color:#6b7280;
-}
-
-.story-section{
-background:#f8fafc;
-}
-
-.story{
-max-width:900px;
-margin:auto;
-text-align:center;
-}
-
-.story h2{
-font-size:2.8rem;
-margin-bottom:25px;
-color:#0f172a;
-}
-
-.story p{
-font-size:1.15rem;
-color:#4b5563;
-margin-bottom:20px;
+    margin-bottom:15px;
 }
 
 .process{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-margin-top:50px;
+    background:#f8fafc;
 }
 
-.step{
-background:#fff;
-padding:35px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.06);
+.process-step{
+    text-align:center;
 }
 
-.step-number{
-font-size:3rem;
-font-weight:800;
-opacity:.2;
-margin-bottom:15px;
+.process-step h3{
+    margin:15px 0;
 }
 
-.outcomes{
-background:#0f172a;
-color:#fff;
-text-align:center;
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
 }
 
-.outcomes h2{
-font-size:3rem;
-margin-bottom:50px;
-}
-
-.outcome-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-}
-
-.outcome{
-padding:30px;
-background:rgba(255,255,255,.08);
-border-radius:16px;
-}
-
-.outcome h3{
-font-size:1.3rem;
+.about img{
+    width:100%;
+    border-radius:16px;
 }
 
 .cta{
-padding:120px 0;
-text-align:center;
+    background:#0d9488;
+    color:white;
+    text-align:center;
+    padding:100px 20px;
 }
 
 .cta h2{
-font-size:3rem;
-margin-bottom:20px;
-color:#0f172a;
+    font-size:2.8rem;
+    margin-bottom:20px;
 }
 
 .cta p{
-max-width:700px;
-margin:0 auto 35px;
-color:#6b7280;
-font-size:1.1rem;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:35px;
+}
+
+.cta .btn{
+    background:white;
+    color:#0d9488;
 }
 
 footer{
-background:#111827;
-color:#fff;
-text-align:center;
-padding:40px 0;
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
 }
 
-@media(max-width:900px){
+@media(max-width:768px){
 
 .hero h1{
-font-size:2.8rem;
+    font-size:2.5rem;
 }
 
-.grid,
-.process,
-.outcome-grid{
-grid-template-columns:1fr;
+.about{
+    grid-template-columns:1fr;
+}
+
+.nav-links{
+    display:none;
 }
 
 }
-
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="container nav">
-<div class="logo">iRelateDigital</div>
-<a href="#book" class="btn">Schedule a Call</a>
+<div class="container">
+<nav>
+<div class="logo">iRelate Digital</div>
+
+<div class="nav-links">
+<a href="#services">Services</a>
+<a href="#process">Process</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+
+<a href="https://calendly.com" class="btn">Book Strategy Call</a>
+</nav>
 </div>
 </header>
 
 <section class="hero">
 <div class="container">
-
 <div class="hero-content">
 
-<h1>Your Practice Should Support Your Life — Not Consume It.</h1>
+<h1>Dominate Your Local Service Area.</h1>
 
 <p>
-Growing a successful advisory business is rewarding, but it can also be exhausting.
-If you're overwhelmed by operations, team management, and the constant demands of running your practice, you're not alone.
-
-iRelateDigital helps financial advisors navigate change with confidence, creating systems and structure that lead to more family time, more focus on ideal clients, and significantly less stress.
+We help service-based businesses generate more leads, rank higher in local search results, streamline operations, and become the obvious choice in their community.
 </p>
 
-<a href="#book" class="btn">Book Your Practice Freedom Assessment</a>
+<a href="#contact" class="btn">Get Your Free Growth Assessment</a>
 
 </div>
-
 </div>
 </section>
 
@@ -281,33 +244,39 @@ iRelateDigital helps financial advisors navigate change with confidence, creatin
 <div class="container">
 
 <div class="section-title">
-<h2>Does This Sound Familiar?</h2>
-
+<h2>Growth Systems Built for Local Service Businesses</h2>
 <p>
-Many successful advisors reach a point where growth starts creating more complexity than freedom.
+Whether you're a contractor, electrician, plumber, landscaper, cleaning company, HVAC provider, or other service professional, we help you attract more customers and grow with confidence.
 </p>
 </div>
 
 <div class="grid">
 
 <div class="card">
-<h3>Your Business Depends on You</h3>
+<h3>Local SEO</h3>
 <p>
-Every decision, client issue, and operational challenge seems to land on your desk.
+Increase visibility in Google Search and Maps so local customers find you before they find your competitors.
 </p>
 </div>
 
 <div class="card">
-<h3>You Never Feel Caught Up</h3>
+<h3>High-Converting Websites</h3>
 <p>
-There are always more emails, more meetings, and more fires to put out.
+Transform your website into a lead-generating machine that turns visitors into booked appointments.
 </p>
 </div>
 
 <div class="card">
-<h3>Growth Feels Heavy</h3>
+<h3>Marketing Automation</h3>
 <p>
-You want to grow, but you're worried growth will only create more stress and complexity.
+Automate follow-ups, lead nurturing, appointment reminders, and customer communication.
+</p>
+</div>
+
+<div class="card">
+<h3>Reputation Management</h3>
+<p>
+Build trust, generate more reviews, and establish authority in your local market.
 </p>
 </div>
 
@@ -316,140 +285,105 @@ You want to grow, but you're worried growth will only create more stress and com
 </div>
 </section>
 
-<section class="section story-section">
-
-<div class="container">
-
-<div class="story">
-
-<h2>Change Can Feel Uncomfortable.</h2>
-
-<p>
-You've worked hard to build your business.
-You care deeply about your clients, your team, and your reputation.
-</p>
-
-<p>
-Many advisors know they need better systems, improved workflows, or stronger operational support, but taking that first step can feel overwhelming.
-</p>
-
-<p>
-That's exactly why I do this work.
-</p>
-
-<p>
-My role isn't to tell you everything you're doing wrong.
-My role is to understand where you are today, where you want to go, and guide you through the changes necessary to get there.
-</p>
-
-<p>
-Together, we'll create a path toward a practice that gives you more freedom, more confidence, and more control over your future.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
+<section class="section process" id="process">
 
 <div class="container">
 
 <div class="section-title">
-<h2>How We Help</h2>
-
+<h2>Our Process</h2>
 <p>
-A proven process designed to help advisors reclaim time, reduce stress, and build scalable operations.
-</p>
-
-</div>
-
-<div class="process">
-
-<div class="step">
-<div class="step-number">01</div>
-<h3>Assess</h3>
-<p>
-Identify where your time is being lost and uncover the bottlenecks limiting your growth.
+A proven framework for helping local businesses become the go-to provider in their market.
 </p>
 </div>
 
-<div class="step">
-<div class="step-number">02</div>
-<h3>Implement</h3>
+<div class="grid">
+
+<div class="process-step">
+<h3>1. Analyze</h3>
 <p>
-Build systems, workflows, and accountability structures that reduce operational friction.
+Identify opportunities, gaps, and competitive advantages in your local market.
 </p>
 </div>
 
-<div class="step">
-<div class="step-number">03</div>
-<h3>Scale</h3>
+<div class="process-step">
+<h3>2. Optimize</h3>
 <p>
-Create a practice that can grow without demanding more of your time and energy.
+Improve your website, online presence, and lead generation systems.
+</p>
+</div>
+
+<div class="process-step">
+<h3>3. Automate</h3>
+<p>
+Implement systems that save time and improve customer experience.
+</p>
+</div>
+
+<div class="process-step">
+<h3>4. Scale</h3>
+<p>
+Generate consistent leads and build sustainable growth.
 </p>
 </div>
 
 </div>
 
 </div>
-
 </section>
 
-<section class="section outcomes">
+<section class="section" id="about">
 
 <div class="container">
 
-<h2>What Success Looks Like</h2>
+<div class="about">
 
-<div class="outcome-grid">
+<div>
+<h2>Why iRelate Digital?</h2>
 
-<div class="outcome">
-<h3>More Family Time</h3>
-</div>
-
-<div class="outcome">
-<h3>More Focus on Ideal Clients</h3>
-</div>
-
-<div class="outcome">
-<h3>Less Operational Stress</h3>
-</div>
-
-<div class="outcome">
-<h3>More Freedom & Capacity</h3>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="cta" id="book">
-
-<div class="container">
-
-<h2>Let's Talk About What's Possible.</h2>
-
-<p>
-Schedule a complimentary Practice Freedom Assessment and discover what may be preventing your business from delivering the freedom you've worked so hard to create.
+<p style="margin-top:20px;">
+Technology and marketing should help your business grow—not create more work.
 </p>
 
-<a href="https://calendly.com/irelatedigital/freedom-assessment" class="btn">
-Schedule Your Assessment
+<p style="margin-top:20px;">
+At iRelate Digital, we help service-based businesses simplify their operations, strengthen their online presence, and generate more qualified leads through strategic digital solutions.
+</p>
+
+<p style="margin-top:20px;">
+Our goal is simple: help you become the first company customers think of when they need your services.
+</p>
+
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?w=1200" alt="Business Growth">
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="cta" id="contact">
+
+<h2>Ready to Become the Go-To Business in Your Market?</h2>
+
+<p>
+Schedule a free strategy session and discover how to increase visibility, generate more leads, and grow your business with confidence.
+</p>
+
+<a href="https://calendly.com" class="btn">
+Book Your Free Strategy Session
 </a>
-
-</div>
 
 </section>
 
 <footer>
 
-<div class="container">
-<p>© 2026 iRelateDigital | Helping Advisors Build Businesses That Support Their Lives</p>
-</div>
+<p><strong>iRelate Digital</strong></p>
+<p>Helping Service-Based Businesses Dominate Their Local Market.</p>
+<p style="margin-top:10px;">
+© 2026 iRelate Digital. All Rights Reserved.
+</p>
 
 </footer>
 

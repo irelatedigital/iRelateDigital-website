@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>iRelate Digital | Local Growth Systems</title>
-<meta name="description" content="iRelate Digital helps local service businesses grow with Local SEO, websites, automation, and marketing systems.">
+<meta name="description" content="We help local service businesses generate more leads, rank higher on Google, and grow with automation.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -20,9 +20,9 @@ body{
     font-family:'Inter',sans-serif;
     color:#1a1a1a;
     line-height:1.6;
+    background:#fff;
 }
 
-/* CONTAINER */
 .container{
     width:90%;
     max-width:1200px;
@@ -46,20 +46,12 @@ nav{
     min-height:70px;
 }
 
-/* LOGO */
-.logo{
-    display:flex;
-    align-items:center;
-    text-decoration:none;
-}
-
 .logo img{
-    height:50px;
+    height:48px;
     width:auto;
-    display:block;
 }
 
-/* NAV LINKS */
+/* NAV */
 .nav-links{
     display:flex;
     gap:25px;
@@ -69,42 +61,22 @@ nav{
     text-decoration:none;
     color:#333;
     font-weight:500;
-    transition:0.3s;
+    transition:0.2s;
 }
 
 .nav-links a:hover{
     color:#0d9488;
 }
 
-/* HEADER ACTIONS */
-.header-actions{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-/* FACEBOOK LINK */
-.fb-link{
-    text-decoration:none;
-    font-weight:600;
-    color:#1877F2;
-    transition:0.3s;
-}
-
-.fb-link:hover{
-    opacity:0.7;
-}
-
 /* BUTTON */
 .btn{
-    display:inline-block;
     background:#0d9488;
     color:#fff;
-    padding:14px 28px;
+    padding:12px 22px;
     border-radius:8px;
     text-decoration:none;
     font-weight:600;
-    transition:0.3s;
+    transition:0.2s;
 }
 
 .btn:hover{
@@ -113,26 +85,26 @@ nav{
 
 /* HERO */
 .hero{
-    padding:100px 0;
+    padding:90px 0;
     background:linear-gradient(to right,#f8fafc,#ecfeff);
 }
 
 .hero h1{
-    font-size:3.2rem;
+    font-size:3rem;
     line-height:1.1;
-    margin-bottom:20px;
+    margin-bottom:15px;
 }
 
 .hero p{
     font-size:1.1rem;
     color:#555;
-    margin-bottom:30px;
     max-width:700px;
+    margin-bottom:25px;
 }
 
 /* SECTIONS */
 .section{
-    padding:90px 0;
+    padding:80px 0;
 }
 
 .section-title{
@@ -141,39 +113,29 @@ nav{
 }
 
 .section-title h2{
-    font-size:2.4rem;
+    font-size:2.2rem;
     margin-bottom:10px;
 }
 
 .section-title p{
+    color:#666;
     max-width:700px;
     margin:auto;
-    color:#666;
 }
 
 /* GRID */
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:25px;
+    gap:22px;
 }
 
-/* CARDS */
+/* CARD */
 .card{
     background:#fff;
-    padding:30px;
-    border-radius:16px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.05);
-}
-
-/* PROCESS */
-.process{
-    background:#f8fafc;
-    text-align:center;
-}
-
-.process-step h3{
-    margin:10px 0;
+    padding:28px;
+    border-radius:14px;
+    box-shadow:0 4px 18px rgba(0,0,0,0.06);
 }
 
 /* ABOUT */
@@ -186,7 +148,7 @@ nav{
 
 .about img{
     width:100%;
-    border-radius:16px;
+    border-radius:14px;
 }
 
 /* CTA */
@@ -194,12 +156,12 @@ nav{
     background:#0d9488;
     color:#fff;
     text-align:center;
-    padding:90px 20px;
+    padding:80px 20px;
 }
 
 .cta h2{
-    font-size:2.5rem;
-    margin-bottom:20px;
+    font-size:2.4rem;
+    margin-bottom:15px;
 }
 
 .cta .btn{
@@ -209,17 +171,44 @@ nav{
 
 /* FOOTER */
 footer{
-    background:#111827;
+    background:#0f172a;
     color:#fff;
     text-align:center;
-    padding:40px 20px;
+    padding:35px 20px;
+}
+
+/* FACEBOOK ICON */
+.socials{
+    margin-bottom:15px;
+}
+
+.socials a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    height:42px;
+    background:#1877F2;
+    border-radius:10px;
+    text-decoration:none;
+    transition:0.2s;
+}
+
+.socials a:hover{
+    transform:translateY(-2px);
+}
+
+.socials svg{
+    width:20px;
+    height:20px;
+    fill:#fff;
 }
 
 /* MOBILE */
 @media(max-width:768px){
 
 .hero h1{
-    font-size:2.3rem;
+    font-size:2.2rem;
 }
 
 .about{
@@ -230,17 +219,6 @@ footer{
     display:none;
 }
 
-.logo img{
-    height:42px;
-}
-
-.header-actions{
-    gap:10px;
-}
-
-.fb-link{
-    font-size:0.9rem;
-}
 }
 </style>
 </head>
@@ -252,12 +230,10 @@ footer{
 <div class="container">
 <nav>
 
-<!-- LOGO -->
 <a href="/" class="logo">
     <img src="logo.PNG" alt="iRelate Digital Logo">
 </a>
 
-<!-- NAV -->
 <div class="nav-links">
     <a href="#services">Services</a>
     <a href="#process">Process</a>
@@ -265,16 +241,7 @@ footer{
     <a href="#contact">Contact</a>
 </div>
 
-<!-- ACTIONS -->
-<div class="header-actions">
-    <a href="https://facebook.com/YOURPAGE" target="_blank" class="fb-link">
-        Facebook
-    </a>
-
-    <a href="https://calendly.com" class="btn">
-        Book Call
-    </a>
-</div>
+<a href="https://calendly.com" class="btn">Book Call</a>
 
 </nav>
 </div>
@@ -283,9 +250,9 @@ footer{
 <!-- HERO -->
 <section class="hero">
 <div class="container">
-    <h1>Dominate Your Local Market.</h1>
+    <h1>Dominate Your Local Market</h1>
     <p>
-        We help service businesses generate more leads, rank higher on Google, and automate their growth systems.
+        We help service businesses generate more leads, rank higher on Google, and automate their growth.
     </p>
     <a href="#contact" class="btn">Get Free Growth Plan</a>
 </div>
@@ -296,30 +263,30 @@ footer{
 <div class="container">
 
 <div class="section-title">
-    <h2>What We Do</h2>
-    <p>We build systems that help local service businesses grow consistently.</p>
+<h2>What We Do</h2>
+<p>Systems that bring you consistent local customers.</p>
 </div>
 
 <div class="grid">
 
 <div class="card">
 <h3>Local SEO</h3>
-<p>Rank higher on Google Maps and get more local customers.</p>
+<p>Rank higher in Google Maps and search results.</p>
 </div>
 
 <div class="card">
 <h3>Web Design</h3>
-<p>High-converting websites built to generate leads.</p>
+<p>High-converting websites that generate leads.</p>
 </div>
 
 <div class="card">
 <h3>Automation</h3>
-<p>Follow-ups, booking, and lead management on autopilot.</p>
+<p>Follow-ups and booking systems on autopilot.</p>
 </div>
 
 <div class="card">
 <h3>Reputation</h3>
-<p>Get more reviews and build trust in your market.</p>
+<p>Get more reviews and build trust fast.</p>
 </div>
 
 </div>
@@ -327,7 +294,7 @@ footer{
 </section>
 
 <!-- PROCESS -->
-<section class="section process" id="process">
+<section class="section" id="process">
 <div class="container">
 
 <div class="section-title">
@@ -338,23 +305,23 @@ footer{
 <div class="grid">
 
 <div class="card">
-<h3>1. Analyze</h3>
-<p>We identify gaps in your current marketing.</p>
+<h3>Analyze</h3>
+<p>Find gaps in your online presence.</p>
 </div>
 
 <div class="card">
-<h3>2. Build</h3>
-<p>We create systems that generate leads.</p>
+<h3>Build</h3>
+<p>Create lead generation systems.</p>
 </div>
 
 <div class="card">
-<h3>3. Optimize</h3>
-<p>We improve performance over time.</p>
+<h3>Optimize</h3>
+<p>Improve conversions and traffic.</p>
 </div>
 
 <div class="card">
-<h3>4. Scale</h3>
-<p>We help you grow consistently.</p>
+<h3>Scale</h3>
+<p>Grow your business consistently.</p>
 </div>
 
 </div>
@@ -370,7 +337,7 @@ footer{
 <div>
 <h2>Why iRelate Digital?</h2>
 <p style="margin-top:15px;">
-We help local businesses stop relying on word-of-mouth and start building predictable lead systems.
+We help local businesses stop relying on referrals and start generating predictable leads.
 </p>
 <p style="margin-top:15px;">
 Our goal is simple: make you the #1 choice in your area.
@@ -378,7 +345,7 @@ Our goal is simple: make you the #1 choice in your area.
 </div>
 
 <div>
-<img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?w=1200" alt="Growth">
+<img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?w=1200" alt="Business Growth">
 </div>
 
 </div>
@@ -390,7 +357,7 @@ Our goal is simple: make you the #1 choice in your area.
 <div class="container">
 
 <h2>Ready to Grow Your Business?</h2>
-<p>Book a free strategy call and we’ll show you exactly how to get more leads.</p>
+<p>Book a free strategy call and we’ll show you how to get more leads.</p>
 
 <a href="https://calendly.com" class="btn">Book Strategy Call</a>
 
@@ -399,12 +366,16 @@ Our goal is simple: make you the #1 choice in your area.
 
 <!-- FOOTER -->
 <footer>
-
-<img src="logo.PNG" alt="iRelate Digital" style="max-width:260px;width:100%;margin-bottom:15px;">
+<div class="socials">
+    <a href="https://facebook.com/YOURPAGE" target="_blank">
+        <svg viewBox="0 0 320 512">
+            <path d="M279.14 288l14.22-92.66h-88.91V127.88c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+        </svg>
+    </a>
+</div>
 
 <p>Helping Service-Based Businesses Dominate Their Local Market.</p>
-<p style="margin-top:10px;">© 2026 iRelate Digital</p>
-
+<p style="margin-top:8px;">© 2026 iRelate Digital</p>
 </footer>
 
 </body>

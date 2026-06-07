@@ -29,7 +29,7 @@ body{
 
 header{
     background:#fff;
-    padding:20px 0;
+    padding:12px 0;
     position:sticky;
     top:0;
     z-index:1000;
@@ -40,13 +40,22 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    min-height:70px;
 }
 
 .logo{
-    font-size:1.8rem;
-    font-weight:800;
-    color:#0d9488;
+    .logo{
+    display:flex;
+    align-items:center;
+    text-decoration:none;
 }
+
+.logo img{
+    height:50px;
+    width:auto;
+    display:block;
+}
+
 
 .nav-links{
     display:flex;
@@ -209,8 +218,9 @@ footer{
 <header>
 <div class="container">
 <nav>
-<div class="logo">iRelate Digital</div>
-
+<a href="/" class="logo">
+    <img src="logo.PNG" alt="iRelate Digital Logo">
+</a>
 <div class="nav-links">
 <a href="#services">Services</a>
 <a href="#process">Process</a>
@@ -371,9 +381,13 @@ Our goal is simple: help you become the first company customers think of when th
 Schedule a free strategy session and discover how to increase visibility, generate more leads, and grow your business with confidence.
 </p>
 
-<a href="https://calendly.com" class="btn">
-Book Your Free Strategy Session
-</a>
+<div class="header-actions">
+    <a href="https://facebook.com/irelatedigital" target="_blank" class="fb-link">
+        Facebook
+    </a>
+
+    <a href="https://calendly.com" class="btn">Book Strategy Call</a>
+</div>
 
 </section>
 

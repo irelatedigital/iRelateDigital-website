@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>iRelate Digital | Helping Local Service Businesses Dominate Their Market</title>
-<meta name="description" content="iRelate Digital helps service-based businesses dominate their local market through Local SEO, high-converting websites, automation, and digital marketing strategies.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>iRelate Digital | Local Growth Systems</title>
+<meta name="description" content="iRelate Digital helps local service businesses grow with Local SEO, websites, automation, and marketing systems.">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -21,19 +22,21 @@ body{
     line-height:1.6;
 }
 
+/* CONTAINER */
 .container{
     width:90%;
     max-width:1200px;
     margin:auto;
 }
 
+/* HEADER */
 header{
     background:#fff;
     padding:12px 0;
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 2px 10px rgba(0,0,0,.05);
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
 nav{
@@ -43,8 +46,8 @@ nav{
     min-height:70px;
 }
 
+/* LOGO */
 .logo{
-    .logo{
     display:flex;
     align-items:center;
     text-decoration:none;
@@ -56,7 +59,7 @@ nav{
     display:block;
 }
 
-
+/* NAV LINKS */
 .nav-links{
     display:flex;
     gap:25px;
@@ -66,8 +69,33 @@ nav{
     text-decoration:none;
     color:#333;
     font-weight:500;
+    transition:0.3s;
 }
 
+.nav-links a:hover{
+    color:#0d9488;
+}
+
+/* HEADER ACTIONS */
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+/* FACEBOOK LINK */
+.fb-link{
+    text-decoration:none;
+    font-weight:600;
+    color:#1877F2;
+    transition:0.3s;
+}
+
+.fb-link:hover{
+    opacity:0.7;
+}
+
+/* BUTTON */
 .btn{
     display:inline-block;
     background:#0d9488;
@@ -76,87 +104,83 @@ nav{
     border-radius:8px;
     text-decoration:none;
     font-weight:600;
-    transition:.3s;
+    transition:0.3s;
 }
 
 .btn:hover{
     background:#0f766e;
 }
 
+/* HERO */
 .hero{
     padding:100px 0;
     background:linear-gradient(to right,#f8fafc,#ecfeff);
 }
 
-.hero-content{
-    max-width:700px;
-}
-
 .hero h1{
-    font-size:3.5rem;
+    font-size:3.2rem;
     line-height:1.1;
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
 .hero p{
-    font-size:1.2rem;
-    margin-bottom:35px;
+    font-size:1.1rem;
     color:#555;
+    margin-bottom:30px;
+    max-width:700px;
 }
 
+/* SECTIONS */
 .section{
     padding:90px 0;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:60px;
+    margin-bottom:50px;
 }
 
 .section-title h2{
-    font-size:2.5rem;
-    margin-bottom:15px;
+    font-size:2.4rem;
+    margin-bottom:10px;
 }
 
 .section-title p{
-    color:#666;
     max-width:700px;
     margin:auto;
+    color:#666;
 }
 
+/* GRID */
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
 }
 
+/* CARDS */
 .card{
     background:#fff;
-    padding:35px;
+    padding:30px;
     border-radius:16px;
-    box-shadow:0 5px 20px rgba(0,0,0,.05);
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
-.card h3{
-    margin-bottom:15px;
-}
-
+/* PROCESS */
 .process{
     background:#f8fafc;
-}
-
-.process-step{
     text-align:center;
 }
 
 .process-step h3{
-    margin:15px 0;
+    margin:10px 0;
 }
 
+/* ABOUT */
 .about{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:60px;
+    gap:50px;
     align-items:center;
 }
 
@@ -165,40 +189,37 @@ nav{
     border-radius:16px;
 }
 
+/* CTA */
 .cta{
     background:#0d9488;
-    color:white;
+    color:#fff;
     text-align:center;
-    padding:100px 20px;
+    padding:90px 20px;
 }
 
 .cta h2{
-    font-size:2.8rem;
+    font-size:2.5rem;
     margin-bottom:20px;
 }
 
-.cta p{
-    max-width:700px;
-    margin:auto;
-    margin-bottom:35px;
-}
-
 .cta .btn{
-    background:white;
+    background:#fff;
     color:#0d9488;
 }
 
+/* FOOTER */
 footer{
     background:#111827;
-    color:white;
+    color:#fff;
     text-align:center;
     padding:40px 20px;
 }
 
+/* MOBILE */
 @media(max-width:768px){
 
 .hero h1{
-    font-size:2.5rem;
+    font-size:2.3rem;
 }
 
 .about{
@@ -209,195 +230,180 @@ footer{
     display:none;
 }
 
+.logo img{
+    height:42px;
+}
+
+.header-actions{
+    gap:10px;
+}
+
+.fb-link{
+    font-size:0.9rem;
+}
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
 <div class="container">
 <nav>
+
+<!-- LOGO -->
 <a href="/" class="logo">
     <img src="logo.PNG" alt="iRelate Digital Logo">
 </a>
+
+<!-- NAV -->
 <div class="nav-links">
-<a href="#services">Services</a>
-<a href="#process">Process</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
 </div>
 
-<a href="https://calendly.com" class="btn">Book Strategy Call</a>
+<!-- ACTIONS -->
+<div class="header-actions">
+    <a href="https://facebook.com/YOURPAGE" target="_blank" class="fb-link">
+        Facebook
+    </a>
+
+    <a href="https://calendly.com" class="btn">
+        Book Call
+    </a>
+</div>
+
 </nav>
 </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
 <div class="container">
-<div class="hero-content">
-
-<h1>Dominate Your Local Service Area.</h1>
-
-<p>
-We help service-based businesses generate more leads, rank higher in local search results, streamline operations, and become the obvious choice in their community.
-</p>
-
-<a href="#contact" class="btn">Get Your Free Growth Assessment</a>
-
-</div>
+    <h1>Dominate Your Local Market.</h1>
+    <p>
+        We help service businesses generate more leads, rank higher on Google, and automate their growth systems.
+    </p>
+    <a href="#contact" class="btn">Get Free Growth Plan</a>
 </div>
 </section>
 
-<section class="section">
-
+<!-- SERVICES -->
+<section class="section" id="services">
 <div class="container">
 
 <div class="section-title">
-<h2>Growth Systems Built for Local Service Businesses</h2>
-<p>
-Whether you're a contractor, electrician, plumber, landscaper, cleaning company, HVAC provider, or other service professional, we help you attract more customers and grow with confidence.
-</p>
+    <h2>What We Do</h2>
+    <p>We build systems that help local service businesses grow consistently.</p>
 </div>
 
 <div class="grid">
 
 <div class="card">
 <h3>Local SEO</h3>
-<p>
-Increase visibility in Google Search and Maps so local customers find you before they find your competitors.
-</p>
+<p>Rank higher on Google Maps and get more local customers.</p>
 </div>
 
 <div class="card">
-<h3>High-Converting Websites</h3>
-<p>
-Transform your website into a lead-generating machine that turns visitors into booked appointments.
-</p>
+<h3>Web Design</h3>
+<p>High-converting websites built to generate leads.</p>
 </div>
 
 <div class="card">
-<h3>Marketing Automation</h3>
-<p>
-Automate follow-ups, lead nurturing, appointment reminders, and customer communication.
-</p>
+<h3>Automation</h3>
+<p>Follow-ups, booking, and lead management on autopilot.</p>
 </div>
 
 <div class="card">
-<h3>Reputation Management</h3>
-<p>
-Build trust, generate more reviews, and establish authority in your local market.
-</p>
+<h3>Reputation</h3>
+<p>Get more reviews and build trust in your market.</p>
 </div>
 
 </div>
-
 </div>
 </section>
 
+<!-- PROCESS -->
 <section class="section process" id="process">
-
 <div class="container">
 
 <div class="section-title">
 <h2>Our Process</h2>
-<p>
-A proven framework for helping local businesses become the go-to provider in their market.
-</p>
+<p>Simple system for predictable growth.</p>
 </div>
 
 <div class="grid">
 
-<div class="process-step">
+<div class="card">
 <h3>1. Analyze</h3>
-<p>
-Identify opportunities, gaps, and competitive advantages in your local market.
-</p>
+<p>We identify gaps in your current marketing.</p>
 </div>
 
-<div class="process-step">
-<h3>2. Optimize</h3>
-<p>
-Improve your website, online presence, and lead generation systems.
-</p>
+<div class="card">
+<h3>2. Build</h3>
+<p>We create systems that generate leads.</p>
 </div>
 
-<div class="process-step">
-<h3>3. Automate</h3>
-<p>
-Implement systems that save time and improve customer experience.
-</p>
+<div class="card">
+<h3>3. Optimize</h3>
+<p>We improve performance over time.</p>
 </div>
 
-<div class="process-step">
+<div class="card">
 <h3>4. Scale</h3>
-<p>
-Generate consistent leads and build sustainable growth.
-</p>
+<p>We help you grow consistently.</p>
 </div>
 
 </div>
-
 </div>
 </section>
 
+<!-- ABOUT -->
 <section class="section" id="about">
-
 <div class="container">
 
 <div class="about">
 
 <div>
 <h2>Why iRelate Digital?</h2>
-
-<p style="margin-top:20px;">
-Technology and marketing should help your business grow—not create more work.
+<p style="margin-top:15px;">
+We help local businesses stop relying on word-of-mouth and start building predictable lead systems.
 </p>
-
-<p style="margin-top:20px;">
-At iRelate Digital, we help service-based businesses simplify their operations, strengthen their online presence, and generate more qualified leads through strategic digital solutions.
+<p style="margin-top:15px;">
+Our goal is simple: make you the #1 choice in your area.
 </p>
-
-<p style="margin-top:20px;">
-Our goal is simple: help you become the first company customers think of when they need your services.
-</p>
-
 </div>
 
 <div>
-<img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?w=1200" alt="Business Growth">
+<img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?w=1200" alt="Growth">
 </div>
 
 </div>
-
 </div>
 </section>
 
+<!-- CTA -->
 <section class="cta" id="contact">
+<div class="container">
 
-<h2>Ready to Become the Go-To Business in Your Market?</h2>
+<h2>Ready to Grow Your Business?</h2>
+<p>Book a free strategy call and we’ll show you exactly how to get more leads.</p>
 
-<p>
-Schedule a free strategy session and discover how to increase visibility, generate more leads, and grow your business with confidence.
-</p>
+<a href="https://calendly.com" class="btn">Book Strategy Call</a>
 
-<div class="header-actions">
-    <a href="https://facebook.com/irelatedigital" target="_blank" class="fb-link">
-        Facebook
-    </a>
-
-    <a href="https://calendly.com" class="btn">Book Strategy Call</a>
 </div>
-
 </section>
 
+<!-- FOOTER -->
 <footer>
 
-<p><strong>iRelate Digital</strong></p>
+<img src="logo.PNG" alt="iRelate Digital" style="max-width:260px;width:100%;margin-bottom:15px;">
+
 <p>Helping Service-Based Businesses Dominate Their Local Market.</p>
-<p style="margin-top:10px;">
-© 2026 iRelate Digital. All Rights Reserved.
-</p>
+<p style="margin-top:10px;">© 2026 iRelate Digital</p>
 
 </footer>
 

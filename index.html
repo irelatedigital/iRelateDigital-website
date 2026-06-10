@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>iRelate Digital | Dominate Your Local Market</title>
-<meta name="description" content="Helping local service businesses dominate their service areas with high-converting websites, expert local SEO, smart automation, and results-driven digital marketing.">
+<title>iRelate Digital | Dominate Your Service Area</title>
+<meta name="description" content="Helping local service businesses on Oahu dominate their service areas with practical digital strategies.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
@@ -61,25 +61,11 @@ nav {
     color:#334155;
     font-weight:500;
     transition:0.3s ease;
-    position:relative;
 }
 
 .nav-links a:hover {
     color:#0f766e;
 }
-
-.nav-links a:after {
-    content:'';
-    position:absolute;
-    width:0;
-    height:2px;
-    bottom:-4px;
-    left:0;
-    background:#0f766e;
-    transition:0.3s;
-}
-
-.nav-links a:hover:after { width:100%; }
 
 /* BUTTON */
 .btn {
@@ -96,33 +82,19 @@ nav {
 .btn:hover {
     background:#0d5f5a;
     transform:translateY(-2px);
-    box-shadow:0 6px 20px rgba(15, 118, 110, 0.3);
 }
 
 /* HERO */
 .hero {
     padding:120px 0 100px;
     background:linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
-    position:relative;
-    overflow:hidden;
 }
-
-.hero::before {
-    content:'';
-    position:absolute;
-    top:0; left:0; right:0; bottom:0;
-    background:radial-gradient(circle at 30% 20%, rgba(16,185,129,0.08) 0%, transparent 70%);
-    z-index:0;
-}
-
-.hero .container { position:relative; z-index:1; }
 
 .hero h1 {
-    font-size:3.4rem;
-    line-height:1.05;
+    font-size:3.2rem;
+    line-height:1.1;
     margin-bottom:24px;
     color:#0f172a;
-    font-weight:700;
 }
 
 .hero p {
@@ -146,13 +118,6 @@ nav {
     color:#0f172a;
 }
 
-.section-title p {
-    color:#64748b;
-    max-width:680px;
-    margin:auto;
-    font-size:1.1rem;
-}
-
 /* GRID */
 .grid {
     display:grid;
@@ -160,39 +125,16 @@ nav {
     gap:32px;
 }
 
-/* CARD */
 .card {
     background:#ffffff;
     padding:40px 32px;
     border-radius:20px;
     box-shadow:0 10px 30px rgba(0,0,0,0.07);
-    transition:transform 0.3s ease, box-shadow 0.3s ease;
-    border:1px solid #f1f5f9;
+    transition:transform 0.3s ease;
 }
 
 .card:hover {
     transform:translateY(-8px);
-    box-shadow:0 20px 40px rgba(0,0,0,0.1);
-}
-
-.card h3 {
-    font-size:1.35rem;
-    margin-bottom:16px;
-    color:#0f172a;
-}
-
-/* ABOUT */
-.about {
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:64px;
-    align-items:center;
-}
-
-.about img {
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 20px 40px rgba(0,0,0,0.1);
 }
 
 /* CTA */
@@ -205,12 +147,6 @@ nav {
 
 .cta h2 { font-size:2.6rem; margin-bottom:20px; }
 
-.cta p {
-    font-size:1.2rem;
-    max-width:620px;
-    margin:0 auto 40px;
-}
-
 /* FOOTER */
 footer {
     background:#0f172a;
@@ -218,8 +154,6 @@ footer {
     text-align:center;
     padding:60px 20px 40px;
 }
-
-.socials { margin-bottom:24px; }
 
 .socials a {
     display:inline-flex;
@@ -229,26 +163,15 @@ footer {
     height:52px;
     background:#1877F2;
     border-radius:50%;
-    text-decoration:none;
-    transition:0.3s ease;
     margin:0 8px;
+    color:#fff;
+    font-size:24px;
 }
 
-.socials a:hover {
-    transform:scale(1.1);
-    background:#1666d4;
-}
-
-.socials i { font-size:24px; color:#fff; }
-
-/* MOBILE */
 @media(max-width:768px) {
     .hero { padding:80px 0 70px; }
     .hero h1 { font-size:2.4rem; }
-    .about { grid-template-columns:1fr; gap:40px; }
     .nav-links { display:none; }
-    .section { padding:70px 0; }
-    .card { padding:32px 24px; }
 }
 </style>
 </head>
@@ -270,7 +193,7 @@ footer {
         <a href="#contact">Contact</a>
     </div>
 
-    <a href="https://calendly.com/irelatedigital" class="btn">Book Call</a>
+    <a href="https://calendly.com/irelatedigital/strategy-call" class="btn">Book Call</a>
 </nav>
 </div>
 </header>
@@ -278,8 +201,8 @@ footer {
 <!-- HERO -->
 <section class="hero">
 <div class="container">
-    <h1>Helping Local Service Businesses Dominate Their Service Areas</h1>
-    <p>High-converting websites, expert local SEO, powerful automation, and targeted digital marketing that drive real leads and growth right in your backyard.</p>
+    <h1>I help local service businesses on Oahu dominate their service areas.</h1>
+    <p>Running a business can feel stressful with unpredictable months. I make it easier by helping owners implement practical digital strategies that bring in more consistent customers and steady work.</p>
     <a href="https://calendly.com/irelatedigital/strategy-call" class="btn">Get Your Free Growth Plan</a>
 </div>
 </section>
@@ -288,55 +211,26 @@ footer {
 <section class="section" id="services">
 <div class="container">
     <div class="section-title">
-        <h2>Our Services</h2>
-        <p>Proven systems built specifically for plumbers, HVAC pros, landscapers, electricians &amp; other local service businesses.</p>
+        <h2>How I Help</h2>
+        <p>Practical digital solutions built for local service businesses in Honolulu and across Oahu.</p>
     </div>
 
     <div class="grid">
         <div class="card">
-            <h3>Local SEO</h3>
-            <p>Dominate Google Maps and "near me" searches with optimized profiles, citations, and content.</p>
+            <h3>Stronger Local Presence</h3>
+            <p>Get found by more customers in your service area.</p>
         </div>
         <div class="card">
-            <h3>High-Converting Websites</h3>
-            <p>Modern, fast sites designed to turn visitors into booked appointments.</p>
+            <h3>Better Online Visibility</h3>
+            <p>Turn searches into real jobs and appointments.</p>
         </div>
         <div class="card">
-            <h3>Automation</h3>
-            <p>Lead follow-up, scheduling, and nurturing on autopilot—save hours every week.</p>
+            <h3>Simple Systems</h3>
+            <p>Automation that saves time and creates steady leads.</p>
         </div>
         <div class="card">
-            <h3>Digital Marketing</h3>
-            <p>Targeted campaigns that attract qualified local customers consistently.</p>
-        </div>
-    </div>
-</div>
-</section>
-
-<!-- PROCESS -->
-<section class="section" id="process">
-<div class="container">
-    <div class="section-title">
-        <h2>Our Simple Process</h2>
-        <p>From audit to scaled growth—predictable results every time.</p>
-    </div>
-
-    <div class="grid">
-        <div class="card">
-            <h3>Analyze</h3>
-            <p>Deep dive into your current online presence and local opportunities.</p>
-        </div>
-        <div class="card">
-            <h3>Build</h3>
-            <p>Launch websites, SEO foundations, and automation systems tailored to you.</p>
-        </div>
-        <div class="card">
-            <h3>Optimize</h3>
-            <p>Refine for maximum conversions and visibility.</p>
-        </div>
-        <div class="card">
-            <h3>Scale</h3>
-            <p>Ongoing marketing that keeps you dominating your market.</p>
+            <h3>Predictable Growth</h3>
+            <p>Build a business with more control and stability.</p>
         </div>
     </div>
 </div>
@@ -345,15 +239,12 @@ footer {
 <!-- ABOUT -->
 <section class="section" id="about">
 <div class="container">
-    <div class="about">
-        <div>
-            <h2>Why Choose iRelate Digital?</h2>
-            <p style="margin-top:20px;">We specialize in helping local service businesses move beyond inconsistent referrals to predictable, scalable growth through smart digital systems.</p>
-            <p style="margin-top:20px;">Our strategies combine proven team architecture with cutting-edge marketing tools so you can focus on what you do best—delivering exceptional service.</p>
-        </div>
-        <div>
-            <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?w=1200" alt="Strategic Business Growth">
-        </div>
+    <div class="section-title">
+        <h2>Why Work With Me</h2>
+    </div>
+    <div style="max-width:700px; margin:auto; text-align:center; font-size:1.15rem; color:#475569;">
+        <p>The goal isn’t just more revenue — it’s building a business that gives you more control, more stability, and more time for your family and what matters most.</p>
+        <p style="margin-top:30px;">I work alongside Oahu service business owners to make digital growth simple and effective.</p>
     </div>
 </div>
 </section>
@@ -361,20 +252,18 @@ footer {
 <!-- CTA -->
 <section class="cta" id="contact">
 <div class="container">
-    <h2>Ready to Dominate Your Local Market?</h2>
-    <p>Book a free strategy call and we'll show you exactly how to get more leads with websites, local SEO, automation, and digital marketing.</p>
-    <a href="https://calendly.com/YOUR-ACTUAL-EVENT-LINK" class="btn" style="background:#fff; color:#0f766e;">Book Strategy Call</a>
+    <h2>Ready to Dominate Your Service Area?</h2>
+    <p>Let’s have a short conversation and see if we’re a good fit to help you grow with more confidence.</p>
+    <a href="https://calendly.com/YOUR-ACTUAL-EVENT-LINK" class="btn" style="background:#fff; color:#0f766e;">Book a Short Strategy Call</a>
 </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
 <div class="socials">
-    <a href="https://www.facebook.com/irelatedigital" target="_blank" aria-label="Facebook">
-        <i class="fab fa-facebook-f"></i>
-    </a>
+    <a href="https://facebook.com/YOURPAGE" target="_blank"><i class="fab fa-facebook-f"></i></a>
 </div>
-<p>Helping Service-Based Businesses Dominate Their Local Market.</p>
+<p>Helping local service businesses on Oahu dominate their service areas.</p>
 <p style="margin-top:12px;">© 2026 iRelate Digital • Honolulu, HI</p>
 </footer>
 

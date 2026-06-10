@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>iRelateDigital | Helping Service Businesses Dominate Their Local Market</title>
-
-<meta name="description" content="Helping service-based businesses dominate their local service area through local SEO, Google Business Profile optimization, lead generation, and practical growth strategies.">
+<title>iRelateDigital | Local Service Growth Agency</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -14,10 +12,8 @@
 :root{
 --primary:#0d9488;
 --primary-dark:#0f766e;
---secondary:#f0fdfa;
 --dark:#0f172a;
 --gray:#64748b;
---light:#ffffff;
 --border:#e2e8f0;
 }
 
@@ -25,10 +21,6 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
 }
 
 body{
@@ -48,13 +40,15 @@ section{
 padding:100px 0;
 }
 
-h1,h2,h3,h4{
+h1,h2,h3{
 line-height:1.15;
 }
 
 a{
 text-decoration:none;
 }
+
+/* BUTTONS */
 
 .btn{
 display:inline-block;
@@ -91,8 +85,8 @@ position:fixed;
 top:0;
 width:100%;
 background:white;
-z-index:999;
 border-bottom:1px solid var(--border);
+z-index:999;
 }
 
 .navbar{
@@ -102,20 +96,9 @@ justify-content:space-between;
 align-items:center;
 }
 
-.logo{
-font-size:1.6rem;
-font-weight:800;
-color:var(--primary-dark);
-}
-
-.nav-links{
-display:flex;
-gap:30px;
-}
-
-.nav-links a{
-color:var(--dark);
-font-weight:600;
+.logo img{
+height:60px;
+width:auto;
 }
 
 /* HERO */
@@ -123,8 +106,7 @@ font-weight:600;
 .hero{
 padding-top:180px;
 padding-bottom:120px;
-background:
-linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,.95)),
+background:linear-gradient(rgba(255,255,255,.95),rgba(255,255,255,.95)),
 url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80');
 background-size:cover;
 background-position:center;
@@ -138,9 +120,8 @@ align-items:center;
 }
 
 .hero h1{
-font-size:4.2rem;
+font-size:4rem;
 font-weight:900;
-margin-bottom:25px;
 }
 
 .hero h1 span{
@@ -150,11 +131,11 @@ color:var(--primary);
 .hero p{
 font-size:1.2rem;
 color:var(--gray);
-margin-bottom:35px;
-max-width:650px;
+margin-top:20px;
 }
 
 .hero-buttons{
+margin-top:30px;
 display:flex;
 gap:15px;
 flex-wrap:wrap;
@@ -167,12 +148,9 @@ border-radius:20px;
 box-shadow:0 15px 40px rgba(0,0,0,.08);
 }
 
-.hero-card h3{
-margin-bottom:20px;
-}
-
 .hero-card ul{
 list-style:none;
+margin-top:20px;
 }
 
 .hero-card li{
@@ -180,7 +158,7 @@ padding:10px 0;
 border-bottom:1px solid var(--border);
 }
 
-/* SECTION TITLES */
+/* SECTIONS */
 
 .section-title{
 text-align:center;
@@ -188,68 +166,36 @@ margin-bottom:60px;
 }
 
 .section-title h2{
-font-size:3rem;
-margin-bottom:15px;
+font-size:2.8rem;
 }
 
 .section-title p{
+color:var(--gray);
 max-width:700px;
 margin:auto;
-color:var(--gray);
+margin-top:10px;
 }
 
-/* PROBLEM */
+/* GRID */
 
-.problem{
-background:#f8fafc;
-}
-
-.problem-grid{
+.problem-grid,
+.services-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
 
-.problem-card{
+.card{
 background:white;
-padding:35px;
-border-radius:16px;
-box-shadow:0 5px 25px rgba(0,0,0,.05);
-}
-
-.problem-card h3{
-margin-bottom:15px;
-}
-
-/* SERVICES */
-
-.services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-}
-
-.service-card{
-padding:35px;
+padding:30px;
 border:1px solid var(--border);
-border-radius:18px;
-transition:.3s;
-}
-
-.service-card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 35px rgba(0,0,0,.08);
-}
-
-.service-card h3{
-margin-bottom:15px;
-color:var(--primary-dark);
+border-radius:15px;
 }
 
 /* RESULTS */
 
 .results{
-background:var(--secondary);
+background:#f0fdfa;
 }
 
 .stats{
@@ -261,12 +207,12 @@ text-align:center;
 
 .stat{
 background:white;
-padding:40px 20px;
-border-radius:16px;
+padding:40px;
+border-radius:15px;
 }
 
 .stat h3{
-font-size:3rem;
+font-size:2.5rem;
 color:var(--primary);
 }
 
@@ -280,23 +226,11 @@ align-items:center;
 }
 
 .about-image{
-height:500px;
+height:450px;
 border-radius:20px;
-background:
-linear-gradient(rgba(13,148,136,.15),rgba(13,148,136,.15)),
-url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80');
+background:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80');
 background-size:cover;
 background-position:center;
-}
-
-.about-content h2{
-font-size:3rem;
-margin-bottom:20px;
-}
-
-.about-content p{
-margin-bottom:20px;
-color:var(--gray);
 }
 
 /* CTA */
@@ -308,32 +242,71 @@ text-align:center;
 }
 
 .cta h2{
-font-size:3.5rem;
-margin-bottom:20px;
+font-size:3rem;
 }
 
 .cta p{
-max-width:700px;
-margin:auto;
-margin-bottom:35px;
 color:#cbd5e1;
-}
-
-.cta .btn{
-background:var(--primary);
-color:white;
+margin:20px auto 30px;
+max-width:700px;
 }
 
 /* FOOTER */
 
 footer{
-padding:40px 0;
-text-align:center;
-border-top:1px solid var(--border);
+background:#0f172a;
+color:white;
+padding:80px 0 40px;
 }
 
-footer p{
-color:var(--gray);
+.footer-content{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:50px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.footer-brand{
+max-width:500px;
+}
+
+.footer-logo{
+height:70px;
+margin-bottom:15px;
+}
+
+.facebook-btn{
+display:inline-flex;
+align-items:center;
+gap:12px;
+padding:18px 32px;
+border-radius:999px;
+background:linear-gradient(135deg,#1877f2,#0f5fd9);
+color:white;
+font-weight:700;
+box-shadow:0 15px 35px rgba(24,119,242,.35);
+transition:.3s ease;
+}
+
+.facebook-btn:hover{
+transform:translateY(-4px);
+}
+
+.footer-bottom{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+color:#94a3b8;
+font-size:.95rem;
+}
+
+hr{
+border:none;
+height:1px;
+background:#334155;
+margin:30px 0;
 }
 
 /* MOBILE */
@@ -346,22 +319,13 @@ grid-template-columns:1fr;
 }
 
 .hero h1{
-font-size:3rem;
+font-size:2.8rem;
 }
 
 .stats{
 grid-template-columns:repeat(2,1fr);
 }
 
-.nav-links{
-display:none;
-}
-
-.section-title h2,
-.about-content h2,
-.cta h2{
-font-size:2.2rem;
-}
 }
 
 @media(max-width:600px){
@@ -374,31 +338,28 @@ grid-template-columns:1fr;
 flex-direction:column;
 }
 
-.btn{
-text-align:center;
-}
 }
 
 </style>
 </head>
+
 <body>
 
 <header>
 <div class="container">
-<nav class="navbar">
-<div class="logo">iRelateDigital</div>
+<div class="navbar">
 
-<div class="nav-links">
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+<div class="logo">
+<img src="image.PNG" alt="iRelateDigital Logo">
 </div>
-</nav>
+
+</div>
 </div>
 </header>
 
-<section class="hero">
+<!-- HERO -->
 
+<section class="hero">
 <div class="container">
 
 <div class="hero-grid">
@@ -406,80 +367,37 @@ text-align:center;
 <div>
 
 <h1>
-Dominate Your
-<span>Local Service Area</span>
+Dominate Your <span>Local Market</span>
 </h1>
 
 <p>
-Helping service-based businesses attract more local customers, create more consistent revenue, and build a business that provides more freedom, stability, and time for what matters most.
+Helping service-based businesses attract more local customers, build predictable revenue, and create long-term stability.
 </p>
 
 <div class="hero-buttons">
-<a href="#contact" class="btn btn-primary">Book a Free Strategy Call</a>
-<a href="#services" class="btn btn-outline">See How I Help</a>
+<a href="#cta" class="btn btn-primary">Book a Strategy Call</a>
+<a href="#services" class="btn btn-outline">View Services</a>
 </div>
 
 </div>
 
 <div class="hero-card">
-
-<h3>What You Can Expect</h3>
-
+<h3>What You Get</h3>
 <ul>
-<li>✓ More Local Visibility</li>
-<li>✓ More Qualified Leads</li>
-<li>✓ Better Google Presence</li>
-<li>✓ Consistent Customer Flow</li>
-<li>✓ Predictable Business Growth</li>
-<li>✓ Less Stress & More Freedom</li>
+<li>More Local Visibility</li>
+<li>More Qualified Leads</li>
+<li>Stronger Google Presence</li>
+<li>Consistent Customer Flow</li>
+<li>Less Business Stress</li>
 </ul>
-
 </div>
 
 </div>
 
 </div>
-
 </section>
 
-<section class="problem">
-
-<div class="container">
-
-<div class="section-title">
-<h2>Running a Service Business Shouldn't Feel Like Guesswork</h2>
-<p>
-Many business owners work hard but still struggle with inconsistent growth and unpredictable revenue.
-</p>
-</div>
-
-<div class="problem-grid">
-
-<div class="problem-card">
-<h3>Inconsistent Leads</h3>
-<p>Some months are busy while others are slow, making planning difficult.</p>
-</div>
-
-<div class="problem-card">
-<h3>Low Visibility</h3>
-<p>Your competitors show up online while potential customers never find you.</p>
-</div>
-
-<div class="problem-card">
-<h3>Overreliance on Referrals</h3>
-<p>Referrals are great, but they shouldn't be your only growth strategy.</p>
-</div>
-
-<div class="problem-card">
-<h3>Business Stress</h3>
-<p>Wondering where the next customer will come from creates unnecessary pressure.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
+<!-- SERVICES -->
 
 <section id="services">
 
@@ -487,65 +405,51 @@ Many business owners work hard but still struggle with inconsistent growth and u
 
 <div class="section-title">
 <h2>How I Help</h2>
-<p>
-Practical digital growth strategies designed specifically for local service businesses.
-</p>
+<p>Practical growth systems for service-based businesses.</p>
 </div>
 
 <div class="services-grid">
 
-<div class="service-card">
-<h3>Local Market Domination</h3>
-<p>Build a strong presence throughout your service area and become the trusted local choice.</p>
-</div>
-
-<div class="service-card">
-<h3>Google Business Profile Optimization</h3>
-<p>Improve rankings, increase calls, and attract more local customers.</p>
-</div>
-
-<div class="service-card">
+<div class="card">
 <h3>Local SEO</h3>
-<p>Get found by people actively searching for your services.</p>
+<p>Get found when customers search for your services.</p>
 </div>
 
-<div class="service-card">
+<div class="card">
+<h3>Google Business Optimization</h3>
+<p>Increase calls, leads, and local rankings.</p>
+</div>
+
+<div class="card">
 <h3>Lead Generation Systems</h3>
-<p>Create reliable processes that consistently generate opportunities.</p>
+<p>Build predictable customer flow systems.</p>
 </div>
 
-<div class="service-card">
-<h3>Online Reputation Management</h3>
-<p>Build trust and authority through reviews and customer feedback.</p>
-</div>
-
-<div class="service-card">
-<h3>Growth Consulting</h3>
-<p>Develop a practical roadmap for sustainable long-term growth.</p>
+<div class="card">
+<h3>Reputation Growth</h3>
+<p>Build trust through reviews and authority.</p>
 </div>
 
 </div>
 
 </div>
-
 </section>
+
+<!-- RESULTS -->
 
 <section class="results">
 
 <div class="container">
 
 <div class="section-title">
-<h2>Focused on Meaningful Growth</h2>
-<p>
-The goal isn't simply more revenue. It's building a business that gives you greater control over your future.
-</p>
+<h2>Better Results, Not More Stress</h2>
 </div>
 
 <div class="stats">
 
 <div class="stat">
 <h3>More</h3>
-<p>Qualified Leads</p>
+<p>Leads</p>
 </div>
 
 <div class="stat">
@@ -566,10 +470,11 @@ The goal isn't simply more revenue. It's building a business that gives you grea
 </div>
 
 </div>
-
 </section>
 
-<section id="about">
+<!-- ABOUT -->
+
+<section>
 
 <div class="container">
 
@@ -577,23 +482,19 @@ The goal isn't simply more revenue. It's building a business that gives you grea
 
 <div class="about-image"></div>
 
-<div class="about-content">
+<div>
 
-<h2>Helping Business Owners Grow With Confidence</h2>
+<h2>Helping Local Businesses Grow With Confidence</h2>
 
 <p>
-I understand that growth can feel overwhelming when you're already managing employees, customers, operations, and everything else that comes with running a business.
+I help service-based business owners simplify digital growth and build systems that create consistent customers.
 </p>
 
 <p>
-That's why I don't just provide marketing advice. I work alongside business owners to simplify digital growth, strengthen local visibility, and build systems that create more consistency.
+The goal is not just more revenue, but more freedom and stability.
 </p>
 
-<p>
-Because success isn't only about making more money. It's about creating more freedom, more stability, and more time for your family and the people who matter most.
-</p>
-
-<p><strong>📍 Based in Honolulu, Hawaii</strong></p>
+<p><strong>Based in Honolulu, Hawaii</strong></p>
 
 </div>
 
@@ -603,28 +504,60 @@ Because success isn't only about making more money. It's about creating more fre
 
 </section>
 
-<section class="cta" id="contact">
+<!-- CTA -->
+
+<section class="cta" id="cta">
 
 <div class="container">
 
-<h2>Ready to Dominate Your Local Service Area?</h2>
+<h2>Ready to Grow Your Local Market?</h2>
 
-<p>
-Let's discuss where your business is today, where you want it to go, and what practical steps can help get you there.
-</p>
+<p>Let’s map out your business growth strategy and build a predictable system for customers.</p>
 
-<a href="https://calendly.com/irelatedigital/strategy-call" class="btn">
-Schedule Your Free Strategy Call
+<a href="https://calendly.com/YOUR-LINK" class="btn btn-primary">
+Book a Free Strategy Call
 </a>
 
 </div>
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
+
 <div class="container">
-<p>© 2026 iRelateDigital • Helping Service Businesses Grow With Confidence</p>
+
+<div class="footer-content">
+
+<div class="footer-brand">
+
+<img src="image.PNG" class="footer-logo" alt="Logo">
+
+<p>
+Helping service businesses dominate their local market through practical growth systems.
+</p>
+
 </div>
+
+<a class="facebook-btn" href="https://facebook.com/irelatedigital" target="_blank">
+<svg width="22" height="22" fill="white" viewBox="0 0 16 16">
+<path d="M16 8.05C16 3.6 12.4 0 8 0S0 3.6 0 8.05C0 12.07 2.9 15.4 6.75 16v-5.6H4.7V8.05H6.75V6.27c0-2 1.2-3.13 3.02-3.13.87 0 1.79.16 1.79.16v1.98H10.5c-.99 0-1.3.62-1.3 1.26v1.52h2.22l-.36 2.32H9.2V16c3.8-.6 6.8-3.9 6.8-7.95z"/>
+</svg>
+Follow on Facebook
+</a>
+
+</div>
+
+<hr>
+
+<div class="footer-bottom">
+<p>© 2026 iRelateDigital</p>
+<p>Honolulu, Hawaii</p>
+</div>
+
+</div>
+
 </footer>
 
 </body>

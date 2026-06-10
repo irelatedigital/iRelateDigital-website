@@ -3,268 +3,628 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iRelateDigital | Helping Service Businesses Dominate Their Local Market</title>
 
-<title>iRelate Digital | Dominate Your Service Area</title>
-<meta name="description" content="Helping local service businesses on Oahu dominate their service areas with practical digital strategies.">
+<meta name="description" content="Helping service-based businesses dominate their local service area through local SEO, Google Business Profile optimization, lead generation, and practical growth strategies.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
 
-body {
-    font-family:'Inter',sans-serif;
-    color:#1a1a1a;
-    line-height:1.7;
-    background:#fff;
+:root{
+--primary:#0d9488;
+--primary-dark:#0f766e;
+--secondary:#f0fdfa;
+--dark:#0f172a;
+--gray:#64748b;
+--light:#ffffff;
+--border:#e2e8f0;
 }
 
-.container {
-    width:90%;
-    max-width:1280px;
-    margin:auto;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+color:var(--dark);
+line-height:1.7;
+background:#fff;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+section{
+padding:100px 0;
+}
+
+h1,h2,h3,h4{
+line-height:1.15;
+}
+
+a{
+text-decoration:none;
+}
+
+.btn{
+display:inline-block;
+padding:16px 34px;
+border-radius:10px;
+font-weight:700;
+transition:.3s ease;
+}
+
+.btn-primary{
+background:var(--primary);
+color:white;
+}
+
+.btn-primary:hover{
+background:var(--primary-dark);
+transform:translateY(-2px);
+}
+
+.btn-outline{
+border:2px solid var(--primary);
+color:var(--primary);
+}
+
+.btn-outline:hover{
+background:var(--primary);
+color:white;
 }
 
 /* HEADER */
-header {
-    background:#ffffff;
-    padding:16px 0;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 4px 20px rgba(0,0,0,0.06);
-    border-bottom:1px solid #f1f5f9;
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+z-index:999;
+border-bottom:1px solid var(--border);
 }
 
-nav {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    min-height:76px;
+.navbar{
+height:80px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-.logo img {
-    height:52px;
-    width:auto;
-    display:block;
+.logo{
+font-size:1.6rem;
+font-weight:800;
+color:var(--primary-dark);
 }
 
-/* NAV */
-.nav-links {
-    display:flex;
-    gap:32px;
+.nav-links{
+display:flex;
+gap:30px;
 }
 
-.nav-links a {
-    text-decoration:none;
-    color:#334155;
-    font-weight:500;
-    transition:0.3s ease;
-}
-
-.nav-links a:hover {
-    color:#0f766e;
-}
-
-/* BUTTON */
-.btn {
-    background:#0f766e;
-    color:#fff;
-    padding:14px 28px;
-    border-radius:9999px;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s ease;
-    box-shadow:0 4px 15px rgba(15, 118, 110, 0.2);
-}
-
-.btn:hover {
-    background:#0d5f5a;
-    transform:translateY(-2px);
+.nav-links a{
+color:var(--dark);
+font-weight:600;
 }
 
 /* HERO */
-.hero {
-    padding:120px 0 100px;
-    background:linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+
+.hero{
+padding-top:180px;
+padding-bottom:120px;
+background:
+linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,.95)),
+url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80');
+background-size:cover;
+background-position:center;
 }
 
-.hero h1 {
-    font-size:3.2rem;
-    line-height:1.1;
-    margin-bottom:24px;
-    color:#0f172a;
+.hero-grid{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:60px;
+align-items:center;
 }
 
-.hero p {
-    font-size:1.25rem;
-    color:#475569;
-    max-width:720px;
-    margin-bottom:40px;
+.hero h1{
+font-size:4.2rem;
+font-weight:900;
+margin-bottom:25px;
 }
 
-/* SECTIONS */
-.section { padding:100px 0; }
-
-.section-title {
-    text-align:center;
-    margin-bottom:64px;
+.hero h1 span{
+color:var(--primary);
 }
 
-.section-title h2 {
-    font-size:2.5rem;
-    margin-bottom:16px;
-    color:#0f172a;
+.hero p{
+font-size:1.2rem;
+color:var(--gray);
+margin-bottom:35px;
+max-width:650px;
 }
 
-/* GRID */
-.grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:32px;
+.hero-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
 }
 
-.card {
-    background:#ffffff;
-    padding:40px 32px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.07);
-    transition:transform 0.3s ease;
+.hero-card{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
 }
 
-.card:hover {
-    transform:translateY(-8px);
+.hero-card h3{
+margin-bottom:20px;
+}
+
+.hero-card ul{
+list-style:none;
+}
+
+.hero-card li{
+padding:10px 0;
+border-bottom:1px solid var(--border);
+}
+
+/* SECTION TITLES */
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:3rem;
+margin-bottom:15px;
+}
+
+.section-title p{
+max-width:700px;
+margin:auto;
+color:var(--gray);
+}
+
+/* PROBLEM */
+
+.problem{
+background:#f8fafc;
+}
+
+.problem-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.problem-card{
+background:white;
+padding:35px;
+border-radius:16px;
+box-shadow:0 5px 25px rgba(0,0,0,.05);
+}
+
+.problem-card h3{
+margin-bottom:15px;
+}
+
+/* SERVICES */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.service-card{
+padding:35px;
+border:1px solid var(--border);
+border-radius:18px;
+transition:.3s;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.service-card h3{
+margin-bottom:15px;
+color:var(--primary-dark);
+}
+
+/* RESULTS */
+
+.results{
+background:var(--secondary);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+text-align:center;
+}
+
+.stat{
+background:white;
+padding:40px 20px;
+border-radius:16px;
+}
+
+.stat h3{
+font-size:3rem;
+color:var(--primary);
+}
+
+/* ABOUT */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about-image{
+height:500px;
+border-radius:20px;
+background:
+linear-gradient(rgba(13,148,136,.15),rgba(13,148,136,.15)),
+url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80');
+background-size:cover;
+background-position:center;
+}
+
+.about-content h2{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.about-content p{
+margin-bottom:20px;
+color:var(--gray);
 }
 
 /* CTA */
-.cta {
-    background:linear-gradient(135deg, #0f766e 0%, #115e59 100%);
-    color:#fff;
-    text-align:center;
-    padding:110px 20px;
+
+.cta{
+background:var(--dark);
+color:white;
+text-align:center;
 }
 
-.cta h2 { font-size:2.6rem; margin-bottom:20px; }
+.cta h2{
+font-size:3.5rem;
+margin-bottom:20px;
+}
+
+.cta p{
+max-width:700px;
+margin:auto;
+margin-bottom:35px;
+color:#cbd5e1;
+}
+
+.cta .btn{
+background:var(--primary);
+color:white;
+}
 
 /* FOOTER */
-footer {
-    background:#0f172a;
-    color:#cbd5e1;
-    text-align:center;
-    padding:60px 20px 40px;
+
+footer{
+padding:40px 0;
+text-align:center;
+border-top:1px solid var(--border);
 }
 
-.socials a {
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    width:52px;
-    height:52px;
-    background:#1877F2;
-    border-radius:50%;
-    margin:0 8px;
-    color:#fff;
-    font-size:24px;
+footer p{
+color:var(--gray);
 }
 
-@media(max-width:768px) {
-    .hero { padding:80px 0 70px; }
-    .hero h1 { font-size:2.4rem; }
-    .nav-links { display:none; }
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-grid,
+.about-grid{
+grid-template-columns:1fr;
 }
+
+.hero h1{
+font-size:3rem;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.nav-links{
+display:none;
+}
+
+.section-title h2,
+.about-content h2,
+.cta h2{
+font-size:2.2rem;
+}
+}
+
+@media(max-width:600px){
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.btn{
+text-align:center;
+}
+}
+
 </style>
 </head>
-
 <body>
 
-<!-- HEADER -->
 <header>
 <div class="container">
-<nav>
-    <a href="/" class="logo">
-        <img src="logo.PNG" alt="iRelate Digital Logo">
-    </a>
+<nav class="navbar">
+<div class="logo">iRelateDigital</div>
 
-    <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
-
-    <a href="https://calendly.com/irelatedigital/strategy-call" class="btn">Book Call</a>
+<div class="nav-links">
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
+
 <div class="container">
-    <h1>I help local service businesses on Oahu dominate their service areas.</h1>
-    <p>Running a business can feel stressful with unpredictable months. I make it easier by helping owners implement practical digital strategies that bring in more consistent customers and steady work.</p>
-    <a href="https://calendly.com/irelatedigital/strategy-call" class="btn">Get Your Free Growth Plan</a>
+
+<div class="hero-grid">
+
+<div>
+
+<h1>
+Dominate Your
+<span>Local Service Area</span>
+</h1>
+
+<p>
+Helping service-based businesses attract more local customers, create more consistent revenue, and build a business that provides more freedom, stability, and time for what matters most.
+</p>
+
+<div class="hero-buttons">
+<a href="#contact" class="btn btn-primary">Book a Free Strategy Call</a>
+<a href="#services" class="btn btn-outline">See How I Help</a>
 </div>
+
+</div>
+
+<div class="hero-card">
+
+<h3>What You Can Expect</h3>
+
+<ul>
+<li>✓ More Local Visibility</li>
+<li>✓ More Qualified Leads</li>
+<li>✓ Better Google Presence</li>
+<li>✓ Consistent Customer Flow</li>
+<li>✓ Predictable Business Growth</li>
+<li>✓ Less Stress & More Freedom</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- SERVICES -->
-<section class="section" id="services">
-<div class="container">
-    <div class="section-title">
-        <h2>How I Help</h2>
-        <p>Practical digital solutions built for local service businesses in Honolulu and across Oahu.</p>
-    </div>
+<section class="problem">
 
-    <div class="grid">
-        <div class="card">
-            <h3>Stronger Local Presence</h3>
-            <p>Get found by more customers in your service area.</p>
-        </div>
-        <div class="card">
-            <h3>Better Online Visibility</h3>
-            <p>Turn searches into real jobs and appointments.</p>
-        </div>
-        <div class="card">
-            <h3>Simple Systems</h3>
-            <p>Automation that saves time and creates steady leads.</p>
-        </div>
-        <div class="card">
-            <h3>Predictable Growth</h3>
-            <p>Build a business with more control and stability.</p>
-        </div>
-    </div>
+<div class="container">
+
+<div class="section-title">
+<h2>Running a Service Business Shouldn't Feel Like Guesswork</h2>
+<p>
+Many business owners work hard but still struggle with inconsistent growth and unpredictable revenue.
+</p>
 </div>
+
+<div class="problem-grid">
+
+<div class="problem-card">
+<h3>Inconsistent Leads</h3>
+<p>Some months are busy while others are slow, making planning difficult.</p>
+</div>
+
+<div class="problem-card">
+<h3>Low Visibility</h3>
+<p>Your competitors show up online while potential customers never find you.</p>
+</div>
+
+<div class="problem-card">
+<h3>Overreliance on Referrals</h3>
+<p>Referrals are great, but they shouldn't be your only growth strategy.</p>
+</div>
+
+<div class="problem-card">
+<h3>Business Stress</h3>
+<p>Wondering where the next customer will come from creates unnecessary pressure.</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- ABOUT -->
-<section class="section" id="about">
+<section id="services">
+
 <div class="container">
-    <div class="section-title">
-        <h2>Why Work With Me</h2>
-    </div>
-    <div style="max-width:700px; margin:auto; text-align:center; font-size:1.15rem; color:#475569;">
-        <p>The goal isn’t just more revenue — it’s building a business that gives you more control, more stability, and more time for your family and what matters most.</p>
-        <p style="margin-top:30px;">I work alongside Oahu service business owners to make digital growth simple and effective.</p>
-    </div>
+
+<div class="section-title">
+<h2>How I Help</h2>
+<p>
+Practical digital growth strategies designed specifically for local service businesses.
+</p>
 </div>
+
+<div class="services-grid">
+
+<div class="service-card">
+<h3>Local Market Domination</h3>
+<p>Build a strong presence throughout your service area and become the trusted local choice.</p>
+</div>
+
+<div class="service-card">
+<h3>Google Business Profile Optimization</h3>
+<p>Improve rankings, increase calls, and attract more local customers.</p>
+</div>
+
+<div class="service-card">
+<h3>Local SEO</h3>
+<p>Get found by people actively searching for your services.</p>
+</div>
+
+<div class="service-card">
+<h3>Lead Generation Systems</h3>
+<p>Create reliable processes that consistently generate opportunities.</p>
+</div>
+
+<div class="service-card">
+<h3>Online Reputation Management</h3>
+<p>Build trust and authority through reviews and customer feedback.</p>
+</div>
+
+<div class="service-card">
+<h3>Growth Consulting</h3>
+<p>Develop a practical roadmap for sustainable long-term growth.</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- CTA -->
+<section class="results">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Focused on Meaningful Growth</h2>
+<p>
+The goal isn't simply more revenue. It's building a business that gives you greater control over your future.
+</p>
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h3>More</h3>
+<p>Qualified Leads</p>
+</div>
+
+<div class="stat">
+<h3>More</h3>
+<p>Visibility</p>
+</div>
+
+<div class="stat">
+<h3>More</h3>
+<p>Stability</p>
+</div>
+
+<div class="stat">
+<h3>Less</h3>
+<p>Stress</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div class="about-image"></div>
+
+<div class="about-content">
+
+<h2>Helping Business Owners Grow With Confidence</h2>
+
+<p>
+I understand that growth can feel overwhelming when you're already managing employees, customers, operations, and everything else that comes with running a business.
+</p>
+
+<p>
+That's why I don't just provide marketing advice. I work alongside business owners to simplify digital growth, strengthen local visibility, and build systems that create more consistency.
+</p>
+
+<p>
+Because success isn't only about making more money. It's about creating more freedom, more stability, and more time for your family and the people who matter most.
+</p>
+
+<p><strong>📍 Based in Honolulu, Hawaii</strong></p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <section class="cta" id="contact">
+
 <div class="container">
-    <h2>Ready to Dominate Your Service Area?</h2>
-    <p>Let’s have a short conversation and see if we’re a good fit to help you grow with more confidence.</p>
-    <a href="https://calendly.com/YOUR-ACTUAL-EVENT-LINK" class="btn" style="background:#fff; color:#0f766e;">Book a Short Strategy Call</a>
+
+<h2>Ready to Dominate Your Local Service Area?</h2>
+
+<p>
+Let's discuss where your business is today, where you want it to go, and what practical steps can help get you there.
+</p>
+
+<a href="https://calendly.com/irelatedigital/strategy-call" class="btn">
+Schedule Your Free Strategy Call
+</a>
+
 </div>
+
 </section>
 
-<!-- FOOTER -->
 <footer>
-<div class="socials">
-    <a href="https://facebook.com/YOURPAGE" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<div class="container">
+<p>© 2026 iRelateDigital • Helping Service Businesses Grow With Confidence</p>
 </div>
-<p>Helping local service businesses on Oahu dominate their service areas.</p>
-<p style="margin-top:12px;">© 2026 iRelate Digital • Honolulu, HI</p>
 </footer>
 
 </body>

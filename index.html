@@ -63,30 +63,29 @@ header{
   border-bottom:1px solid var(--border);
 }
 
-nav{
-  min-height:82px;
+.clean-nav{
+  min-height:96px;
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  gap:24px;
+  justify-content:center;
+  position:relative;
+}
+
+.logo-wrap{
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 .logo-img{
-  height:48px;
+  height:74px;
   width:auto;
   display:block;
 }
 
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:26px;
-}
-
-.nav-links a{
-  color:var(--text);
-  font-size:15px;
-  font-weight:800;
+.nav-cta{
+  position:absolute;
+  right:0;
 }
 
 .btn{
@@ -651,19 +650,12 @@ textarea{
 
 <header>
   <div class="container">
-    <nav>
-      <a href="#home">
+    <nav class="clean-nav">
+      <a href="#home" class="logo-wrap">
         <img src="logo.PNG" alt="iRelateDigital Logo" class="logo-img">
       </a>
 
-      <div class="nav-links">
-        <a href="#problem">Problem</a>
-        <a href="#framework">Framework</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-      </div>
-
-      <a href="#hero-form" class="btn">Get Growth Plan</a>
+      <a href="#hero-form" class="btn nav-cta">Get Growth Plan</a>
     </nav>
   </div>
 </header>

@@ -53,7 +53,7 @@ header{
   position:sticky;
   top:0;
   z-index:99;
-  background:rgba(255,255,255,.92);
+  background:rgba(255,255,255,.94);
   backdrop-filter:blur(14px);
   border-bottom:1px solid var(--border);
 }
@@ -66,15 +66,10 @@ nav{
   gap:24px;
 }
 
-.logo{
-  font-size:28px;
-  font-weight:900;
-  color:var(--navy);
-  letter-spacing:-1px;
-}
-
-.logo span{
-  color:var(--teal);
+.logo-img{
+  height:48px;
+  width:auto;
+  display:block;
 }
 
 .nav-links{
@@ -105,10 +100,6 @@ nav{
 .btn:hover{
   transform:translateY(-2px);
   background:var(--teal2);
-}
-
-.btn-dark{
-  background:var(--navy);
 }
 
 .btn-outline{
@@ -185,7 +176,6 @@ nav{
   border-radius:34px;
   padding:34px;
   box-shadow:0 35px 90px rgba(0,0,0,.3);
-  border:1px solid rgba(255,255,255,.4);
 }
 
 .lead-card small{
@@ -209,8 +199,7 @@ nav{
 }
 
 input,
-textarea,
-select{
+textarea{
   width:100%;
   padding:15px;
   border-radius:14px;
@@ -229,6 +218,7 @@ textarea{
   color:#64748b;
   font-size:13px;
   margin-top:12px;
+  text-align:center;
 }
 
 section{
@@ -432,33 +422,6 @@ section{
   font-weight:900;
 }
 
-.highlight{
-  background:linear-gradient(135deg,#ecfeff,#ffffff);
-  border-radius:36px;
-  padding:58px;
-  box-shadow:var(--shadow);
-}
-
-.full-form{
-  max-width:900px;
-  margin:0 auto;
-  background:white;
-  border-radius:34px;
-  padding:44px;
-  box-shadow:var(--shadow);
-  border:1px solid var(--border);
-}
-
-.form-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
-}
-
-.full{
-  grid-column:1 / -1;
-}
-
 .steps{
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -567,6 +530,14 @@ footer{
   text-align:center;
 }
 
+.footer-logo{
+  height:54px;
+  width:auto;
+  margin:auto;
+  display:block;
+  margin-bottom:14px;
+}
+
 footer p{
   color:#cbd5e1;
   margin-top:8px;
@@ -575,6 +546,10 @@ footer p{
 @media(max-width:980px){
   .nav-links{
     display:none;
+  }
+
+  .logo-img{
+    height:42px;
   }
 
   .hero-grid,
@@ -612,17 +587,8 @@ footer p{
   }
 
   .problem-panel,
-  .highlight,
-  .full-form{
+  .lead-card{
     padding:30px;
-  }
-
-  .form-grid{
-    grid-template-columns:1fr;
-  }
-
-  .full{
-    grid-column:auto;
   }
 
   .btn-outline{
@@ -639,22 +605,23 @@ footer p{
 <header>
   <div class="container">
     <nav>
-      <div class="logo">iRelate<span>Digital</span></div>
+      <a href="#home">
+        <img src="logo.PNG" alt="iRelateDigital Logo" class="logo-img">
+      </a>
 
       <div class="nav-links">
         <a href="#problem">Problem</a>
         <a href="#framework">Framework</a>
         <a href="#services">Services</a>
-        <a href="#plan">Free Plan</a>
         <a href="#about">About</a>
       </div>
 
-      <a href="#plan" class="btn">Get Growth Plan</a>
+      <a href="#hero-form" class="btn">Get Growth Plan</a>
     </nav>
   </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
   <div class="container hero-grid">
     <div>
       <div class="badge">Business Growth Partner For Service-Based Businesses</div>
@@ -666,8 +633,8 @@ footer p{
         strengthen their local market presence, and build systems that create long-term stability.
       </p>
 
-      <a href="#plan" class="btn">Get My Free Custom Growth Plan</a>
-      <a href="#strategy" class="btn-outline">Book A Strategy Session</a>
+      <a href="#hero-form" class="btn">Get My Free Custom Growth Plan</a>
+      <a href="#hero-form" class="btn-outline">Book A Strategy Session</a>
 
       <div class="hero-points">
         <div class="hero-point">Visibility</div>
@@ -676,21 +643,25 @@ footer p{
       </div>
     </div>
 
-    <form class="lead-card" action="https://formsubmit.co/Irelatedigital@gmail.com" method="POST">
+    <form id="hero-form" class="lead-card" action="https://formsubmit.co/Irelatedigital@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="New Growth Plan Request From iRelateDigital.com">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
 
       <small>Free Custom Growth Plan</small>
-      <h2>Discover What's Holding Your Business Back</h2>
+      <h2>Get Your Free Custom Growth Plan</h2>
       <p>
-        Submit your details and get a practical review of your biggest growth opportunities.
+        Tell us a little about your business and we'll identify opportunities to improve visibility,
+        attract more customers, and create more predictable growth.
       </p>
 
       <input type="text" name="Name" placeholder="Your Name" required>
       <input type="text" name="Business Name" placeholder="Business Name" required>
       <input type="email" name="Email" placeholder="Email Address" required>
       <input type="tel" name="Phone" placeholder="Phone Number">
+      <input type="text" name="Website" placeholder="Website or Social Page (Optional)">
+      <textarea name="Biggest Growth Challenge" placeholder="What is your biggest growth challenge right now?" required></textarea>
+
       <button class="btn" type="submit" style="width:100%;">Get My Plan</button>
 
       <div class="form-note">No spam. No pressure. Just useful growth insight.</div>
@@ -839,57 +810,6 @@ footer p{
   </div>
 </section>
 
-<section id="plan">
-  <div class="container">
-    <div class="highlight">
-      <div class="section-head">
-        <div class="kicker">Free Growth Plan</div>
-        <h2 class="title">Get Your Custom Growth Plan & Market Opportunity Assessment</h2>
-        <p class="subtitle">
-          Share your business details and we will review your current online presence,
-          service area, and biggest growth opportunities.
-        </p>
-      </div>
-
-      <form class="full-form" action="https://formsubmit.co/Irelatedigital@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="New Full Growth Plan Request From iRelateDigital.com">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-
-        <div class="form-grid">
-          <input type="text" name="First Name" placeholder="First Name" required>
-          <input type="text" name="Last Name" placeholder="Last Name">
-
-          <input type="text" name="Business Name" placeholder="Business Name" required>
-          <input type="email" name="Email" placeholder="Email Address" required>
-
-          <input type="tel" name="Phone" placeholder="Phone Number">
-          <input type="url" name="Website" placeholder="Website URL">
-
-          <input type="text" name="Service Area" placeholder="Service Area / City / State" required>
-
-          <select name="Business Type" required>
-            <option value="">Business Type</option>
-            <option>Home Services</option>
-            <option>Professional Services</option>
-            <option>Health / Wellness</option>
-            <option>Local Service Business</option>
-            <option>Other</option>
-          </select>
-
-          <textarea class="full" name="Biggest Growth Challenge" placeholder="What is your biggest growth challenge right now?" required></textarea>
-        </div>
-
-        <button type="submit" class="btn" style="width:100%;">Get My Free Growth Plan</button>
-
-        <p class="form-note">
-          First-time FormSubmit use may require email confirmation before submissions are delivered.
-        </p>
-      </form>
-    </div>
-  </div>
-</section>
-
 <section>
   <div class="container">
     <div class="section-head">
@@ -984,7 +904,7 @@ footer p{
   </div>
 </section>
 
-<section class="cta-section" id="strategy">
+<section class="cta-section">
   <div class="container">
     <div class="cta-box">
       <h2>Discover What Is Holding Your Business Back</h2>
@@ -992,14 +912,14 @@ footer p{
         Get your free custom growth plan and see where your service business may be missing customers,
         visibility, trust, and growth opportunities.
       </p>
-      <a href="#plan" class="btn">Get My Free Growth Plan</a>
+      <a href="#hero-form" class="btn">Get My Free Growth Plan</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <div class="logo" style="color:white;">iRelate<span>Digital</span></div>
+    <img src="logo.PNG" alt="iRelateDigital Logo" class="footer-logo">
     <p>Helping Service Businesses Grow Nationwide</p>
     <p>Based in Honolulu, Hawaii</p>
     <p>Visibility • Trust • Growth</p>

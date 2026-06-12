@@ -3,31 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>iRelateDigital | Local Service Growth Agency</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>iRelateDigital | Business Growth Partner</title>
 
 <style>
-
-:root{
---primary:#0d9488;
---primary-dark:#0f766e;
---dark:#0f172a;
---gray:#64748b;
---border:#e2e8f0;
-}
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-font-family:'Inter',sans-serif;
-color:var(--dark);
-line-height:1.7;
-background:#fff;
+background:#ffffff;
+color:#102a43;
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
 }
 
 .container{
@@ -36,529 +31,487 @@ max-width:1200px;
 margin:auto;
 }
 
-section{
-padding:100px 0;
-}
 
-h1,h2,h3{
-line-height:1.15;
-}
+/* NAV */
 
-a{
-text-decoration:none;
-}
-
-/* BUTTONS */
-
-.btn{
-display:inline-block;
-padding:16px 34px;
-border-radius:10px;
-font-weight:700;
-transition:.3s ease;
-}
-
-.btn-primary{
-background:var(--primary);
-color:white;
-}
-
-.btn-primary:hover{
-background:var(--primary-dark);
-transform:translateY(-2px);
-}
-
-.btn-outline{
-border:2px solid var(--primary);
-color:var(--primary);
-}
-
-.btn-outline:hover{
-background:var(--primary);
-color:white;
-}
-
-/* HEADER */
-
-header{
-position:fixed;
-top:0;
-width:100%;
-background:white;
-border-bottom:1px solid var(--border);
-z-index:999;
-}
-
-.navbar{
+nav{
 height:80px;
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:space-between;
 }
 
-.logo img{
-height:60px;
-width:auto;
+.logo{
+font-size:28px;
+font-weight:800;
+color:#0b3c49;
 }
+
+.logo span{
+color:#14b8a6;
+}
+
+.nav-btn{
+background:#14b8a6;
+color:white;
+padding:12px 24px;
+border-radius:30px;
+font-weight:bold;
+}
+
 
 /* HERO */
 
 .hero{
-padding-top:180px;
-padding-bottom:120px;
-background:linear-gradient(rgba(255,255,255,.95),rgba(255,255,255,.95)),
-url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80');
-background-size:cover;
-background-position:center;
-}
-
-.hero-grid{
-display:grid;
-grid-template-columns:1.2fr .8fr;
-gap:60px;
-align-items:center;
+background:
+linear-gradient(135deg,#062b36,#0b5563);
+color:white;
+padding:100px 0;
+border-radius:0 0 50px 50px;
 }
 
 .hero h1{
-font-size:4rem;
-font-weight:900;
-}
-
-.hero h1 span{
-color:var(--primary);
+font-size:55px;
+line-height:1.1;
+max-width:700px;
 }
 
 .hero p{
-font-size:1.2rem;
-color:var(--gray);
-margin-top:20px;
+margin:25px 0;
+font-size:20px;
+max-width:650px;
+color:#d7f7f4;
 }
 
-.hero-buttons{
-margin-top:30px;
-display:flex;
-gap:15px;
-flex-wrap:wrap;
+.cta{
+display:inline-block;
+background:#14b8a6;
+color:white;
+padding:16px 32px;
+border-radius:40px;
+font-weight:bold;
+margin-top:15px;
 }
 
-.hero-card{
-background:white;
-padding:40px;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-}
-
-.hero-card ul{
-list-style:none;
-margin-top:20px;
-}
-
-.hero-card li{
-padding:10px 0;
-border-bottom:1px solid var(--border);
-}
 
 /* SECTIONS */
 
-.section-title{
+section{
+padding:90px 0;
+}
+
+.title{
 text-align:center;
-margin-bottom:60px;
+font-size:38px;
+margin-bottom:20px;
 }
 
-.section-title h2{
-font-size:2.8rem;
-}
-
-.section-title p{
-color:var(--gray);
+.subtitle{
+text-align:center;
 max-width:700px;
 margin:auto;
-margin-top:10px;
+color:#486581;
 }
 
-/* GRID */
 
-.problem-grid,
-.services-grid{
+/* CARDS */
+
+.cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(4,1fr);
 gap:25px;
+margin-top:50px;
 }
 
 .card{
 background:white;
-padding:30px;
-border:1px solid var(--border);
-border-radius:15px;
+padding:35px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
 }
 
-/* RESULTS */
+.card h3{
+color:#0b5563;
+margin-bottom:12px;
+}
 
-.results{
+
+/* DARK SECTION */
+
+.dark{
+background:#062b36;
+color:white;
+}
+
+.dark .subtitle{
+color:#d7f7f4;
+}
+
+
+/* CHECKLIST */
+
+.list{
+max-width:700px;
+margin:40px auto;
+}
+
+.list div{
 background:#f0fdfa;
+margin:12px 0;
+padding:18px;
+border-radius:12px;
+font-weight:bold;
 }
 
-.stats{
+
+/* ROADMAP */
+
+.roadmap{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:20px;
-text-align:center;
+margin-top:50px;
 }
 
-.stat{
-background:white;
-padding:40px;
-border-radius:15px;
-}
-
-.stat h3{
-font-size:2.5rem;
-color:var(--primary);
-}
-
-/* ABOUT */
-
-.about-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-}
-
-.about-image{
-height:450px;
+.step{
+padding:30px;
 border-radius:20px;
-background:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80');
-background-size:cover;
-background-position:center;
+background:#f8fafc;
 }
+
+.step span{
+font-size:40px;
+font-weight:bold;
+color:#14b8a6;
+}
+
 
 /* CTA */
 
-.cta{
-background:var(--dark);
-color:white;
+.final{
 text-align:center;
+background:#e6fffb;
+border-radius:40px;
+padding:70px 20px;
 }
 
-.cta h2{
-font-size:3rem;
-}
-
-.cta p{
-color:#cbd5e1;
-margin:20px auto 30px;
-max-width:700px;
-}
 
 /* FOOTER */
 
 footer{
-background:#0f172a;
+background:#062b36;
 color:white;
-padding:80px 0 40px;
+text-align:center;
+padding:35px;
+margin-top:50px;
 }
 
-.footer-content{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:50px;
-flex-wrap:wrap;
-margin-bottom:40px;
-}
-
-.footer-brand{
-max-width:500px;
-}
-
-.footer-logo{
-height:70px;
-margin-bottom:15px;
-}
-
-.facebook-btn{
-display:inline-flex;
-align-items:center;
-gap:12px;
-padding:18px 32px;
-border-radius:999px;
-background:linear-gradient(135deg,#1877f2,#0f5fd9);
-color:white;
-font-weight:700;
-box-shadow:0 15px 35px rgba(24,119,242,.35);
-transition:.3s ease;
-}
-
-.facebook-btn:hover{
-transform:translateY(-4px);
-}
-
-.footer-bottom{
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-color:#94a3b8;
-font-size:.95rem;
-}
-
-hr{
-border:none;
-height:1px;
-background:#334155;
-margin:30px 0;
-}
-
-/* MOBILE */
 
 @media(max-width:900px){
 
-.hero-grid,
-.about-grid{
-grid-template-columns:1fr;
-}
-
 .hero h1{
-font-size:2.8rem;
+font-size:38px;
 }
 
-.stats{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-@media(max-width:600px){
-
-.stats{
+.cards,
+.roadmap{
 grid-template-columns:1fr;
 }
 
-.hero-buttons{
-flex-direction:column;
+nav{
+padding:20px 0;
 }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<header>
+
 <div class="container">
-<div class="navbar">
+
+<nav>
 
 <div class="logo">
-<img src="logo.PNG" alt="iRelateDigital Logo">
+iRelate<span>Digital</span>
 </div>
 
-</div>
-</div>
-</header>
+<a class="nav-btn" href="#">
+Book Call
+</a>
 
-<!-- HERO -->
+</nav>
+
+</div>
+
+
 
 <section class="hero">
+
 <div class="container">
-
-<div class="hero-grid">
-
-<div>
 
 <h1>
-Dominate Your <span>Local Market</span>
+Build A Business That Grows Without The Guesswork
 </h1>
 
+
 <p>
-Helping service-based businesses attract more local customers, build predictable revenue, and create long-term stability.
+iRelateDigital partners with service-based businesses to create predictable customer flow, stronger local visibility, and growth systems that give owners back their time.
 </p>
 
-<div class="hero-buttons">
-<a href="#cta" class="btn btn-primary">Book a Strategy Call</a>
-<a href="#services" class="btn btn-outline">View Services</a>
-</div>
+
+<a class="cta" href="#">
+Get Your Growth Plan
+</a>
+
 
 </div>
 
-<div class="hero-card">
-<h3>What You Get</h3>
-<ul>
-<li>More Local Visibility</li>
-<li>More Qualified Leads</li>
-<li>Stronger Google Presence</li>
-<li>Consistent Customer Flow</li>
-<li>Less Business Stress</li>
-</ul>
-</div>
-
-</div>
-
-</div>
 </section>
 
-<!-- SERVICES -->
 
-<section id="services">
-
-<div class="container">
-
-<div class="section-title">
-<h2>How I Help</h2>
-<p>Practical growth systems for service-based businesses.</p>
-</div>
-
-<div class="services-grid">
-
-<div class="card">
-<h3>Local SEO</h3>
-<p>Get found when customers search for your services.</p>
-</div>
-
-<div class="card">
-<h3>Google Business Optimization</h3>
-<p>Increase calls, leads, and local rankings.</p>
-</div>
-
-<div class="card">
-<h3>Lead Generation Systems</h3>
-<p>Build predictable customer flow systems.</p>
-</div>
-
-<div class="card">
-<h3>Reputation Growth</h3>
-<p>Build trust through reviews and authority.</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- RESULTS -->
-
-<section class="results">
-
-<div class="container">
-
-<div class="section-title">
-<h2>Better Results, Not More Stress</h2>
-</div>
-
-<div class="stats">
-
-<div class="stat">
-<h3>More</h3>
-<p>Leads</p>
-</div>
-
-<div class="stat">
-<h3>More</h3>
-<p>Visibility</p>
-</div>
-
-<div class="stat">
-<h3>More</h3>
-<p>Stability</p>
-</div>
-
-<div class="stat">
-<h3>Less</h3>
-<p>Stress</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- ABOUT -->
 
 <section>
 
 <div class="container">
 
-<div class="about-grid">
 
-<div class="about-image"></div>
+<h2 class="title">
+You Built The Business. Now Build The System.
+</h2>
 
-<div>
 
-<h2>Helping Local Businesses Grow With Confidence</h2>
+<p class="subtitle">
 
-<p>
-I help service-based business owners simplify digital growth and build systems that create consistent customers.
+Running a service business shouldn't mean constantly chasing leads or wondering where next month's customers will come from.
+
+We help simplify growth and create systems that build stability.
+
 </p>
 
-<p>
-The goal is not just more revenue, but more freedom and stability.
-</p>
-
-<p><strong>Based in Honolulu, Hawaii</strong></p>
-
-</div>
-
-</div>
 
 </div>
 
 </section>
 
-<!-- CTA -->
 
-<section class="cta" id="cta">
+
+
+<section class="dark">
+
 
 <div class="container">
 
-<h2>Ready to Grow Your Local Market?</h2>
 
-<p>Let’s map out your business growth strategy and build a predictable system for customers.</p>
+<h2 class="title">
+Your Growth Roadmap
+</h2>
 
-<a href="https://calendly.com/irelatedigital/strategy-call" class="btn btn-primary">
-Book a Free Strategy Call
-</a>
+
+<div class="roadmap">
+
+
+<div class="step">
+<span>01</span>
+<h3>Discover</h3>
+<p>
+Understand your business, market, goals, and opportunities.
+</p>
+</div>
+
+
+<div class="step">
+<span>02</span>
+<h3>Diagnose</h3>
+<p>
+Identify what is limiting your growth and where customers are being lost.
+</p>
+</div>
+
+
+<div class="step">
+<span>03</span>
+<h3>Build</h3>
+<p>
+Create systems that attract, capture, and convert customers.
+</p>
+</div>
+
+
+<div class="step">
+<span>04</span>
+<h3>Scale</h3>
+<p>
+Improve what works and create long-term growth.
+</p>
+</div>
+
+
+</div>
 
 </div>
 
 </section>
 
-<!-- FOOTER -->
+
+
+
+
+<section>
+
+
+<div class="container">
+
+
+<h2 class="title">
+Become The Business Your Market Chooses
+</h2>
+
+
+<p class="subtitle">
+Your customers are searching. The question is whether they find you or your competitors.
+</p>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+<h3>Local Visibility</h3>
+<p>
+Improve your presence where customers are looking.
+</p>
+</div>
+
+
+<div class="card">
+<h3>Customer Acquisition</h3>
+<p>
+Create a consistent flow of opportunities.
+</p>
+</div>
+
+
+<div class="card">
+<h3>Follow-Up Systems</h3>
+<p>
+Turn more inquiries into customers.
+</p>
+</div>
+
+
+<div class="card">
+<h3>Growth Strategy</h3>
+<p>
+Build a clear path forward.
+</p>
+</div>
+
+
+</div>
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section>
+
+
+<div class="container">
+
+
+<h2 class="title">
+More Than Marketing
+</h2>
+
+
+<p class="subtitle">
+
+Most agencies deliver tasks.
+
+We focus on helping you build a stronger business.
+
+</p>
+
+
+<div class="list">
+
+<div>✓ More predictable months</div>
+
+<div>✓ Less dependence on referrals</div>
+
+<div>✓ More time for high-value work</div>
+
+<div>✓ Less stress running the business</div>
+
+<div>✓ More control over your future</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<section>
+
+
+<div class="container">
+
+
+<div class="final">
+
+
+<h2>
+Ready To Create Your Growth Plan?
+</h2>
+
+
+<p>
+Let's identify your biggest opportunities and build the next steps.
+</p>
+
+
+<a class="cta" href="#">
+Schedule Strategy Call
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
 
 <footer>
 
-<div class="container">
-
-<div class="footer-content">
-
-<div class="footer-brand">
-
-<img src="logo.PNG" class="footer-logo" alt="Logo">
-
 <p>
-Helping service businesses dominate their local market through practical growth systems.
+© 2026 iRelateDigital. Business Growth Partner.
 </p>
 
-</div>
-
-<a class="facebook-btn" href="https://facebook.com/irelatedigital" target="_blank">
-<svg width="22" height="22" fill="white" viewBox="0 0 16 16">
-<path d="M16 8.05C16 3.6 12.4 0 8 0S0 3.6 0 8.05C0 12.07 2.9 15.4 6.75 16v-5.6H4.7V8.05H6.75V6.27c0-2 1.2-3.13 3.02-3.13.87 0 1.79.16 1.79.16v1.98H10.5c-.99 0-1.3.62-1.3 1.26v1.52h2.22l-.36 2.32H9.2V16c3.8-.6 6.8-3.9 6.8-7.95z"/>
-</svg>
-Follow
-</a>
-
-</div>
-
-<hr>
-
-<div class="footer-bottom">
-<p>© 2026 iRelateDigital</p>
-<p>Honolulu, Hawaii</p>
-</div>
-
-</div>
-
 </footer>
+
+
 
 </body>
 </html>

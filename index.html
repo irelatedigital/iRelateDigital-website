@@ -30,13 +30,11 @@
 html{
   scroll-behavior:smooth;
 }
-html{
-  scroll-behavior:smooth;
-}
 
 #hero-form{
   scroll-margin-top:120px;
 }
+
 body{
   font-family:Arial, Helvetica, sans-serif;
   background:var(--white);
@@ -54,38 +52,39 @@ a{
   margin:auto;
 }
 
-header{
-  position:sticky;
+/* LUXURY HEADER */
+
+.lux-header{
+  position:absolute;
   top:0;
-  z-index:99;
-  background:rgba(255,255,255,.94);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--border);
+  left:0;
+  width:100%;
+  z-index:100;
+  background:transparent;
 }
 
-.clean-nav{
-  min-height:96px;
+.lux-nav{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  min-height:130px;
   display:flex;
   align-items:center;
-  justify-content:center;
-  position:relative;
+  justify-content:space-between;
 }
 
-.logo-wrap{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.logo-img{
-  height:74px;
+.center-logo img{
+  height:120px;
   width:auto;
   display:block;
 }
 
-.nav-cta{
-  position:absolute;
-  right:0;
+.social-icon,
+.menu-icon{
+  color:white;
+  font-size:34px;
+  text-decoration:none;
+  font-weight:700;
 }
 
 .btn{
@@ -113,14 +112,6 @@ header{
   padding:15px 28px;
   border-radius:999px;
   font-weight:900;
-  border:none;
-  cursor:pointer;
-  transition:.25s ease;
-}
-
-.facebook-btn:hover{
-  transform:translateY(-2px);
-  background:#0f5fd0;
 }
 
 .hero{
@@ -128,7 +119,7 @@ header{
     radial-gradient(circle at 85% 10%, rgba(20,184,166,.35), transparent 28%),
     linear-gradient(135deg,#031a22 0%,#062b36 45%,#0b5563 100%);
   color:white;
-  padding:95px 0;
+  padding:190px 0 95px;
   overflow:hidden;
 }
 
@@ -534,13 +525,6 @@ details p{
   font-size:18px;
 }
 
-.cta-actions{
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  flex-wrap:wrap;
-}
-
 footer{
   background:#031a22;
   color:white;
@@ -549,7 +533,7 @@ footer{
 }
 
 .footer-logo{
-  height:54px;
+  height:70px;
   width:auto;
   margin:auto;
   display:block;
@@ -570,12 +554,18 @@ footer p{
 }
 
 @media(max-width:980px){
-  .nav-links{
-    display:none;
+
+  .lux-nav{
+    min-height:125px;
   }
 
-  .logo-img{
-    height:42px;
+  .center-logo img{
+    height:105px;
+  }
+
+  .social-icon,
+  .menu-icon{
+    font-size:28px;
   }
 
   .hero-grid,
@@ -585,7 +575,7 @@ footer p{
   }
 
   .hero{
-    padding:70px 0;
+    padding:170px 0 70px;
   }
 
   .hero h1{
@@ -613,29 +603,29 @@ footer p{
   }
 
   .problem-panel{
-  padding:30px;
-}
+    padding:30px;
+  }
 
-.lead-card{
-  padding:28px 22px;
-  border-radius:28px;
-}
+  .lead-card{
+    padding:28px 22px;
+    border-radius:28px;
+  }
 
-.lead-card h2{
-  font-size:32px;
-  line-height:1.15;
-}
+  .lead-card h2{
+    font-size:32px;
+    line-height:1.15;
+  }
 
-.lead-card p{
-  font-size:17px;
-  line-height:1.6;
-}
+  .lead-card p{
+    font-size:17px;
+    line-height:1.6;
+  }
 
-input,
-textarea{
-  font-size:16px;
-  padding:15px 16px;
-}
+  input,
+  textarea{
+    font-size:16px;
+    padding:15px 16px;
+  }
 
   .btn,
   .facebook-btn{
@@ -648,15 +638,21 @@ textarea{
 
 <body>
 
-<header>
-  <div class="container">
-    <nav class="clean-nav">
-      <a href="#home" class="logo-wrap">
-        <img src="logo.PNG" alt="iRelateDigital Logo" class="logo-img">
-      </a>
+<header class="lux-header">
+  <div class="lux-nav">
 
-      <a href="#hero-form" class="btn nav-cta">Get Growth Plan</a>
-    </nav>
+    <a href="https://facebook.com/iRelateDigital" target="_blank" class="social-icon">
+      ◎
+    </a>
+
+    <a href="#home" class="center-logo">
+      <img src="logo.PNG" alt="iRelateDigital Logo">
+    </a>
+
+    <a href="#hero-form" class="menu-icon">
+      ☰
+    </a>
+
   </div>
 </header>
 
@@ -689,6 +685,7 @@ textarea{
 
       <small>Free Custom Growth Plan</small>
       <h2>Get Your Free Custom Growth Plan</h2>
+
       <p>
         Tell us a little about your business and we'll identify opportunities to improve visibility,
         attract more customers, and create more predictable growth.
@@ -952,11 +949,7 @@ textarea{
         visibility, trust, and growth opportunities.
       </p>
 
-      <div class="cta-actions">
-  <a href="#hero-form" class="btn">
-    Get My Free Growth Plan
-  </a>
-</div>
+      <a href="#hero-form" class="btn">Get My Free Growth Plan</a>
     </div>
   </div>
 </section>
@@ -964,13 +957,14 @@ textarea{
 <footer>
   <div class="container">
     <img src="logo.PNG" alt="iRelateDigital Logo" class="footer-logo">
+
     <p>Helping Service Businesses Grow Nationwide</p>
     <p>Based in Honolulu, Hawaii</p>
     <p>Visibility • Trust • Growth</p>
 
     <div class="footer-actions">
       <a href="#hero-form" class="btn">Get Growth Plan</a>
-      <a href="https://facebook.com/irelatedigital" target="_blank" class="facebook-btn">Facebook</a>
+      <a href="https://facebook.com/iRelateDigital" target="_blank" class="facebook-btn">Follow Us On Facebook</a>
     </div>
 
     <p>© 2026 iRelateDigital. All rights reserved.</p>

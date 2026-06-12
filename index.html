@@ -5,20 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>iRelateDigital | Business Growth Partner</title>
-<meta name="description" content="iRelateDigital helps service-based businesses nationwide strengthen visibility, build trust, and create predictable growth systems." />
+<meta name="description" content="iRelateDigital helps service businesses create more predictable growth through stronger visibility, better customer acquisition, and practical growth systems." />
 
 <style>
 :root{
   --navy:#031a22;
   --navy2:#062b36;
+  --deep:#021318;
   --teal:#14b8a6;
-  --teal2:#0f766e;
-  --text:#102a43;
-  --muted:#557086;
-  --light:#f8fafc;
+  --teal-dark:#0f766e;
+  --aqua:#ccfbf1;
   --white:#ffffff;
+  --soft:#f8fafc;
+  --text:#102a43;
+  --muted:#5b7184;
   --border:#e2e8f0;
-  --shadow:0 20px 60px rgba(0,0,0,.12);
+  --shadow:0 24px 70px rgba(0,0,0,.14);
 }
 
 *{
@@ -31,14 +33,10 @@ html{
   scroll-behavior:smooth;
 }
 
-#hero-form{
-  scroll-margin-top:120px;
-}
-
 body{
   font-family:Arial, Helvetica, sans-serif;
-  background:var(--white);
   color:var(--text);
+  background:white;
   line-height:1.6;
 }
 
@@ -48,61 +46,66 @@ a{
 
 .container{
   width:90%;
-  max-width:1200px;
+  max-width:1180px;
   margin:auto;
 }
 
-/* PREMIUM CENTER LOGO HEADER */
+#hero-form{
+  scroll-margin-top:90px;
+}
 
-.lux-header{
+/* HEADER */
+
+.header{
   position:absolute;
   top:0;
   left:0;
   width:100%;
-  z-index:100;
-  background:transparent;
+  z-index:20;
+  padding-top:18px;
 }
 
-.lux-nav{
-  width:90%;
-  max-width:1200px;
-  margin:auto;
-  min-height:160px;
+.nav{
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
 }
 
-.center-logo img{
-  height:160px;
-  width:auto;
-  display:block;
-  filter:drop-shadow(0 10px 25px rgba(0,0,0,.18));
+.logo{
+  width:190px;
+  max-width:45vw;
+  filter:drop-shadow(0 14px 30px rgba(0,0,0,.25));
 }
+
+/* BUTTONS */
 
 .btn{
   display:inline-block;
   background:var(--teal);
   color:white;
-  padding:14px 26px;
+  padding:15px 28px;
   border-radius:999px;
   font-weight:900;
   border:none;
   cursor:pointer;
+  box-shadow:0 14px 35px rgba(20,184,166,.25);
   transition:.25s ease;
-  box-shadow:0 10px 25px rgba(20,184,166,.22);
 }
 
 .btn:hover{
+  background:var(--teal-dark);
   transform:translateY(-2px);
-  background:var(--teal2);
+}
+
+.btn-dark{
+  background:var(--navy);
 }
 
 .facebook-btn{
   display:inline-block;
   background:#1877F2;
   color:white;
-  padding:14px 26px;
+  padding:15px 28px;
   border-radius:999px;
   font-weight:900;
 }
@@ -110,63 +113,57 @@ a{
 /* HERO */
 
 .hero{
+  min-height:100vh;
   background:
-    radial-gradient(circle at 85% 10%, rgba(20,184,166,.28), transparent 28%),
-    linear-gradient(135deg,#031a22 0%,#062b36 48%,#0b5563 100%);
+    linear-gradient(rgba(2,19,24,.76),rgba(2,19,24,.86)),
+    radial-gradient(circle at 80% 20%, rgba(20,184,166,.35), transparent 32%),
+    linear-gradient(135deg,#031a22,#062b36,#0b5563);
   color:white;
-  padding:220px 0 120px;
-  overflow:hidden;
+  padding:190px 0 100px;
+  display:flex;
+  align-items:center;
 }
 
 .hero-grid{
   display:grid;
   grid-template-columns:1.05fr .95fr;
-  gap:60px;
+  gap:58px;
   align-items:center;
 }
 
-.badge{
+.eyebrow{
   display:inline-block;
-  padding:8px 18px;
-  border-radius:999px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.12);
   color:#d7f7f4;
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.08);
+  padding:8px 16px;
+  border-radius:999px;
   font-size:12px;
-  letter-spacing:.15em;
+  font-weight:800;
+  letter-spacing:.16em;
   text-transform:uppercase;
-  font-weight:700;
-  margin-bottom:26px;
+  margin-bottom:24px;
 }
 
 .hero h1{
-  font-size:60px;
+  font-size:62px;
   line-height:1.04;
-  letter-spacing:-2.3px;
-  max-width:780px;
+  letter-spacing:-2.5px;
+  max-width:760px;
 }
 
 .hero p{
   font-size:20px;
   color:#d7f7f4;
-  margin:26px 0 32px;
-  max-width:650px;
+  margin:26px 0 30px;
+  max-width:670px;
 }
 
-.hero-points{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-  margin-top:34px;
-}
-
-.hero-point{
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.12);
-  padding:15px;
-  border-radius:14px;
-  font-weight:800;
-  color:#e6fffb;
+.hero-trust{
+  margin-top:22px;
+  color:#d7f7f4;
+  font-size:15px;
+  opacity:.9;
 }
 
 /* FORM */
@@ -176,19 +173,19 @@ a{
   color:var(--text);
   border-radius:30px;
   padding:34px;
-  box-shadow:0 35px 90px rgba(0,0,0,.28);
+  box-shadow:0 35px 90px rgba(0,0,0,.35);
 }
 
 .lead-card small{
-  color:var(--teal2);
+  color:var(--teal-dark);
   font-weight:900;
-  letter-spacing:.12em;
+  letter-spacing:.13em;
   text-transform:uppercase;
 }
 
 .lead-card h2{
   color:var(--navy);
-  font-size:30px;
+  font-size:31px;
   line-height:1.15;
   margin:10px 0;
 }
@@ -196,7 +193,7 @@ a{
 .lead-card p{
   color:var(--muted);
   font-size:16px;
-  margin:0 0 22px;
+  margin-bottom:22px;
 }
 
 input,
@@ -218,29 +215,29 @@ textarea{
 .form-note{
   color:#64748b;
   font-size:13px;
-  margin-top:12px;
   text-align:center;
+  margin-top:12px;
 }
 
-/* GENERAL SECTIONS */
+/* SECTIONS */
 
 section{
-  padding:88px 0;
+  padding:90px 0;
 }
 
 .section-head{
   max-width:820px;
-  margin:0 auto 50px;
+  margin:0 auto 52px;
   text-align:center;
 }
 
 .kicker{
-  color:var(--teal2);
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:.12em;
+  color:var(--teal-dark);
   font-size:13px;
-  margin-bottom:10px;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:12px;
 }
 
 .title{
@@ -256,8 +253,10 @@ section{
   font-size:18px;
 }
 
-.strip{
-  background:var(--light);
+/* TRUST BAR */
+
+.trust-strip{
+  background:var(--soft);
   border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
   padding:28px 0;
@@ -270,15 +269,17 @@ section{
   text-align:center;
 }
 
-.trust-item{
+.trust-row div{
   font-weight:900;
   color:var(--navy);
 }
 
-.problem-wrap{
+/* PROBLEM */
+
+.problem-grid{
   display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:45px;
+  grid-template-columns:.95fr 1.05fr;
+  gap:46px;
   align-items:center;
 }
 
@@ -286,18 +287,19 @@ section{
   background:var(--navy);
   color:white;
   padding:46px;
-  border-radius:30px;
+  border-radius:32px;
   box-shadow:var(--shadow);
 }
 
 .problem-panel h2{
-  font-size:40px;
+  font-size:42px;
   line-height:1.1;
   margin-bottom:18px;
 }
 
 .problem-panel p{
   color:#d7f7f4;
+  font-size:18px;
 }
 
 .problem-list{
@@ -309,11 +311,53 @@ section{
 .problem-item{
   background:#f0fdfa;
   border:1px solid #99f6e4;
-  padding:23px;
-  border-radius:20px;
+  padding:24px;
+  border-radius:22px;
   font-weight:900;
   color:var(--navy);
 }
+
+/* OUTCOMES */
+
+.outcomes{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+}
+
+.outcome-card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:28px;
+  padding:36px;
+  box-shadow:0 18px 45px rgba(0,0,0,.07);
+}
+
+.outcome-card span{
+  display:inline-flex;
+  width:54px;
+  height:54px;
+  align-items:center;
+  justify-content:center;
+  background:var(--aqua);
+  color:var(--teal-dark);
+  border-radius:17px;
+  font-weight:900;
+  font-size:24px;
+  margin-bottom:20px;
+}
+
+.outcome-card h3{
+  color:var(--navy);
+  font-size:25px;
+  margin-bottom:10px;
+}
+
+.outcome-card p{
+  color:var(--muted);
+}
+
+/* DARK FRAMEWORK */
 
 .dark{
   background:var(--navy2);
@@ -328,13 +372,13 @@ section{
   color:#d7f7f4;
 }
 
-.pillars{
+.roadmap{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:22px;
 }
 
-.pillar{
+.step{
   background:white;
   color:var(--text);
   padding:32px;
@@ -342,29 +386,24 @@ section{
   box-shadow:0 18px 45px rgba(0,0,0,.18);
 }
 
-.pillar span{
-  display:inline-flex;
-  width:54px;
-  height:54px;
-  align-items:center;
-  justify-content:center;
-  background:#ccfbf1;
-  color:var(--teal2);
-  border-radius:16px;
-  font-size:24px;
-  font-weight:900;
-  margin-bottom:20px;
+.step strong{
+  color:var(--teal);
+  font-size:38px;
+  display:block;
+  margin-bottom:12px;
 }
 
-.pillar h3{
+.step h3{
   color:var(--navy);
   font-size:23px;
   margin-bottom:10px;
 }
 
-.pillar p{
+.step p{
   color:var(--muted);
 }
+
+/* SERVICES */
 
 .cards{
   display:grid;
@@ -382,7 +421,7 @@ section{
 
 .card h3{
   color:var(--navy);
-  font-size:24px;
+  font-size:23px;
   margin-bottom:10px;
 }
 
@@ -390,10 +429,12 @@ section{
   color:var(--muted);
 }
 
+/* SPLIT */
+
 .split{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:55px;
+  gap:56px;
   align-items:center;
 }
 
@@ -413,89 +454,18 @@ section{
 
 .checks{
   list-style:none;
-  margin-top:18px;
 }
 
 .checks li{
-  background:#f8fafc;
+  background:var(--soft);
   border:1px solid var(--border);
-  border-radius:16px;
   padding:16px 18px;
+  border-radius:16px;
   margin-bottom:12px;
   font-weight:900;
 }
 
-.steps{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-}
-
-.next{
-  background:#f8fafc;
-  border:1px solid var(--border);
-  border-radius:24px;
-  padding:28px;
-  text-align:center;
-}
-
-.next strong{
-  display:block;
-  font-size:34px;
-  color:var(--teal);
-  margin-bottom:8px;
-}
-
-.next h3{
-  color:var(--navy);
-  margin-bottom:8px;
-}
-
-.next p{
-  color:var(--muted);
-}
-
-.about-card{
-  background:var(--navy);
-  color:white;
-  border-radius:30px;
-  padding:42px;
-  box-shadow:var(--shadow);
-}
-
-.about-card h3{
-  font-size:30px;
-  margin-bottom:12px;
-}
-
-.about-card p{
-  color:#d7f7f4;
-}
-
-.faq{
-  max-width:900px;
-  margin:auto;
-}
-
-details{
-  background:#f8fafc;
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:22px 24px;
-  margin-bottom:14px;
-}
-
-summary{
-  cursor:pointer;
-  font-weight:900;
-  color:var(--navy);
-  font-size:18px;
-}
-
-details p{
-  margin-top:12px;
-  color:var(--muted);
-}
+/* CTA */
 
 .cta-section{
   padding:70px 0 95px;
@@ -503,12 +473,12 @@ details p{
 
 .cta-box{
   background:
-    radial-gradient(circle at top right, rgba(20,184,166,.28), transparent 35%),
-    linear-gradient(135deg,#041f28,#06333d);
+    radial-gradient(circle at top right, rgba(20,184,166,.28), transparent 34%),
+    linear-gradient(135deg,#031a22,#062b36);
   color:white;
   text-align:center;
-  border-radius:36px;
-  padding:75px 30px;
+  border-radius:38px;
+  padding:76px 30px;
   box-shadow:var(--shadow);
 }
 
@@ -526,20 +496,46 @@ details p{
   font-size:18px;
 }
 
+/* FAQ */
+
+.faq{
+  max-width:900px;
+  margin:auto;
+}
+
+details{
+  background:var(--soft);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:22px 24px;
+  margin-bottom:14px;
+}
+
+summary{
+  cursor:pointer;
+  color:var(--navy);
+  font-weight:900;
+  font-size:18px;
+}
+
+details p{
+  margin-top:12px;
+  color:var(--muted);
+}
+
+/* FOOTER */
+
 footer{
-  background:#031a22;
+  background:var(--deep);
   color:white;
-  padding:46px 0;
+  padding:48px 0;
   text-align:center;
 }
 
 .footer-logo{
   height:90px;
-  width:auto;
-  margin:auto;
-  display:block;
   margin-bottom:14px;
-  filter:drop-shadow(0 10px 22px rgba(0,0,0,.18));
+  filter:drop-shadow(0 10px 24px rgba(0,0,0,.25));
 }
 
 footer p{
@@ -548,7 +544,7 @@ footer p{
 }
 
 .footer-actions{
-  margin-top:22px;
+  margin-top:24px;
   display:flex;
   justify-content:center;
   gap:14px;
@@ -559,20 +555,16 @@ footer p{
 
 @media(max-width:980px){
 
-  .lux-nav{
-    min-height:150px;
-  }
-
-  .center-logo img{
-    height:130px;
+  .logo{
+    width:170px;
   }
 
   .hero{
-    padding:200px 0 75px;
+    padding:175px 0 72px;
   }
 
   .hero-grid,
-  .problem-wrap,
+  .problem-grid,
   .split{
     grid-template-columns:1fr;
   }
@@ -586,12 +578,11 @@ footer p{
     font-size:18px;
   }
 
-  .hero-points,
   .trust-row,
   .problem-list,
-  .pillars,
-  .cards,
-  .steps{
+  .outcomes,
+  .roadmap,
+  .cards{
     grid-template-columns:1fr;
   }
 
@@ -601,29 +592,18 @@ footer p{
     font-size:32px;
   }
 
-  .problem-panel{
-    padding:30px;
-  }
-
+  .problem-panel,
   .lead-card{
     padding:28px 22px;
-    border-radius:28px;
   }
 
   .lead-card h2{
-    font-size:32px;
-    line-height:1.15;
-  }
-
-  .lead-card p{
-    font-size:17px;
-    line-height:1.6;
+    font-size:31px;
   }
 
   input,
   textarea{
     font-size:16px;
-    padding:15px 16px;
   }
 
   .btn,
@@ -641,32 +621,31 @@ footer p{
 
 <body>
 
-<header class="lux-header">
-  <div class="lux-nav">
-    <a href="#home" class="center-logo">
-      <img src="logo-clear.png" alt="iRelateDigital Logo">
+<header class="header">
+  <div class="nav">
+    <a href="#home">
+      <img src="logo-clear.png" alt="iRelateDigital Logo" class="logo">
     </a>
   </div>
 </header>
 
 <section class="hero" id="home">
   <div class="container hero-grid">
-    <div>
-      <div class="badge">Business Growth Partner For Service-Based Businesses</div>
 
-      <h1>Predictable Growth Systems For Service-Based Businesses</h1>
+    <div>
+      <div class="eyebrow">Business Growth Partner</div>
+
+      <h1>Helping Service Businesses Create More Predictable Growth</h1>
 
       <p>
-        Helping service businesses strengthen visibility, build trust, and create a more consistent path to growth.
+        Build stronger visibility, attract better customers, and create a business that gives you more control, stability, and freedom.
       </p>
 
-      <a href="#hero-form" class="btn">Get My Free Custom Growth Plan</a>
+      <a href="#hero-form" class="btn">Request Your Growth Plan</a>
 
-      <div class="hero-points">
-        <div class="hero-point">Visibility</div>
-        <div class="hero-point">Trust</div>
-        <div class="hero-point">Growth</div>
-      </div>
+      <p class="hero-trust">
+        Based in Honolulu • Serving Service Businesses Nationwide
+      </p>
     </div>
 
     <form id="hero-form" class="lead-card" action="https://formsubmit.co/Irelatedigital@gmail.com" method="POST">
@@ -676,11 +655,10 @@ footer p{
       <input type="hidden" name="_template" value="table">
 
       <small>Free Custom Growth Plan</small>
-      <h2>Get Your Free Custom Growth Plan</h2>
+      <h2>Discover Your Growth Opportunities</h2>
 
       <p>
-        Tell us a little about your business and we'll identify opportunities to improve visibility,
-        attract more customers, and create more predictable growth.
+        Tell us about your business and we’ll identify practical opportunities to improve visibility, trust, and customer acquisition.
       </p>
 
       <input type="text" name="Name" placeholder="Your Name" required>
@@ -690,121 +668,152 @@ footer p{
       <input type="text" name="Website or Social Page" placeholder="Website or Social Page (Optional)">
       <textarea name="Biggest Growth Challenge" placeholder="What is your biggest growth challenge right now?" required></textarea>
 
-      <button class="btn" type="submit" style="width:100%;">Get My Plan</button>
+      <button class="btn" type="submit" style="width:100%;">Request My Growth Plan</button>
 
       <div class="form-note">No spam. No pressure. Just useful growth insight.</div>
     </form>
+
   </div>
 </section>
 
-<section class="strip">
+<section class="trust-strip">
   <div class="container trust-row">
-    <div class="trust-item">Nationwide Service</div>
-    <div class="trust-item">Local Market Focus</div>
-    <div class="trust-item">Growth Systems</div>
-    <div class="trust-item">Based in Honolulu</div>
+    <div>Predictable Growth</div>
+    <div>Local Visibility</div>
+    <div>Better Customers</div>
+    <div>Practical Systems</div>
   </div>
 </section>
 
-<section id="problem">
-  <div class="container problem-wrap">
+<section>
+  <div class="container problem-grid">
     <div class="problem-panel">
-      <h2>Most Service Businesses Don't Have a Lead Problem.</h2>
+      <h2>Growth Shouldn’t Feel Like Guesswork</h2>
       <p>
-        They have a visibility, trust, and conversion problem. When those three areas improve,
-        growth becomes more predictable and less stressful.
+        Many service business owners are working hard, serving customers well, and still dealing with unpredictable months. The problem usually isn’t effort. It’s the lack of a clear growth system.
       </p>
     </div>
 
     <div class="problem-list">
-      <div class="problem-item">Inconsistent customer flow</div>
-      <div class="problem-item">Too dependent on referrals</div>
-      <div class="problem-item">Competitors show up first</div>
+      <div class="problem-item">Unpredictable customer flow</div>
+      <div class="problem-item">Too much dependence on referrals</div>
+      <div class="problem-item">Competitors showing up first</div>
       <div class="problem-item">Weak follow-up systems</div>
-      <div class="problem-item">Website visitors do not convert</div>
-      <div class="problem-item">No clear growth roadmap</div>
+      <div class="problem-item">Marketing that feels disconnected</div>
+      <div class="problem-item">No clear path to consistent growth</div>
     </div>
   </div>
 </section>
 
-<section class="dark" id="framework">
+<section>
   <div class="container">
     <div class="section-head">
-      <div class="kicker">The Growth Framework</div>
-      <h2 class="title">The System Behind More Predictable Growth</h2>
+      <div class="kicker">What We Help Create</div>
+      <h2 class="title">A Stronger Business With More Consistency</h2>
       <p class="subtitle">
-        We help service businesses improve the core areas that determine whether customers find,
-        trust, and choose them.
+        We focus on the areas that help service businesses become easier to find, easier to trust, and easier to choose.
       </p>
     </div>
 
-    <div class="pillars">
-      <div class="pillar">
+    <div class="outcomes">
+      <div class="outcome-card">
         <span>1</span>
-        <h3>Local Market Authority</h3>
-        <p>Become the obvious choice in your service area.</p>
+        <h3>More Visibility</h3>
+        <p>Become easier to find when customers are actively looking for services like yours.</p>
       </div>
 
-      <div class="pillar">
+      <div class="outcome-card">
         <span>2</span>
-        <h3>Customer Acquisition</h3>
-        <p>Create a steady flow of new business opportunities.</p>
+        <h3>More Trust</h3>
+        <p>Build credibility before prospects ever pick up the phone or submit a request.</p>
       </div>
 
-      <div class="pillar">
+      <div class="outcome-card">
         <span>3</span>
-        <h3>Reputation & Trust</h3>
-        <p>Build confidence before prospects ever call.</p>
-      </div>
-
-      <div class="pillar">
-        <span>4</span>
-        <h3>Growth Systems</h3>
-        <p>Reduce chaos and improve consistency.</p>
+        <h3>More Predictability</h3>
+        <p>Create systems that generate more consistent opportunities and reduce uncertainty.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="services">
+<section class="dark">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Your Growth Roadmap</div>
+      <h2 class="title">A Practical Process For Moving Forward</h2>
+      <p class="subtitle">
+        Simple, focused, and designed to help you understand where growth is being limited.
+      </p>
+    </div>
+
+    <div class="roadmap">
+      <div class="step">
+        <strong>01</strong>
+        <h3>Discover</h3>
+        <p>Understand your business, goals, service area, and current growth challenges.</p>
+      </div>
+
+      <div class="step">
+        <strong>02</strong>
+        <h3>Diagnose</h3>
+        <p>Identify visibility gaps, conversion issues, and missed customer opportunities.</p>
+      </div>
+
+      <div class="step">
+        <strong>03</strong>
+        <h3>Build</h3>
+        <p>Create practical systems that help attract, capture, and convert better customers.</p>
+      </div>
+
+      <div class="step">
+        <strong>04</strong>
+        <h3>Scale</h3>
+        <p>Improve what works so your business can grow with more confidence and control.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
   <div class="container">
     <div class="section-head">
       <div class="kicker">How We Help</div>
       <h2 class="title">Built Around Outcomes, Not Random Marketing Tasks</h2>
       <p class="subtitle">
-        Every service is designed to help your business get found, get trusted, and get chosen.
+        Marketing tools matter, but they are not the strategy. The goal is predictable growth.
       </p>
     </div>
 
     <div class="cards">
       <div class="card">
         <h3>Local Visibility</h3>
-        <p>Improve how your business appears where local customers are actively searching.</p>
+        <p>Improve how your business appears where local customers are already searching.</p>
+      </div>
+
+      <div class="card">
+        <h3>Customer Acquisition</h3>
+        <p>Create a clearer path for attracting and capturing better business opportunities.</p>
       </div>
 
       <div class="card">
         <h3>Website Conversion</h3>
-        <p>Turn more website visitors into real inquiries with clearer messaging and stronger calls-to-action.</p>
+        <p>Turn more visitors into real inquiries with stronger messaging and clearer calls-to-action.</p>
       </div>
 
       <div class="card">
-        <h3>Lead Capture</h3>
-        <p>Make it easier for prospects to contact you, request information, and take the next step.</p>
+        <h3>Reputation & Trust</h3>
+        <p>Help prospects feel confident choosing your business before they contact you.</p>
       </div>
 
       <div class="card">
         <h3>Follow-Up Systems</h3>
-        <p>Reduce missed opportunities with practical systems that help you respond faster and more consistently.</p>
+        <p>Reduce missed opportunities by improving how leads are captured and followed up with.</p>
       </div>
 
       <div class="card">
-        <h3>Reputation Growth</h3>
-        <p>Build trust through stronger online credibility, review strategy, and customer confidence.</p>
-      </div>
-
-      <div class="card">
-        <h3>Strategic Guidance</h3>
-        <p>Work with a growth partner focused on helping your business move forward with clarity.</p>
+        <h3>Growth Strategy</h3>
+        <p>Work with a partner focused on long-term business outcomes, not just activity.</p>
       </div>
     </div>
   </div>
@@ -813,90 +822,27 @@ footer p{
 <section>
   <div class="container split">
     <div>
-      <div class="kicker">Why iRelateDigital</div>
-      <h2>Not Another Marketing Vendor. A Growth Partner.</h2>
+      <div class="kicker">Why iRelateDigital Exists</div>
+      <h2>Built For Owners Who Want Growth Without More Chaos</h2>
       <p>
-        A vendor completes tasks. A growth partner helps you understand what your business needs,
-        where opportunities are being missed, and how to build a system that supports long-term growth.
+        iRelateDigital was built around a simple belief: service business owners deserve a clearer path to growth.
       </p>
       <p>
-        The goal is not just more revenue. The goal is more consistency, more control, and more time
-        for what matters most.
-      </p>
-    </div>
-
-    <div>
-      <ul class="checks">
-        <li>✓ More predictable months</li>
-        <li>✓ Less dependence on word-of-mouth alone</li>
-        <li>✓ Stronger local market presence</li>
-        <li>✓ Clearer growth priorities</li>
-        <li>✓ Better systems for leads and follow-up</li>
-        <li>✓ More freedom for owners and families</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">What Happens Next</div>
-      <h2 class="title">Simple, Clear, No Pressure</h2>
-    </div>
-
-    <div class="steps">
-      <div class="next">
-        <strong>1</strong>
-        <h3>Submit Details</h3>
-        <p>Tell us about your business and current challenge.</p>
-      </div>
-
-      <div class="next">
-        <strong>2</strong>
-        <h3>We Review</h3>
-        <p>We look for visibility, trust, and conversion gaps.</p>
-      </div>
-
-      <div class="next">
-        <strong>3</strong>
-        <h3>Get Direction</h3>
-        <p>You receive practical opportunities and next steps.</p>
-      </div>
-
-      <div class="next">
-        <strong>4</strong>
-        <h3>Discuss Growth</h3>
-        <p>If there is a fit, we can discuss implementation.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="container split">
-    <div>
-      <div class="kicker">About iRelateDigital</div>
-      <h2>Built For Business Owners Who Want Growth Without More Chaos</h2>
-      <p>
-        iRelateDigital was started because too many business owners are exceptional at serving
-        customers but struggle to create predictable growth.
-      </p>
-      <p>
-        My goal is to simplify that process and help service business owners build a company
-        that supports the life they want, not one that consumes it.
+        The goal is to help owners create more consistency, more control, and more confidence in the future of their business.
       </p>
       <p>
         Based in Honolulu, Hawaii. Serving service businesses nationwide.
       </p>
     </div>
 
-    <div class="about-card">
-      <h3>Visibility • Trust • Growth</h3>
-      <p>
-        We help service businesses build practical systems for getting found, getting trusted,
-        and getting chosen by more of the right customers.
-      </p>
+    <div>
+      <ul class="checks">
+        <li>✓ More predictable months</li>
+        <li>✓ Stronger visibility in your market</li>
+        <li>✓ Better customer acquisition systems</li>
+        <li>✓ Less dependence on chance and referrals alone</li>
+        <li>✓ More freedom to focus on what matters most</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -911,22 +857,22 @@ footer p{
     <div class="faq">
       <details>
         <summary>Who is this for?</summary>
-        <p>Service-based business owners who want more consistent customers, stronger visibility, and practical growth systems.</p>
+        <p>Service-based business owners who want more consistent customer acquisition, stronger visibility, and a clearer growth system.</p>
       </details>
 
       <details>
         <summary>Do you only work with Hawaii businesses?</summary>
-        <p>No. iRelateDigital is based in Honolulu, Hawaii, and works with service businesses nationwide.</p>
+        <p>No. iRelateDigital is based in Honolulu, Hawaii, and serves service businesses nationwide.</p>
       </details>
 
       <details>
-        <summary>What is included in the custom growth plan?</summary>
-        <p>A review of visibility opportunities, conversion gaps, trust-building opportunities, and recommended next steps.</p>
+        <summary>What is included in the growth plan?</summary>
+        <p>A review of your visibility, positioning, customer acquisition opportunities, and practical next steps for more predictable growth.</p>
       </details>
 
       <details>
         <summary>Is this just digital marketing?</summary>
-        <p>No. Marketing is part of it, but the focus is building a growth system that helps your business attract, capture, and convert customers.</p>
+        <p>No. Digital marketing tools may be part of the solution, but the focus is building a practical growth system for your business.</p>
       </details>
     </div>
   </div>
@@ -935,13 +881,12 @@ footer p{
 <section class="cta-section">
   <div class="container">
     <div class="cta-box">
-      <h2>Discover What Is Holding Your Business Back</h2>
+      <h2>Discover What’s Holding Your Business Back</h2>
       <p>
-        Get your free custom growth plan and see where your service business may be missing customers,
-        visibility, trust, and growth opportunities.
+        Request your complimentary growth plan and receive practical recommendations designed to improve visibility, trust, and customer acquisition.
       </p>
 
-      <a href="#hero-form" class="btn">Get My Free Growth Plan</a>
+      <a href="#hero-form" class="btn">Request Your Growth Plan</a>
     </div>
   </div>
 </section>
@@ -950,12 +895,11 @@ footer p{
   <div class="container">
     <img src="logo-clear.png" alt="iRelateDigital Logo" class="footer-logo">
 
-    <p>Helping Service Businesses Grow Nationwide</p>
-    <p>Based in Honolulu, Hawaii</p>
-    <p>Visibility • Trust • Growth</p>
+    <p>Business Growth Partner | Helping Service Businesses Create More Predictable Growth</p>
+    <p>Based in Honolulu, Hawaii • Serving Nationwide</p>
 
     <div class="footer-actions">
-      <a href="#hero-form" class="btn">Get Growth Plan</a>
+      <a href="#hero-form" class="btn">Request Growth Plan</a>
       <a href="https://facebook.com/iRelateDigital" target="_blank" class="facebook-btn">Follow Us On Facebook</a>
     </div>
 

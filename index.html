@@ -24,6 +24,7 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
+
 html{
   scroll-behavior:smooth;
   overflow-anchor:none;
@@ -44,9 +45,7 @@ a{text-decoration:none;}
   margin:auto;
 }
 
-#growth-plan{
-  scroll-margin-top:120px;
-}
+#growth-plan{scroll-margin-top:90px;}
 
 /* HEADER */
 
@@ -93,9 +92,9 @@ a{text-decoration:none;}
 
 .brand-name{
   color:#ffffff;
-  font-size:18px;
+  font-size:24px;
   font-weight:700;
-  margin-top:8px;
+  margin-top:14px;
   letter-spacing:.5px;
   text-align:center;
 }
@@ -323,7 +322,7 @@ section{padding:92px 0;}
   color:var(--navy);
 }
 
-/* OUTCOMES */
+/* OUTCOMES / CARDS */
 
 .outcomes{
   display:grid;
@@ -360,6 +359,51 @@ section{padding:92px 0;}
 }
 
 .outcome-card p{color:var(--muted);}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:26px;
+  padding:34px;
+  box-shadow:0 15px 40px rgba(0,0,0,.07);
+}
+
+.card h3{
+  color:var(--navy);
+  font-size:23px;
+  margin-bottom:10px;
+}
+
+.card p{color:var(--muted);}
+
+/* SUCCESS SECTION */
+
+.success-section{
+  background:linear-gradient(135deg,#ffffff,#f8fafc);
+}
+
+.success-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  max-width:900px;
+  margin:0 auto;
+}
+
+.success-item{
+  background:#f0fdfa;
+  border:1px solid #99f6e4;
+  border-radius:18px;
+  padding:20px 22px;
+  font-weight:900;
+  color:var(--navy);
+}
 
 /* ROADMAP */
 
@@ -399,30 +443,6 @@ section{padding:92px 0;}
 }
 
 .step p{color:var(--muted);}
-
-/* CARDS */
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:24px;
-}
-
-.card{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:26px;
-  padding:34px;
-  box-shadow:0 15px 40px rgba(0,0,0,.07);
-}
-
-.card h3{
-  color:var(--navy);
-  font-size:23px;
-  margin-bottom:10px;
-}
-
-.card p{color:var(--muted);}
 
 /* SPLIT */
 
@@ -653,17 +673,16 @@ footer p{
 
 @media(max-width:980px){
 
-  .logo{width:110px;
-  }
+  .logo{width:120px;}
 
   .brand-name{
-    font-size:28px;
-    margin-top:16px;
+    font-size:18px;
+    margin-top:8px;
   }
 
   .hero{
-    min-height:calc(100vh + 80px);
-    padding:245px 0 140px;
+    min-height:100vh;
+    padding:245px 0 70px;
   }
 
   .hero h1{
@@ -675,7 +694,8 @@ footer p{
 
   .problem-grid,
   .split,
-  .form-wrap{
+  .form-wrap,
+  .success-grid{
     grid-template-columns:1fr;
   }
 
@@ -713,11 +733,11 @@ footer p{
 
   .floating-cta{
     display:none;
-}
+  }
 
   .top-arrow{
     right:24px;
-    bottom:86px;
+    bottom:24px;
   }
 
   .footer-logo{height:48px;}
@@ -870,6 +890,27 @@ footer p{
   </div>
 </section>
 
+<section class="success-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">What Success Looks Like</div>
+      <h2 class="title">Growth With More Clarity, Confidence, And Consistency</h2>
+      <p class="subtitle">
+        The goal is not just more marketing activity. The goal is building a stronger, more predictable business.
+      </p>
+    </div>
+
+    <div class="success-grid">
+      <div class="success-item">✓ More qualified customer inquiries</div>
+      <div class="success-item">✓ Stronger visibility in your service area</div>
+      <div class="success-item">✓ Less dependence on referrals alone</div>
+      <div class="success-item">✓ Greater confidence in your growth strategy</div>
+      <div class="success-item">✓ More predictable months</div>
+      <div class="success-item">✓ More freedom to focus on running the business</div>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="container split">
     <div>
@@ -892,7 +933,24 @@ footer p{
   </div>
 </section>
 
-<div id="growth-anchor"></div>
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">FAQ</div>
+      <h2 class="title">Questions Business Owners Usually Ask</h2>
+    </div>
+
+    <div class="faq">
+      <details><summary>Who is this for?</summary><p>Service-based business owners who want more consistent customer acquisition, stronger visibility, and a clearer growth system.</p></details>
+      <details><summary>How quickly can I expect results?</summary><p>Every business is different, but many owners begin identifying growth opportunities immediately. Improvements in visibility, customer acquisition, and business systems often build over time. The goal is sustainable, predictable growth rather than short-term spikes.</p></details>
+      <details><summary>Can you guarantee specific results?</summary><p>No ethical growth partner can guarantee exact outcomes. What we can do is identify opportunities, improve visibility, strengthen customer acquisition systems, and help position your business for stronger long-term growth.</p></details>
+      <details><summary>What if I’ve tried marketing before and it didn’t work?</summary><p>Many business owners come to us after trying disconnected marketing tactics. Our focus is on building a practical growth strategy that supports the overall business, not simply running isolated marketing activities.</p></details>
+      <details><summary>How involved do I need to be?</summary><p>We work collaboratively with business owners, but the goal is to simplify growth, not create more work. We help identify priorities and next steps while keeping the process practical and manageable.</p></details>
+      <details><summary>Do you only work with Hawaii businesses?</summary><p>No. iRelateDigital is based in Honolulu, Hawaii, and serves service businesses nationwide.</p></details>
+      <details><summary>What is included in the growth plan?</summary><p>A review of your visibility, positioning, customer acquisition opportunities, and practical next steps for more predictable growth.</p></details>
+    </div>
+  </div>
+</section>
 
 <section class="form-section" id="growth-plan">
   <div class="container form-wrap">
@@ -909,7 +967,6 @@ footer p{
       <input type="hidden" name="_next" value="https://irelatedigital.com/thank-you.html">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_autoresponse" value="Thank you for requesting a complimentary Growth Plan from iRelateDigital. We’ve received your information and will personally review your business, visibility, and growth opportunities. If you’d like to move faster, schedule a complimentary Growth Discovery Call here: https://calendly.com/irelatedigital/strategy-call">
 
       <small>Request Your Growth Plan</small>
       <h2>Tell Us About Your Business</h2>
@@ -926,22 +983,6 @@ footer p{
       <div class="form-note">No spam. No pressure. Just useful growth insight.</div>
     </form>
 
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">FAQ</div>
-      <h2 class="title">Questions Business Owners Usually Ask</h2>
-    </div>
-
-    <div class="faq">
-      <details><summary>Who is this for?</summary><p>Service-based business owners who want more consistent customer acquisition, stronger visibility, and a clearer growth system.</p></details>
-      <details><summary>Do you only work with Hawaii businesses?</summary><p>No. iRelateDigital is based in Honolulu, Hawaii, and serves service businesses nationwide.</p></details>
-      <details><summary>What is included in the growth plan?</summary><p>A review of your visibility, positioning, customer acquisition opportunities, and practical next steps for more predictable growth.</p></details>
-      <details><summary>Is this just digital marketing?</summary><p>No. Digital marketing tools may be part of the solution, but the focus is building a practical growth system for your business.</p></details>
-    </div>
   </div>
 </section>
 
@@ -992,7 +1033,7 @@ function scrollToGrowthPlan(){
   const target = document.getElementById('growth-plan');
   if(!target) return;
 
-  const offset = 0;
+  const offset = 220;
   const targetPosition =
     target.getBoundingClientRect().top + window.pageYOffset - offset;
 
@@ -1039,21 +1080,8 @@ window.addEventListener('scroll', function(){
   }
 });
 
-window.addEventListener('beforeunload', function(){
-  forceTop();
-});
-
 window.addEventListener('pageshow', function(){
   forceTop();
-
-  setTimeout(forceTop, 50);
-  setTimeout(forceTop, 250);
-  setTimeout(forceTop, 600);
-});
-
-window.addEventListener('load', function(){
-  forceTop();
-
   setTimeout(forceTop, 50);
   setTimeout(forceTop, 250);
   setTimeout(forceTop, 600);

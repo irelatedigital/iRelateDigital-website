@@ -41,7 +41,9 @@ a{text-decoration:none;}
   margin:auto;
 }
 
-#growth-plan{scroll-margin-top:90px;}
+#growth-plan{
+  scroll-margin-top:120px;
+}
 
 /* HEADER */
 
@@ -973,10 +975,16 @@ footer p{
 <script>
 document.querySelectorAll('.scroll-growth').forEach(button => {
   button.addEventListener('click', function(){
-    document.getElementById('growth-plan').scrollIntoView({
-      behavior:'smooth',
-      block:'start'
-    });
+    const target = document.getElementById('growth-plan');
+const offset = 120;
+
+const targetPosition =
+  target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+window.scrollTo({
+  top: targetPosition,
+  behavior: 'smooth'
+});
     history.replaceState(null, null, window.location.pathname);
   });
 });

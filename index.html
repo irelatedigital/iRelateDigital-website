@@ -976,46 +976,32 @@ footer p{
 </footer>
 
 <script>
-document.querySelectorAll('.scroll-growth').forEach(button => {
-  button.addEventListener('click', function(){
-    const target = document.getElementById('growth-plan');
-const offset = 0;
+// Disable browser scroll restoration
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
 
-const targetPosition =
-  target.getBoundingClientRect().top + window.pageYOffset - offset;
+// Always start at top on page load / refresh
+window.addEventListener('load', function () {
 
-window.scrollTo({
-  top: targetPosition,
-  behavior: 'smooth'
-});
-    history.replaceState(null, null, window.location.pathname);
-  });
-});
+  // Remove any anchor from URL
+  history.replaceState(
+    null,
+    null,
+    window.location.pathname
+  );
 
-document.querySelector('.top-arrow').addEventListener('click', function(){
-  window.scrollTo({
-    top:0,
-    behavior:'smooth'
-  });
-  history.replaceState(null, null, window.location.pathname);
-});
+  // Force top immediately
+  window.scrollTo(0, 0);
 
-window.addEventListener('scroll', function(){
-  const cta = document.querySelector('.floating-cta');
-  const arrow = document.querySelector('.top-arrow');
+  // Force top again after Safari finishes rendering
+  setTimeout(function () {
+    window.scrollTo(0, 0);
+  }, 50);
 
-  if(window.scrollY > 1200){
-    cta.classList.add('show');
-    arrow.classList.add('show');
-  } else {
-    cta.classList.remove('show');
-    arrow.classList.remove('show');
-  }
-});
-
-window.addEventListener('load', function(){
-  history.replaceState(null, null, window.location.pathname);
-  window.scrollTo(0,0);
+  setTimeout(function () {
+    window.scrollTo(0, 0);
+  }, 250);
 });
 </script>
 

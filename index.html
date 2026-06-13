@@ -891,6 +891,8 @@ footer p{
   </div>
 </section>
 
+<div id="growth-anchor"></div>
+
 <section class="form-section" id="growth-plan">
   <div class="container form-wrap">
 
@@ -976,7 +978,7 @@ footer p{
 document.querySelectorAll('.scroll-growth').forEach(button => {
   button.addEventListener('click', function(){
     const target = document.getElementById('growth-plan');
-const offset = 120;
+const offset = 350;
 
 const targetPosition =
   target.getBoundingClientRect().top + window.pageYOffset - offset;

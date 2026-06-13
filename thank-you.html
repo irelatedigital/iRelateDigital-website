@@ -1,20 +1,20 @@
-<!-- thank-you.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Thank You | iRelateDigital</title>
 
 <style>
 :root{
-  --navy:#041f28;
-  --navy2:#062b36;
+  --navy:#031a22;
   --teal:#14b8a6;
+  --teal-dark:#0f766e;
   --text:#102a43;
-  --muted:#557086;
-  --light:#f8fafc;
+  --muted:#5b7184;
+  --white:#ffffff;
+  --soft:#f8fafc;
   --border:#e2e8f0;
 }
 
@@ -22,105 +22,153 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-  background:linear-gradient(135deg,#031a22,#062b36,#0b5563);
-  color:white;
+  font-family:Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top right, rgba(20,184,166,.28), transparent 30%),
+    linear-gradient(135deg,#031a22,#062b36,#0b5563);
   min-height:100vh;
+  color:var(--text);
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:30px;
+  padding:36px 18px;
 }
 
-.card{
-  background:white;
-  color:var(--text);
-  max-width:800px;
+.thank-card{
   width:100%;
-  padding:50px;
-  border-radius:34px;
+  max-width:760px;
+  background:white;
+  border-radius:32px;
+  padding:54px 42px;
   text-align:center;
-  box-shadow:0 30px 80px rgba(0,0,0,.3);
+  box-shadow:0 30px 90px rgba(0,0,0,.22);
 }
 
 .logo{
-  max-width:220px;
-  margin-bottom:25px;
+  width:110px;
+  margin:0 auto 24px;
+  display:block;
+}
+
+.kicker{
+  color:var(--teal-dark);
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:14px;
 }
 
 h1{
-  font-size:42px;
-  line-height:1.15;
   color:var(--navy);
-  margin-bottom:18px;
+  font-size:44px;
+  line-height:1.12;
+  letter-spacing:-1.4px;
+  margin-bottom:22px;
 }
 
 p{
   color:var(--muted);
-  font-size:18px;
-  margin-bottom:22px;
+  font-size:20px;
+  line-height:1.6;
+  margin-bottom:20px;
 }
 
-.steps{
-  text-align:left;
-  background:var(--light);
-  border:1px solid var(--border);
-  border-radius:24px;
-  padding:28px;
-  margin:30px 0;
-}
-
-.steps h2{
-  color:var(--navy);
-  margin-bottom:14px;
-}
-
-.steps ul{
+.benefits-list{
   list-style:none;
+  padding:0;
+  margin:26px auto;
+  max-width:560px;
+  text-align:left;
 }
 
-.steps li{
-  padding:10px 0;
+.benefits-list li{
+  color:var(--navy);
+  font-size:18px;
   font-weight:800;
+  background:var(--soft);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:15px 18px;
+  margin-bottom:12px;
+}
+
+.notice{
+  color:var(--teal-dark);
+  font-weight:900;
+  font-size:17px;
+  margin:26px 0 22px;
 }
 
 .btn{
   display:inline-block;
   background:var(--teal);
   color:white;
-  padding:15px 28px;
+  padding:16px 30px;
   border-radius:999px;
   font-weight:900;
+  font-size:18px;
   text-decoration:none;
-  margin:8px;
+  box-shadow:0 16px 40px rgba(20,184,166,.28);
+  transition:.25s ease;
 }
 
-.facebook-btn{
-  display:inline-block;
-  background:#1877F2;
-  color:white;
-  padding:15px 28px;
-  border-radius:999px;
-  font-weight:900;
-  text-decoration:none;
-  margin:8px;
+.btn:hover{
+  background:var(--teal-dark);
+  transform:translateY(-2px);
 }
 
-.small{
-  font-size:14px;
+.home-link{
+  display:block;
   margin-top:22px;
+  color:var(--teal-dark);
+  font-weight:800;
+  text-decoration:none;
+}
+
+.footer-line{
+  margin-top:36px;
+  color:var(--muted);
+  font-size:16px;
 }
 
 @media(max-width:700px){
-  .card{
-    padding:32px 24px;
+  body{
+    padding:28px 16px;
+    align-items:flex-start;
+  }
+
+  .thank-card{
+    padding:40px 24px;
+    border-radius:28px;
+  }
+
+  .logo{
+    width:90px;
   }
 
   h1{
-    font-size:32px;
+    font-size:34px;
+  }
+
+  p{
+    font-size:18px;
+  }
+
+  .benefits-list li{
+    font-size:16px;
+  }
+
+  .btn{
+    width:100%;
+    font-size:17px;
   }
 }
 </style>
@@ -128,38 +176,48 @@ p{
 
 <body>
 
-<div class="card">
+<div class="thank-card">
 
   <img src="logo-clear.png" alt="iRelateDigital Logo" class="logo">
 
-  <h1>Your Growth Plan Request Has Been Received</h1>
+  <div class="kicker">Request Received</div>
 
-<p>
-Thank you for reaching out to iRelateDigital.
-</p>
+  <h1>Thanks! Your Growth Plan Request Has Been Received.</h1>
 
-<p>
-We’ll personally review your business, online visibility, and growth opportunities before determining the most impactful next steps.
-</p>
-
-<p>
-If you’d like to move faster, you can schedule a complimentary Growth Discovery Call below.
-</p>
-
-<ul>
-  <li>✓ Your growth goals</li>
-  <li>✓ What’s currently limiting growth</li>
-  <li>✓ Opportunities to improve visibility and customer acquisition</li>
-  <li>✓ Potential next steps for creating more predictable growth</li>
-</ul>
-
-<a href="https://calendly.com/irelatedigital/strategy-call" class="btn">
-  Schedule Your Discovery Call
-</a>
-
-  <p class="small">
-    iRelateDigital — Business Growth Partner | Helping Service Businesses Create More Predictable Growth
+  <p>
+    Thank you for reaching out to iRelateDigital.
   </p>
+
+  <p>
+    We’ll personally review your business, online visibility, and growth opportunities before determining the most impactful next steps.
+  </p>
+
+  <p>
+    If you’d like to move faster, you can schedule a complimentary Growth Discovery Call below.
+  </p>
+
+  <ul class="benefits-list">
+    <li>✓ Your growth goals</li>
+    <li>✓ What’s currently limiting growth</li>
+    <li>✓ Opportunities to improve visibility and customer acquisition</li>
+    <li>✓ Potential next steps for creating more predictable growth</li>
+  </ul>
+
+  <p class="notice">
+    Most Growth Discovery Calls are scheduled within 48 hours of submitting a request.
+  </p>
+
+  <a href="https://calendly.com/irelatedigital/strategy-call" class="btn" target="_blank">
+    Book My Complimentary Discovery Call
+  </a>
+
+  <a href="https://irelatedigital.com" class="home-link">
+    Return to Homepage
+  </a>
+
+  <div class="footer-line">
+    iRelateDigital — Business Growth Partner | Helping Service Businesses Grow More Predictably
+  </div>
 
 </div>
 

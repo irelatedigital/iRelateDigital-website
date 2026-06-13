@@ -1060,8 +1060,18 @@ footer p{
 </footer>
 
 <script>
+/* Force homepage to load at the top */
+window.addEventListener('load', function () {
+  if (window.location.hash) {
+    history.replaceState(null, null, window.location.pathname);
+    window.scrollTo(0, 0);
+  }
+});
+
+/* Floating CTA */
 window.addEventListener('scroll', function(){
   const button = document.querySelector('.floating-cta');
+
   if(window.scrollY > 1200){
     button.classList.add('show');
   } else {

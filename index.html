@@ -976,34 +976,27 @@ footer p{
 </footer>
 
 <script>
-// Disable browser scroll restoration
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
 
-// Always start at top on page load / refresh
-window.addEventListener('load', function () {
+function scrollToGrowthPlan(){
+  const target = document.getElementById('growth-plan');
+  const offset = 350;
 
-  // Remove any anchor from URL
-  history.replaceState(
-    null,
-    null,
-    window.location.pathname
-  );
+  const targetPosition =
+    target.getBoundingClientRect().top + window.pageYOffset - offset;
 
-  // Force top immediately
-  window.scrollTo(0, 0);
+  window.scrollTo({
+    top: targetPosition,
+    behavior:'smooth'
+  });
 
-  // Force top again after Safari finishes rendering
-  setTimeout(function () {
-    window.scrollTo(0, 0);
-  }, 50);
+  history.replaceState(null, null, window.location.pathname);
+}
 
-  setTimeout(function () {
-    window.scrollTo(0, 0);
-  }, 250);
-});
-</script>
+document.querySelectorAll('.scroll-growth').forEach(button => {
+  button.addEventListener
 
 </body>
 </html>

@@ -982,8 +982,9 @@ if ('scrollRestoration' in history) {
 
 function scrollToGrowthPlan(){
   const target = document.getElementById('growth-plan');
-  const offset = 350;
+  if(!target) return;
 
+  const offset = 350;
   const targetPosition =
     target.getBoundingClientRect().top + window.pageYOffset - offset;
 
@@ -996,7 +997,52 @@ function scrollToGrowthPlan(){
 }
 
 document.querySelectorAll('.scroll-growth').forEach(button => {
-  button.addEventListener
+  button.addEventListener('click', function(e){
+    e.preventDefault();
+    scrollToGrowthPlan();
+  });
+});
+
+const topArrow = document.querySelector('.top-arrow');
+
+if(topArrow){
+  topArrow.addEventListener('click', function(e){
+    e.preventDefault();
+
+    window.scrollTo({
+      top:0,
+      behavior:'smooth'
+    });
+
+    history.replaceState(null, null, window.location.pathname);
+  });
+}
+
+window.addEventListener('scroll', function(){
+  const cta = document.querySelector('.floating-cta');
+  const arrow = document.querySelector('.top-arrow');
+
+  if(window.scrollY > 1200){
+    if(cta) cta.classList.add('show');
+    if(arrow) arrow.classList.add('show');
+  } else {
+    if(cta) cta.classList.remove('show');
+    if(arrow) arrow.classList.remove('show');
+  }
+});
+
+window.addEventListener('load', function(){
+  history.replaceState(null, null, window.location.pathname);
+
+  setTimeout(function(){
+    window.scrollTo(0,0);
+  }, 50);
+
+  setTimeout(function(){
+    window.scrollTo(0,0);
+  }, 250);
+});
+</script>
 
 </body>
 </html>

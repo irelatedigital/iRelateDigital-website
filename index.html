@@ -24,7 +24,6 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
-
 html{scroll-behavior:smooth;}
 
 body{
@@ -153,6 +152,34 @@ a{text-decoration:none;}
   pointer-events:auto;
 }
 
+.top-arrow{
+  position:fixed;
+  bottom:86px;
+  right:24px;
+  z-index:999;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:rgba(255,255,255,.14);
+  color:white;
+  border:1px solid rgba(255,255,255,.25);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  font-weight:900;
+  opacity:0;
+  transform:translateY(30px);
+  pointer-events:none;
+  transition:.25s ease;
+}
+
+.top-arrow.show{
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:auto;
+}
+
 /* HERO */
 
 .hero{
@@ -162,7 +189,7 @@ a{text-decoration:none;}
     radial-gradient(circle at 82% 18%, rgba(20,184,166,.32), transparent 32%),
     linear-gradient(135deg,#031a22,#062b36,#0b5563);
   color:white;
-  padding:260px 0 90px;
+  padding:260px 0 100px;
   display:flex;
   align-items:center;
 }
@@ -621,16 +648,16 @@ footer p{
 
 @media(max-width:980px){
 
-  .logo{width:90px;}
+  .logo{width:105px;}
 
   .brand-name{
-    font-size:16px;
+    font-size:18px;
     margin-top:8px;
   }
 
   .hero{
-    min-height:auto;
-    padding:245px 0 45px;
+    min-height:100vh;
+    padding:245px 0 70px;
   }
 
   .hero h1{
@@ -685,6 +712,11 @@ footer p{
     text-align:center;
   }
 
+  .top-arrow{
+    right:24px;
+    bottom:86px;
+  }
+
   .footer-logo{height:48px;}
 }
 </style>
@@ -693,6 +725,7 @@ footer p{
 <body>
 
 <a href="javascript:void(0)" class="floating-cta scroll-growth">Request Growth Plan</a>
+<a href="javascript:void(0)" class="top-arrow">↑</a>
 
 <header class="header">
   <div class="nav">
@@ -769,23 +802,9 @@ footer p{
     </div>
 
     <div class="outcomes">
-      <div class="outcome-card">
-        <span>1</span>
-        <h3>More Visibility</h3>
-        <p>Become easier to find when customers are actively looking for services like yours.</p>
-      </div>
-
-      <div class="outcome-card">
-        <span>2</span>
-        <h3>More Trust</h3>
-        <p>Build credibility before prospects ever pick up the phone or submit a request.</p>
-      </div>
-
-      <div class="outcome-card">
-        <span>3</span>
-        <h3>More Predictability</h3>
-        <p>Create systems that generate more consistent opportunities and reduce uncertainty.</p>
-      </div>
+      <div class="outcome-card"><span>1</span><h3>More Visibility</h3><p>Become easier to find when customers are actively looking for services like yours.</p></div>
+      <div class="outcome-card"><span>2</span><h3>More Trust</h3><p>Build credibility before prospects ever pick up the phone or submit a request.</p></div>
+      <div class="outcome-card"><span>3</span><h3>More Predictability</h3><p>Create systems that generate more consistent opportunities and reduce uncertainty.</p></div>
     </div>
   </div>
 </section>
@@ -801,20 +820,9 @@ footer p{
     </div>
 
     <div class="cards">
-      <div class="card">
-        <h3>Clearer Growth Priorities</h3>
-        <p>Know where to focus instead of guessing what marketing task to try next.</p>
-      </div>
-
-      <div class="card">
-        <h3>Stronger Local Presence</h3>
-        <p>Improve how your business shows up when customers are searching.</p>
-      </div>
-
-      <div class="card">
-        <h3>Less Growth Confusion</h3>
-        <p>Replace scattered tactics with a practical path toward more consistency.</p>
-      </div>
+      <div class="card"><h3>Clearer Growth Priorities</h3><p>Know where to focus instead of guessing what marketing task to try next.</p></div>
+      <div class="card"><h3>Stronger Local Presence</h3><p>Improve how your business shows up when customers are searching.</p></div>
+      <div class="card"><h3>Less Growth Confusion</h3><p>Replace scattered tactics with a practical path toward more consistency.</p></div>
     </div>
   </div>
 </section>
@@ -830,29 +838,10 @@ footer p{
     </div>
 
     <div class="roadmap">
-      <div class="step">
-        <strong>01</strong>
-        <h3>Discover</h3>
-        <p>Understand your business, goals, service area, and current growth challenges.</p>
-      </div>
-
-      <div class="step">
-        <strong>02</strong>
-        <h3>Diagnose</h3>
-        <p>Identify visibility gaps, conversion issues, and missed customer opportunities.</p>
-      </div>
-
-      <div class="step">
-        <strong>03</strong>
-        <h3>Build</h3>
-        <p>Create practical systems that help attract, capture, and convert better customers.</p>
-      </div>
-
-      <div class="step">
-        <strong>04</strong>
-        <h3>Scale</h3>
-        <p>Improve what works so your business can grow with more confidence and control.</p>
-      </div>
+      <div class="step"><strong>01</strong><h3>Discover</h3><p>Understand your business, goals, service area, and current growth challenges.</p></div>
+      <div class="step"><strong>02</strong><h3>Diagnose</h3><p>Identify visibility gaps, conversion issues, and missed customer opportunities.</p></div>
+      <div class="step"><strong>03</strong><h3>Build</h3><p>Create practical systems that help attract, capture, and convert better customers.</p></div>
+      <div class="step"><strong>04</strong><h3>Scale</h3><p>Improve what works so your business can grow with more confidence and control.</p></div>
     </div>
   </div>
 </section>
@@ -992,12 +981,24 @@ document.querySelectorAll('.scroll-growth').forEach(button => {
   });
 });
 
+document.querySelector('.top-arrow').addEventListener('click', function(){
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  });
+  history.replaceState(null, null, window.location.pathname);
+});
+
 window.addEventListener('scroll', function(){
-  const button = document.querySelector('.floating-cta');
+  const cta = document.querySelector('.floating-cta');
+  const arrow = document.querySelector('.top-arrow');
+
   if(window.scrollY > 1200){
-    button.classList.add('show');
+    cta.classList.add('show');
+    arrow.classList.add('show');
   } else {
-    button.classList.remove('show');
+    cta.classList.remove('show');
+    arrow.classList.remove('show');
   }
 });
 

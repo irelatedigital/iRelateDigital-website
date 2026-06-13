@@ -24,7 +24,10 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+html{
+  scroll-behavior:smooth;
+  overflow-anchor:none;
+}
 
 body{
   font-family:Arial, Helvetica, sans-serif;
@@ -980,11 +983,18 @@ if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
 
+function forceTop(){
+  history.replaceState(null, null, window.location.pathname);
+  window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+}
+
 function scrollToGrowthPlan(){
   const target = document.getElementById('growth-plan');
   if(!target) return;
 
-  const offset = 0;
+  const offset = 350;
   const targetPosition =
     target.getBoundingClientRect().top + window.pageYOffset - offset;
 
@@ -1031,16 +1041,24 @@ window.addEventListener('scroll', function(){
   }
 });
 
+window.addEventListener('beforeunload', function(){
+  forceTop();
+});
+
+window.addEventListener('pageshow', function(){
+  forceTop();
+
+  setTimeout(forceTop, 50);
+  setTimeout(forceTop, 250);
+  setTimeout(forceTop, 600);
+});
+
 window.addEventListener('load', function(){
-  history.replaceState(null, null, window.location.pathname);
+  forceTop();
 
-  setTimeout(function(){
-    window.scrollTo(0,0);
-  }, 50);
-
-  setTimeout(function(){
-    window.scrollTo(0,0);
-  }, 250);
+  setTimeout(forceTop, 50);
+  setTimeout(forceTop, 250);
+  setTimeout(forceTop, 600);
 });
 </script>
 

@@ -284,6 +284,34 @@ section{padding:92px 0;}
   font-weight:900;
   color:var(--navy);
 }
+/* WHO WE HELP */
+
+.who-we-help{
+  background:white;
+  padding:86px 0;
+}
+
+.who-we-help .section-head{
+  margin-bottom:36px;
+}
+
+.industry-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  max-width:920px;
+  margin:0 auto;
+}
+
+.industry-card{
+  background:#f8fafc;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:22px;
+  text-align:center;
+  font-weight:900;
+  color:var(--navy);
+}
 
 /* PROBLEM */
 
@@ -710,12 +738,13 @@ footer p{
   }
 
   .trust-row,
-  .problem-list,
-  .outcomes,
-  .roadmap,
-  .cards{
-    grid-template-columns:1fr;
-  }
+.problem-list,
+.outcomes,
+.roadmap,
+.cards,
+.industry-grid{
+  grid-template-columns:1fr;
+}
 
   .title,
   .split h2,
@@ -800,6 +829,30 @@ footer p{
 <div>More Repeat Customers</div>
 <div>More Revenue</div>
 <div>Predictable Growth</div>
+  </div>
+</section>
+
+<section class="who-we-help">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Who We Help</div>
+      <h2 class="title">Built For Local Service Businesses</h2>
+      <p class="subtitle">
+        We partner with service-based businesses that want more visibility, more appointments, and a clearer path to predictable growth.
+      </p>
+    </div>
+
+    <div class="industry-grid">
+      <div class="industry-card">HVAC</div>
+      <div class="industry-card">Plumbing</div>
+      <div class="industry-card">Electrical</div>
+      <div class="industry-card">Roofing</div>
+      <div class="industry-card">Landscaping</div>
+      <div class="industry-card">Cleaning Services</div>
+      <div class="industry-card">General Contractors</div>
+      <div class="industry-card">Restoration Companies</div>
+      <div class="industry-card">Specialty Trades</div>
+    </div>
   </div>
 </section>
 
@@ -994,8 +1047,8 @@ footer p{
 <section class="cta-section">
   <div class="container">
     <div class="cta-box">
-      <h2>Ready To Create More Predictable Growth?</h2>
-      <p>Request your complimentary growth plan and discover where your business may be missing visibility, trust, and customer opportunities.</p>
+      <h2>Ready To Dominate Your Local Market?</h2>
+      <p>Request your complimentary Growth Plan and discover where your business may be losing visibility, leads, and customers to competitors.</p>
       <a href="javascript:void(0)" class="btn scroll-growth">Request Your Growth Plan</a>
     </div>
   </div>

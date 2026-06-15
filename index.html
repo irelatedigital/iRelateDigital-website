@@ -1145,11 +1145,10 @@ window.addEventListener('scroll', function(){
   }
 });
 
-window.addEventListener('pageshow', function(){
-  forceTop();
-  setTimeout(forceTop, 50);
-  setTimeout(forceTop, 250);
-  setTimeout(forceTop, 600);
+window.addEventListener('load', function(){
+  if (window.location.hash) {
+    history.replaceState(null, null, window.location.pathname);
+  }
 });
 </script>
 

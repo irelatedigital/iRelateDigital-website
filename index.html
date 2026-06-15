@@ -603,6 +603,42 @@ textarea{
   margin-top:12px;
 }
 
+/* OPPORTUNITIES */
+
+.opportunity-section{
+  background:#f8fafc;
+}
+
+.opportunity-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.opportunity-card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:30px;
+  box-shadow:0 15px 40px rgba(0,0,0,.06);
+}
+
+.opportunity-card h3{
+  color:var(--navy);
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.opportunity-card p{
+  color:var(--muted);
+}
+
+@media(max-width:980px){
+  .opportunity-grid{
+    grid-template-columns:1fr;
+  }
+}
+
 /* FAQ */
 
 .faq{
@@ -839,6 +875,54 @@ footer p{
 <div>More Repeat Customers</div>
 <div>More Revenue</div>
 <div>Predictable Growth</div>
+  </div>
+</section>
+
+<section class="opportunity-section">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="kicker">What We Commonly Find</div>
+      <h2 class="title">Growth Opportunities We Frequently Discover</h2>
+      <p class="subtitle">
+        Most service businesses don't have a sales problem. They have visibility, conversion, and follow-up opportunities that are quietly limiting growth.
+      </p>
+    </div>
+
+    <div class="opportunity-grid">
+
+      <div class="opportunity-card">
+        <h3>Local Visibility Gaps</h3>
+        <p>Businesses often aren't appearing as prominently as they could when customers search for services in their area.</p>
+      </div>
+
+      <div class="opportunity-card">
+        <h3>Missed Lead Opportunities</h3>
+        <p>Potential customers visit the website or call the business but never become appointments.</p>
+      </div>
+
+      <div class="opportunity-card">
+        <h3>Weak Follow-Up Systems</h3>
+        <p>Leads are generated but inconsistent follow-up prevents them from becoming paying customers.</p>
+      </div>
+
+      <div class="opportunity-card">
+        <h3>Reputation Challenges</h3>
+        <p>Online reviews and trust signals aren't working as hard as they could to help win business.</p>
+      </div>
+
+      <div class="opportunity-card">
+        <h3>Conversion Bottlenecks</h3>
+        <p>Websites attract visitors but fail to create enough inquiries, estimates, or appointments.</p>
+      </div>
+
+      <div class="opportunity-card">
+        <h3>Unclear Growth Priorities</h3>
+        <p>Owners are investing effort but don't always know which actions will create the biggest impact.</p>
+      </div>
+
+    </div>
+
   </div>
 </section>
 

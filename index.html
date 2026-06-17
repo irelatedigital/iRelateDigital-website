@@ -1238,16 +1238,28 @@ if(topArrow){
 }
 
 window.addEventListener('scroll', function(){
+
   const cta = document.querySelector('.floating-cta');
   const arrow = document.querySelector('.top-arrow');
+  const footer = document.querySelector('footer');
 
+  const footerTop = footer.getBoundingClientRect().top;
+  const viewportHeight = window.innerHeight;
+
+  // CTA still appears after scrolling
   if(window.scrollY > 1200){
     if(cta) cta.classList.add('show');
-    if(arrow) arrow.classList.add('show');
   } else {
     if(cta) cta.classList.remove('show');
+  }
+
+  // Arrow only appears when footer enters viewport
+  if(footerTop <= viewportHeight){
+    if(arrow) arrow.classList.add('show');
+  } else {
     if(arrow) arrow.classList.remove('show');
   }
+
 });
 
 window.addEventListener('load', function(){
